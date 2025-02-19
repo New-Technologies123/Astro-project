@@ -1,0 +1,59 @@
+/* Страничка карьеры */
+
+.team{
+    display: flex;
+    justify-content: center;
+    gap: 70px; 
+    padding: 50px 10px;
+    background-color: #e6f7ff;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.title{
+    margin-top: 10px;
+}
+
+// @media (max-width: 1400px){
+//     .name{
+//         font-size: 24px;
+//     }    
+// }
+
+@media (max-width: 1030px){
+    .team{
+        gap: 40px;
+        padding: 25px 10px;
+        margin: 15px 0;
+    }
+    .title{
+        margin-top: 5px;
+    }
+    // .name{
+    //     font-size: 22px;
+    //     margin: 10px 0;
+    // }
+}
+
+// @media (max-width: 500px){
+//     .name{
+//         font-size: 20px;
+//     }
+// }
+
+// @media (max-width: 320px){
+//     .careersTeam{
+//         padding: 8px;
+//     }
+//     .careersCard{
+//         padding: 5px;
+//         width: 160px;
+//     }
+//     .careersCard h3{
+//         font-size: 16px;
+//     }
+//     .careersCard p{
+//         font-size: 14px;
+//         margin-left: 13px;
+//     }
+// }

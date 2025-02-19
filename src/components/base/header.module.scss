@@ -1,0 +1,409 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  padding: 15px 35px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.logoIcon {
+  width: 220px;
+}
+
+.headerIcon {
+  height: 18px;
+  width: 18px;
+  margin-right: 8px;
+}
+
+.contactBloc {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.contactInfo {
+  flex: 1;
+  padding-right: 85px;
+}
+
+.contactInfo p {
+  font-size: 16px;
+  margin: 7px 0;
+}
+
+.languageSwitch {
+  font-size: 15px;
+}
+
+.buttonMenu {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #0051ff;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  padding: 10px 15px;
+  border-top-right-radius: 90px;
+  border-bottom-left-radius: 80px;
+}
+
+.buttonMenu:hover {
+  background-color: rgb(0, 26, 255);
+}
+
+.buttonMenu:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.buttonMenu:active:after {
+  background: transparent;
+}
+
+.buttonMenu:hover:before {
+  opacity: 1;
+}
+.buttonMenu:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  width: 100%;
+  box-shadow: var(--nav-shadow);
+  z-index: 2;
+  background: linear-gradient(#03000e, #0019a5);
+  position: sticky;
+}
+
+.navSticky {
+  position: sticky;
+  top: -1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  overflow-y: hidden;
+  transition: 1s cubic-bezier(0.68, -0.55, 0.27, 10.55);
+  box-shadow: var(--nav-shadow);
+  padding: 10px 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 15px;
+  display: block;
+  position: relative;
+  font-size: 18px;
+}
+
+nav ul li a.active {
+  color: #31baff;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  height: 3px;
+  width: 100%;
+  background-color: #007bff;
+  transform: scaleX(0);
+  transition: transform 0.9s ease;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.menuToggle {
+  width: 20px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  margin: 15px;
+}
+
+.menuToggle.active {
+  background: #ffffff;
+}
+
+@media (max-width: 1400px) {
+  .headerContainer {
+    padding: 13px 32px;
+  }
+  .logoIcon {
+    width: 210px;
+  }
+  .contactInfo {
+    padding-right: 75px;
+  }
+  .contactInfo p {
+    font-size: 15px;
+    margin: 6px 0;
+  }
+  .headerIcon {
+    width: 17px;
+    height: 17px;
+  }
+  nav ul {
+    padding: 12px 0;
+    font-size: 17px;
+  }
+  nav ul li {
+    margin: 0 10px;
+  }
+  nav ul li a {
+    padding: 5px 20px;
+    font-size: 17px;
+  }
+  nav ul li a.active {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1195px) {
+  nav ul {
+    font-size: 16px;
+  }
+  nav ul li {
+    margin: 0 5px;
+  }
+  nav ul li a {
+    padding: 8px 15px;
+    font-size: 16px;
+  }
+  nav ul li a.active {
+    font-size: 17px;
+  }
+  .logoIcon {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .headerContainer {
+    padding: 8px 16px;
+  }
+  .contactInfo {
+    padding-right: 30px;
+  }
+  .contactInfo p {
+    font-size: 15px;
+  }
+  nav {
+    background-color: #444;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    position: relative;
+  }
+  .navMenu {
+    --padding: 5px;
+    --font-size: 14px;
+    --height: 0px;
+
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 46px;
+    height: var(--height);
+    transition: 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    background: linear-gradient(#0019a5, #03000e);
+    z-index: 100;
+  }
+  .navMenu.active {
+    --height: calc((((var(--padding) * 2) + (var(--font-size) * 1.5))) * var(--childenNumber));
+    transition: 2s ease;
+  }
+  .menuToggle {
+    display: flex;
+    margin-left: auto;
+  }
+  nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  nav ul li a {
+    padding: 4px 15px;
+    font-size: 16px;
+  }
+  nav ul li a.active {
+    font-size: 18px;
+  }
+  .menuIcon {
+    height: 22px;
+    width: 22px;
+  }
+  .headerIcon {
+    height: 16px;
+    width: 16px;
+    margin-right: 5px;
+  }
+  .logoIcon {
+    width: 190px;
+  }
+}
+
+@media (max-width: 770px) {
+  .headerContainer {
+    padding: 8px 13px;
+    gap: 20px;
+  }
+  .headerIcon {
+    height: 15px;
+    width: 15px;
+  }
+  .logoIcon {
+    width: 180px;
+  }
+  .contactInfo {
+    padding-right: 15px;
+  }
+  .contactInfo p {
+    font-size: 15px;
+    margin: 3px 0;
+  }
+  .languageSwitch {
+    font-size: 15px;
+  }
+  .languageSwitch a {
+    padding: 7px 11px;
+  }
+  .navMenu {
+    top: 45px;
+  }
+  .menuIcon {
+    height: 20px;
+    width: 20px;
+  }
+  nav ul li a {
+    padding: 3px 12px;
+    font-size: 15px;
+  }
+  nav ul li a.active {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 660px) {
+  .headerContainer {
+    display: grid;
+  }
+  .headerIcon {
+    height: 14px;
+    width: 14px;
+  }
+  .logoIcon {
+    margin-left: auto;
+    margin-right: auto;
+    width: 170px;
+  }
+  .contactBloc {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+    padding-top: 4px;
+  }
+  .headerContainer {
+    gap: 0px;
+    padding: 0px;
+  }
+  .contactInfo p {
+    font-size: 14px;
+    margin: 2px 0;
+  }
+  .languageSwitch {
+    margin-left: auto;
+    font-size: 14px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 430px) {
+  .headerContainer {
+    padding: 5px;
+  }
+  .headerIcon {
+    height: 13px;
+    width: 13px;
+  }
+  .contactBloc {
+    display: grid;
+    gap: 0px;
+    margin: 0px;
+    padding-bottom: 0px;
+  }
+  .contactInfo {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0px;
+  }
+  .navMenu {
+    top: 45px;
+  }
+  nav ul li a {
+    padding: 5px 15px;
+    font-size: 14px;
+  }
+  nav ul li a.active {
+    font-size: 15px;
+  }
+  .menuIcon {
+    height: 18px;
+    width: 18px;
+  }
+}

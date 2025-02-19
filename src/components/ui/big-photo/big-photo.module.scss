@@ -1,0 +1,31 @@
+.modal {
+  display: flex;
+  position: fixed; /* Окно фиксировано */
+  z-index: 2; /* На переднем плане */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: auto; /* Включить прокрутку при необходимости */
+  background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный фон */
+  justify-content: center; /* для расположения изображения по центру */
+  align-items: center; /* для расположения изображения по центру */
+}
+
+.modalContent {
+  width: auto;  /* Автоматическая ширина для сохранения пропорций */
+  max-width: 98%;  /* Максимальная ширина увеличенного изображения */
+  max-height: 98%;  /* Максимальная высота, чтобы изображение не выходило за пределы экрана */
+  cursor: zoom-out; // Курсор в виде лупы с минусом
+  transition: transform 0.5s ease;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}

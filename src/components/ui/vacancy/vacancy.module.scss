@@ -1,0 +1,51 @@
+
+
+.employeeVacancy {
+  background-color: #44c1ff;
+  padding: 10px 15px;
+  width: 300px; 
+  text-align: center;
+  color: #000000;
+  border-radius: 8px;
+  transition: transform 0.3s; 
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.06);
+    box-shadow: 12px 8px 10px rgba(0, 0, 0, 0.13);
+    // text-decoration: underline;
+  }
+  p{
+    font-size: 18px;
+    margin: 5px 0;
+  }
+}  
+  
+.titleVacancy {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px 0;
+} 
+
+@media (max-width: 1020px){
+  .employeeVacancy{
+    width: 250px;
+  }
+  .titleVacancy{
+    font-size: 18px;
+  }
+  .employeeVacancy p{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px){
+  .employeeVacancy{
+    width: 215px;
+  }
+  .titleVacancy{
+    font-size: 16px;
+  }
+  .employeeVacancy p{
+    font-size: 14px;
+  }
+}

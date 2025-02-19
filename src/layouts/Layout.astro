@@ -1,0 +1,30 @@
+---
+import i18next, { t } from "i18next";
+---
+
+<html lang={i18next.language}> 
+  <head> 
+      <meta charset="UTF-8"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>{t('Новые Технологии')}</title>
+  </head> 
+ 
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+</style>

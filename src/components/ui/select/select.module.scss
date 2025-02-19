@@ -1,0 +1,139 @@
+.customSelect {
+  position: relative;
+  border: 1px solid #4de1fc;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 700px; /* Регулируемая ширина */
+  margin: 10px;
+}
+
+.selectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+}
+
+.selectedOption {
+  flex-grow: 1; /* Занимает все доступное пространство */
+  font-size: 17px;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  transition: transform 0.3s ease; /* Плавный переход */
+}
+
+.arrow.down {
+  border-top: 5px solid black;
+}
+
+.arrow.up {
+  border-top: 5px solid black;
+  transform: rotate(180deg);
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid #4de1fc;
+  background-color: white;
+  z-index: 1;
+
+  border-radius: 6px;
+  font-size: 17px;
+}
+
+.option {
+  padding: 10px;
+}
+
+.option:hover {
+  background-color: #f0f0f0; /* Цвет при наведении */
+}
+
+@media (max-width: 1360px){
+  .customSelect{
+    width: 500px;
+  }
+  .selectedOption{
+    font-size: 16px;
+  }
+  .options{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1020px){
+  .customSelect{
+    width: 400px;
+  }
+  .selectedOption{
+    font-size: 15px;
+  }
+  .options{
+    font-size: 15px;
+  }
+  .option {
+    padding: 6px;
+  }
+}
+
+@media (max-width: 770px){
+  .customSelect {
+    width: 350px;
+  }
+  .selectedOption {
+    font-size: 14px;
+  }
+  .options {
+    font-size: 14px;
+  }
+  .option {
+    padding: 4px;
+  }
+}
+
+
+// @media (max-width: 430px) {
+//   .selectedOption {
+//     font-size: 14px;
+//   }
+//   .options {
+//     font-size: 14px;
+//   }
+//   // .option {
+//   //   padding: 4px;
+//   // }
+// }
+
+@media (max-width: 380px) {
+  .customSelect {
+    width: 300px;
+  }
+  .selectedOption {
+    font-size: 13px;
+  }
+  .options {
+    font-size: 13px;
+  }
+}
+
+// @media (max-width: 320px) {
+//   .customSelect {
+//     margin: 5px;
+//     width: 280px;
+//   }
+//   .selectedOption {
+//     font-size: 12px;
+//   }
+//   .options {
+//     font-size: 12px;
+//   }
+// }
