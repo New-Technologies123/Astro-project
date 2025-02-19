@@ -3,7 +3,6 @@ import { Card } from '../../ui/card/Card';
 import { useState } from 'react';
 import { LayoutBack } from '../../layout/LayoutBack';
 import { Repair } from './Repair';
-import { Modernization } from './Modernization';
 import { Metering } from './Metering';
 import { Service } from './Service';
 import { Dewaxing } from './Dewaxing';
@@ -12,14 +11,13 @@ import serves_3 from '../../../images/services/serves_3.png';
 import serves_5 from '../../../images/services/serves_5.png';
 import { useTranslation } from 'react-i18next';
 
-type TServices = 'repair' | 'modernization' | 'metering' | 'service' | 'dewaxing';
+type TServices = 'repair' | 'metering' | 'service' | 'dewaxing';
 
 export const Services = () => {
   const { t } = useTranslation('services');
 
   const cardTitle: Record<TServices, string> = {
     repair: t('АГЗУ'),
-    modernization: t('Модернизация'),
     metering: t('Замер'),
     service: t('Обслуживание'),
     dewaxing: t('Депарафинизация'),
@@ -58,13 +56,6 @@ export const Services = () => {
               }}
             />
             <Card
-              imgSrc={serves_12.src}
-              title={cardTitle.modernization}
-              onClick={() => {
-                onClickCard('modernization');
-              }}
-            />
-            <Card
               imgSrc={serves_3.src}
               title={cardTitle.metering}
               onClick={() => {
@@ -91,11 +82,6 @@ export const Services = () => {
       {typeLayoutBackOpen === 'repair' && (
         <LayoutBack onBack={onBack} title={cardTitle.repair}>
           <Repair />
-        </LayoutBack>
-      )}
-      {typeLayoutBackOpen === 'modernization' && (
-        <LayoutBack onBack={onBack} title={cardTitle.modernization}>
-          <Modernization />
         </LayoutBack>
       )}
       {typeLayoutBackOpen === 'metering' && (

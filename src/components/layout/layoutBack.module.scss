@@ -2,18 +2,15 @@
 .boxButtonText {
   display: flex;
   align-items: center;
-}
-
-/* Кнопка назад, на форме для заголовка страницы */
-.boxButtonText a {
-  text-decoration: none;
-  color: #0d5fda;
-  cursor: pointer;
-}
-
-.back {
-  font-size: 55px;
-  margin-left: 10px;
+  margin: 5px;
+  img{
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 10px;
+    width: 60px;
+    height: 60px;
+    // margin-left: 15px;
+  }
 }
 
 .content {
@@ -28,55 +25,40 @@
 }
 
 @media (max-width: 1030px){
-  // .boxButtonText{
-  //   margin: 0 20px;
-  // }
-  .back{
-    font-size: 45px;
-  }  
-  // h2{
-  //   font-size: 22px;
-  //   margin: 3px;
-  // }
+  .boxButtonText{
+    img{
+      width: 55px;
+      height: 55px;
+    }
+  }
+  .content{
+    display: grid;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
 }
 
 @media (max-width: 770px){
-  // .boxButtonText{
-  //   margin: 0 15px;
-  // }
-  .back{
-    font-size: 40px;
+  .boxButtonText{
+    img{
+      width: 50px;
+      height: 50px;
+    }
   }
-  // h2{
-  //   font-size: 20px;
-  // }
   .content{
-    display: grid;
     margin: 0 10px 15px 10px;
     padding: 13px 8px;
   }
 }
 
-// @media (max-width: 630px){
-//   h2{
-//     margin-bottom: 8px;
-//   }
-// }
-
 @media (max-width: 430px) {
+  .boxButtonText{
+    img{
+      width: 45px;
+      height: 45px;
+    }
+  }
   .content {
     padding: 7px;
   }
-  // h2 {
-  //   font-size: 18px;
-  // }
-}
-
-@media (max-width: 375px) {
-  .content {
-    padding: 5px;
-  }
-  // h2 {
-  //   font-size: 17px;
-  // }
 }
