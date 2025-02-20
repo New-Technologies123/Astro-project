@@ -5,17 +5,19 @@
   text-align: center;
   color: #fff;
   border-radius: 8px;
-  // box-shadow: 8px 12px 17px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s; 
+  // transition: transform 0.3s;
+  transition: transform 1.9s ease, z-index 1.6s ease; /* Плавное увеличение */
   cursor: pointer;
-}
-
-.employeeCard:hover {
-  transform: scale(1.1);
-  box-shadow: 8px 12px 17px rgba(0, 0, 0, 0.4);
-  .actionTitle{
-    text-decoration: underline;
-  }  
+  p{
+    font-size: 18px;
+  }
+  &:hover{
+    transform: scale(1.1);
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.4);
+    .actionTitle{
+      text-decoration: underline;
+    } 
+  }
 }
 
 .system {
@@ -34,14 +36,9 @@
   margin: 15px 0;
 }
 
-.employeeCard p{
-  font-size: 18px;
-}
-
 .actionTitle {
   font-size: 20px;
-  margin: 10px 0;
-  // text-decoration: underline;
+  margin: 10px 5px;
   cursor: pointer;
 }
 
@@ -49,6 +46,9 @@
   .employeeCard{
     width: 240px;
     padding: 15px;
+    p{
+      font-size: 16px;
+    }
   }
   .system{
     width: 180px;
@@ -58,15 +58,15 @@
     font-size: 18px;
     margin: 10px 0;
   }
-  .employeeCard p{
-    font-size: 16px;
-  }
 }
 
 @media (max-width: 1030px){
   .employeeCard{
     padding: 10px;
     width: 230px;
+    p{
+      font-size: 15px;
+    }
   }  
   .system{
     width: 170px;
@@ -75,14 +75,11 @@
   .headerTitle{
     font-size: 17px;
     margin: 7px 0;
-  }
-  .employeeCard p{
-    font-size: 15px;
-  }
+  }  
   .actionTitle{
     font-size: 17px;
-    padding: 0px;
-    margin: 7px 0;
+    padding: 2px;
+    margin: 7px 3px;
   }  
 }
 
@@ -101,12 +98,12 @@
 @media (max-width: 430px) {
   .employeeCard {
     width: 220px;
+    p{
+      font-size: 15px;
+    }
   }
   .headerTitle{
     font-size: 17px;
-  }
-  .employeeCard p{
-    font-size: 15px;
   }
   .system {
     width: 180px;
@@ -116,13 +113,13 @@
 @media (max-width: 375px){
   .employeeCard{
     width: 180px;
+    p{
+      font-size: 14px;
+    }
   }
   .system{
     width: 150px;
     height: 140px;
-  }
-  .employeeCard p{
-    font-size: 14px;
   }
 }
 
