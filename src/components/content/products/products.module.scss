@@ -1,5 +1,6 @@
 .wrapper {
   display: grid;
+  grid-template-columns: 1fr; // Одна колонка по умолчанию
 }
 
 .bloc{
@@ -12,7 +13,8 @@
   max-width: 200px;
   font-size: 16px;
   text-align: center;
-  float: left;
+  display: flex;
+  flex-direction: column; // Вертикальное меню
   
   a{
     background-color: #17c9ff; 
@@ -21,7 +23,7 @@
     padding: 7px;
     text-decoration: none; 
     cursor: pointer;
-    outline: 1px solid rgb(39, 140, 255);
+    outline: 2px solid rgb(39, 140, 255);
 
     &:hover{
       background-color: #5eecff; /* фон на наведении курсора мыши */
@@ -46,8 +48,6 @@
     width: 60%;
     padding: 7px;
     cursor: zoom-in; // Курсор в виде лупы
-    // transition: transform 0.5s ease;
-    // margin: 10px 0;
     overflow: hidden; /* Предотвращает выход изображений за пределы контейнера */
     transition: transform 0.9s ease, z-index 0.6s ease; /* Плавное увеличение */
   
@@ -103,7 +103,7 @@
       height: 30px;
     }
     &:hover{
-      outline: 2px solid rgb(0, 60, 255);
+      // outline: 2px solid rgb(0, 60, 255);
       background-color: rgba(0, 132, 255, 0.884);      
     }
   }
@@ -124,19 +124,13 @@
   img{
     width: 50%;
     transition: transform 0.9s ease, z-index 0.6s ease; /* Плавное увеличение */
-    // z-index: 1; /* Базовый z-index */
     &:hover{
-      transform: scale(1.03); /* Увеличение изображения при наведении */
-      // z-index: 2; /* Увеличенное изображение должно быть поверх других */    
+      transform: scale(1.03); /* Увеличение изображения при наведении */   
     }
   }
 }
 
 @media (max-width: 1400px){
-  // .verticalMenu{
-  //   max-width: 200px;
-  //   font-size: 16px;
-  // }
   .productsText{
     h3{
       font-size: 19px;
@@ -207,9 +201,6 @@
     font-size: 13px;
   }
   .productsText{
-    // img{
-    //   width: 60%;
-    // }
     h3{
       font-size: 16px;
     }

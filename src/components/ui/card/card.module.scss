@@ -12,16 +12,16 @@
     font-size: 18px;
   }
   &:hover{
-    transform: scale(1.1);
+    transform: scale(1.06);
     box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.4);
     .actionTitle{
       text-decoration: underline;
-    } 
+    }
   }
 }
 
 .system {
-  width: 190px; /* Увеличиваем ширину фото */
+  width: 200px; /* Увеличиваем ширину фото */
   height: 190px; /* Увеличиваем высоту фото */
   background-size: cover;
   background-position: center;
@@ -51,12 +51,19 @@
     }
   }
   .system{
-    width: 180px;
-    height: 170px;
+    width: 190px;
+    height: 180px;
   }
   .headerTitle{
     font-size: 18px;
     margin: 10px 0;
+  }
+}
+
+@media (max-width: 1200px){
+  .system{
+    width: 180px;
+    height: 170px;
   }
 }
 
