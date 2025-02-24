@@ -50,66 +50,64 @@ export const PreparationSystems = () => {
 
   return (
     <div className={Styles.wrapper}>
-      <div className={Styles.bloc}>
-        <div className={Styles.verticalMenu}>
-          <a onClick={() => {handleClick('products-1');}}>{t('Запуск')}</a>
-          <a onClick={() => {handleClick('products-2');}}>{t('Блок')}</a>
-          <a onClick={() => {handleClick('products-3');}}>{t('Очистка')}</a>
-        </div>
+      <div className={Styles.verticalMenu}>
+        <a onClick={() => {handleClick('products-1');}}>{t('Запуск')}</a>
+        <a onClick={() => {handleClick('products-2');}}>{t('Блок')}</a>
+        <a onClick={() => {handleClick('products-3');}}>{t('Очистка')}</a>
+      </div>
 
-        <div className={Styles.productsInfo}>
-          <section className={Styles.productsText}>
-            <h3 id="products-1">{t('Запуск')}</h3>
-            <img src={product_4.src} alt="УЗПЗ" className={Styles.mainImg} onClick={() => {setOneIsOpen(true);}}/>
-            <h1>{t('Назначение')}</h1>
-            <p>{t('Переодического')}</p>
-            <h1>{t('Область')}</h1>
-            <p>{t('Узлы')}</p>
-          </section>
-          <section className={Styles.productsText}>
-            <h3 id="products-2">{t('Блок')}</h3>
-            <img src={product_4_1.src} alt="БГ" className={Styles.mainImg} onClick={() => {setTwoIsOpen(true);}}/>
-            <h1>{t('Назначение')}</h1>
-            <p>{t('Распределение')}</p>
-          </section>
-          <section className={Styles.productsText}>
-            <h3 id="products-3">{t('Очистка')}</h3>
-            <div className={Styles.productsGallery}>
-              <GalleryProducts
-                photos={[
-                  { id: 1, src: product_4_2.src, alt: '' },
-                  { id: 2, src: product_4_3.src, alt: '' },
-                  { id: 3, src: product_4_4.src, alt: '' },
-                ]}
-              />
-            </div>
-            
-            {/* <img src={product_4_2.src} alt="УН" className={Styles.mainImg} onClick={() => {setThreeIsOpen(true);}}/> */}
-            <h1>{t('Назначение')}</h1>
-            <p>{t('Поверхности')}</p>
-            <h1>{t('Аналог')}</h1>
-            <p>
-              <img src={dot.src}/>
-              {t('Сматывание')}
-            </p>
-            <p>
-              <img src={dot.src}/>
-              {t('Процесс')}
-            </p>
-            <p>
-              <img src={dot.src}/>
-              {t('Положения')}
-            </p>
-            <p>
-              <img src={dot.src}/>
-              {t('Скребок')}
-            </p>
-            <p>
-              <img src={dot.src}/>
-              {t('Магниты')}
-            </p>            
-          </section>
-        </div>
+      <div className={Styles.productsInfo}>
+        <section className={Styles.productsText}>
+          <h3 id="products-1">{t('Запуск')}</h3>
+          <img src={product_4.src} alt="УЗПЗ" className={Styles.mainImg} onClick={() => {setOneIsOpen(true);}}/>
+          <h1>{t('Назначение')}</h1>
+          <p>{t('Переодического')}</p>
+          <h1>{t('Область')}</h1>
+          <p>{t('Узлы')}</p>
+        </section>
+        <section className={Styles.productsText}>
+          <h3 id="products-2">{t('Блок')}</h3>
+          <img src={product_4_1.src} alt="БГ" className={Styles.mainImg} onClick={() => {setTwoIsOpen(true);}}/>
+          <h1>{t('Назначение')}</h1>
+          <p>{t('Распределение')}</p>
+        </section>
+        <section className={Styles.productsText}>
+          <h3 id="products-3">{t('Очистка')}</h3>
+          <div className={Styles.productsGallery}>
+            <GalleryProducts
+              photos={[
+                { id: 1, src: product_4_2.src, alt: '' },
+                { id: 2, src: product_4_3.src, alt: '' },
+                { id: 3, src: product_4_4.src, alt: '' },
+              ]}
+            />
+          </div>
+          
+          {/* <img src={product_4_2.src} alt="УН" className={Styles.mainImg} onClick={() => {setThreeIsOpen(true);}}/> */}
+          <h1>{t('Назначение')}</h1>
+          <p>{t('Поверхности')}</p>
+          <h1>{t('Аналог')}</h1>
+          <p>
+            <img src={dot.src}/>
+            {t('Сматывание')}
+          </p>
+          <p>
+            <img src={dot.src}/>
+            {t('Процесс')}
+          </p>
+          <p>
+            <img src={dot.src}/>
+            {t('Положения')}
+          </p>
+          <p>
+            <img src={dot.src}/>
+            {t('Скребок')}
+          </p>
+          <p>
+            <img src={dot.src}/>
+            {t('Магниты')}
+          </p>            
+        </section>
       </div>
 
       {/* Кнопка "Наверх" с условием видимости */}

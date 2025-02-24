@@ -46,31 +46,30 @@ export const AccountingSystem = () => {
 
   return (
     <div className={Styles.wrapper}>
-      <div className={Styles.bloc}>
-        <div className={Styles.verticalMenu}>
-          <a onClick={() => { handleClick('products-1'); }}>{t('Стационарная')}</a>
-          <a onClick={() => { handleClick('products-2'); }}>{t('Мобильная')}</a>
+      
+      <div className={Styles.verticalMenu}>
+        <a onClick={() => { handleClick('products-1'); }}>{t('Стационарная')}</a>
+        <a onClick={() => { handleClick('products-2'); }}>{t('Мобильная')}</a>
+      </div>
+
+      <div className={Styles.productsInfo}>
+        <div className={Styles.productsText}>
+          <h3 id="products-1">{t('Стационарная')}</h3>
+
+          <div className={Styles.blocImg}>
+            <img src={product_1.src} alt="АГЗУ-С" onClick={() => { setFirstIsOpen(true); }} />
+            <img src={product_1_1.src} alt="АГЗУ-С" onClick={() => { setSecondIsOpen(true); }} />
+          </div>
+
+          <h1>{t('Преимущество')}</h1>
+          <p>{t('Высокая')}</p>
+          <p>{t('Гибкая')}</p>
         </div>
-
-        <div className={Styles.productsInfo}>
-          <div className={Styles.productsText}>
-            <h3 id="products-1">{t('Стационарная')}</h3>
-
-            <div className={Styles.blocImg}>
-              <img src={product_1.src} alt="АГЗУ-С" onClick={() => { setFirstIsOpen(true); }} />
-              <img src={product_1_1.src} alt="АГЗУ-С" onClick={() => { setSecondIsOpen(true); }} />
-            </div>
-
-            <h1>{t('Преимущество')}</h1>
-            <p>{t('Высокая')}</p>
-            <p>{t('Гибкая')}</p>
-          </div>
-          <div className={Styles.productsText}>
-            <h3 id="products-2">{t('Мобильная')}</h3>
-            <img src={product_1_2.src} alt="АГЗУ-С" className={Styles.mainImg} onClick={() => { setThirdIsOpen(true); }} />
-            <p>{t('Изготовлении')}</p>
-            <p>{t('Действия')}</p>
-          </div>
+        <div className={Styles.productsText}>
+          <h3 id="products-2">{t('Мобильная')}</h3>
+          <img src={product_1_2.src} alt="АГЗУ-С" className={Styles.mainImg} onClick={() => { setThirdIsOpen(true); }} />
+          <p>{t('Изготовлении')}</p>
+          <p>{t('Действия')}</p>
         </div>
       </div>
 

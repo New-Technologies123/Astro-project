@@ -45,120 +45,118 @@ export const PumpingStations = () => {
 
   return (
     <div className={Styles.wrapper}>
-      <div className={Styles.bloc}>
-        <div className={Styles.verticalMenu}>
-          <a onClick={() => {handleClick('products-1');}}>{t('Насосная')}</a>
-          <a onClick={() => {handleClick('products-2');}}>{t('Мультифазная')}</a>
-        </div>
+      <div className={Styles.verticalMenu}>
+        <a onClick={() => {handleClick('products-1');}}>{t('Насосная')}</a>
+        <a onClick={() => {handleClick('products-2');}}>{t('Мультифазная')}</a>
+      </div>
 
-        <div className={Styles.productsInfo}>
-          <section className={Styles.productsText}>
-            <h3 id="products-1">{t('Насосная')}</h3>
-            <img src={product_5.src} alt="БН" className={Styles.mainImg} onClick={() => {setOneIsOpen(true);}}/>
-            <h1>{t('Назначение')}</h1>
-            <p>{t('Трубопроводы')}</p>
-            <p>{t('Производства')}</p>
+      <div className={Styles.productsInfo}>
+        <section className={Styles.productsText}>
+          <h3 id="products-1">{t('Насосная')}</h3>
+          <img src={product_5.src} alt="БН" className={Styles.mainImg} onClick={() => {setOneIsOpen(true);}}/>
+          <h1>{t('Назначение')}</h1>
+          <p>{t('Трубопроводы')}</p>
+          <p>{t('Производства')}</p>
 
-            <h1>{t('Типовой')}</h1>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Насосные')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Приемный')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Дренажа')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Пожароохранной')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Пенного')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Автоматизации')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Грузоподъемные')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Управления')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Передачи')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Электроснабжения')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Жизнеобеспечения')}
-            </p>
-          </section>
+          <h1>{t('Типовой')}</h1>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Насосные')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Приемный')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Дренажа')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Пожароохранной')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Пенного')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Автоматизации')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Грузоподъемные')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Управления')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Передачи')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Электроснабжения')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Жизнеобеспечения')}
+          </p>
+        </section>
 
-          <section className={Styles.productsText}>
-            <h3 id="products-2">{t('Мультифазная')}</h3>
-            <img src={product_5_1.src} alt="БЛ" className={Styles.mainImg} onClick={() => {setTwoIsOpen(true);}}/>
-            <h1>{t('Назначение')}</h1>
-            <p>{t('Перекачивания')}</p>
+        <section className={Styles.productsText}>
+          <h3 id="products-2">{t('Мультифазная')}</h3>
+          <img src={product_5_1.src} alt="БЛ" className={Styles.mainImg} onClick={() => {setTwoIsOpen(true);}}/>
+          <h1>{t('Назначение')}</h1>
+          <p>{t('Перекачивания')}</p>
 
-            <h1>{t('Типовой')}</h1>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Мультифазные')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Насосной')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Трубо')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Дренажные')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Комплект')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Отопление')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Агрегатами')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Противоаварийной')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Частотных')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Информации')}
-            </p>
-            <p>
-              <img src={dot.src} className={Styles.dotIcon}/>
-              {t('Электро')}
-            </p>
-          </section>
-        </div>
+          <h1>{t('Типовой')}</h1>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Мультифазные')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Насосной')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Трубо')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Дренажные')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Комплект')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Отопление')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Агрегатами')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Противоаварийной')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Частотных')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Информации')}
+          </p>
+          <p>
+            <img src={dot.src} className={Styles.dotIcon}/>
+            {t('Электро')}
+          </p>
+        </section>
       </div>
 
       {/* Кнопка "Наверх" с условием видимости */}
