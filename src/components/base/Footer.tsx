@@ -10,8 +10,8 @@ export const Footer = ({ }) => {
 
   return (
     <footer>
-      <div className={Styles.footerContainerImg}>
-        <div className={Styles.footerContainer}>
+      <div className={Styles.footerContainer}>
+        <div className={Styles.footerContainerText}>
           <div className={Styles.footerText}>
             <h3>{t('Контакты')}</h3>
             <p>
@@ -31,13 +31,13 @@ export const Footer = ({ }) => {
             <div className={Styles.footerSection}>
               <h3>{t('Продукция')}</h3>
               <p>
-                <a href={`/${i18n.language}/services`} className={Styles.active}>
+                <a href={`/${i18n.language}/services`}>
                   {t('Сервисные услуги')}
                 </a>
               </p>
               <h3>{t('Карьера')}</h3>
               <p>
-                <a href={`/${i18n.language}/careers`} className={Styles.active}>
+                <a href={`/${i18n.language}/careers`}>
                   {t('Вакансия')}
                 </a>
               </p>
@@ -45,12 +45,12 @@ export const Footer = ({ }) => {
             <div className={Styles.footerSection}>
               <h3>{t('О компании')}</h3>
               <p>
-                <a href={`/${i18n.language}/documents`} className={Styles.active}>
+                <a href={`/${i18n.language}/documents`}>
                   {t('Документы')}
                 </a>
               </p>
               <p>
-                <a href={`/${i18n.language}/news`} className={Styles.active}>
+                <a href={`/${i18n.language}/news`}>
                   {t('Новости')}
                 </a>
               </p>
