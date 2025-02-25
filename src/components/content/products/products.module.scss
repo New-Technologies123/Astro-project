@@ -92,6 +92,7 @@
     text-decoration: none; 
     border-radius: 100%; 
     cursor: pointer;
+    // outline: 2px solid rgb(0, 60, 255);
     img{
       width: 30px;
       height: 30px;
@@ -100,10 +101,6 @@
       outline: 2px solid rgb(0, 60, 255);
       background-color: rgba(0, 132, 255, 0.884);      
     }
-    // &:focus{
-    //   outline: none;
-    //   background-color: none;
-    // }
   }
 }
 
@@ -161,6 +158,9 @@
     max-width: 160px;
     min-width: 160px;
     font-size: 14px;    
+  }
+  .productsInfo{
+    padding: 5px 0;
   }
   .productsText{
     padding: 0px 7px;
@@ -221,6 +221,11 @@
   .verticalMenu{
     font-size: 13px;
     max-width: 100%;
+    a{
+      &:hover{
+        background-color: #17c9ff;
+      }
+    }
   }
   .productsInfo{
     margin-top: 10px;
@@ -236,6 +241,10 @@
       img{
         width: 20px;
         height: 20px;
+      }
+      &:hover {
+        outline: 0px;
+        background-color: #0066ff81;
       }
     }  
   }
