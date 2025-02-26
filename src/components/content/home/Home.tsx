@@ -20,16 +20,17 @@ export const Home = () => {
     <>
       <div className={Styles.homeInfo}>
         <img src={homeItem_1.src} alt="Главная картинка" className={Styles.homeImg} />
-        <div className={Styles.title}>
+        {/* <div className={Styles.title}>
           <Title text={t('Поставки')}></Title>
-        </div>
-        
+        </div> */}
+        <Title text={t('Поставки')}></Title>
         <img src={homeItem_2.src} alt="Карта поставок" className={Styles.homeImg} />
+        <div className={Styles.title}>
+          <Title text={t('Заказчики')}></Title>
+        </div>
       </div>
       
-      <div className={Styles.title}>
-        <Title text={t('Заказчики')}></Title>
-      </div>
+      
 
       <div className={Styles.brandParent}>
         <div className={Styles.brandsCarousel} id="brandsCarousel">
