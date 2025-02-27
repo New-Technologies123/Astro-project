@@ -8,6 +8,7 @@ import item_6 from '../../../images/home/tat.webp';
 import item_7 from '../../../images/home/bel.webp';
 import item_8 from '../../../images/home/cas.webp';
 import item_9 from '../../../images/home/luc.webp';
+import item_10 from '../../../images/home/luc_ysb.webp';
 import homeItem_1 from '../../../images/home/home.webp';
 import homeItem_2 from '../../../images/home/geography.webp';
 import { useTranslation } from 'react-i18next';
@@ -79,6 +80,11 @@ export const Home = () => {
               <img src={item_9.src} alt="Логотип 9" />
             </a>
           </div>
+          <div className={Styles.slideContent}>
+            <a>
+              <img src={item_10.src} alt="Логотип 10" />
+            </a>
+          </div>
         </div>
         <div className={Styles.brandsCarousel} id="brandsCarousel2">
           <div className={Styles.slideContent}>
@@ -124,6 +130,11 @@ export const Home = () => {
           <div className={Styles.slideContent}>
             <a>
               <img src={item_9.src} alt="Логотип 9" />
+            </a>
+          </div>
+          <div className={Styles.slideContent}>
+            <a>
+              <img src={item_10.src} alt="Логотип 10" />
             </a>
           </div>
         </div>

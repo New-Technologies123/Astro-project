@@ -21,8 +21,8 @@
 }
 
 .system {
-  width: 200px; /* Увеличиваем ширину фото */
-  height: 190px; /* Увеличиваем высоту фото */
+  width: 210px; /* Увеличиваем ширину фото */
+  height: 200px; /* Увеличиваем высоту фото */
   background-size: cover;
   background-position: center;
   flex: 1;
@@ -31,9 +31,10 @@
 }
 
 .headerTitle {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  margin: 15px 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .actionTitle {
@@ -45,43 +46,43 @@
 @media (max-width: 1400px){
   .employeeCard{
     width: 240px;
-    padding: 15px;
     p{
       font-size: 16px;
     }
   }
   .system{
-    width: 190px;
-    height: 180px;
+    width: 200px;
+    height: 190px;
   }
   .headerTitle{
-    font-size: 18px;
-    margin: 10px 0;
+    font-size: 17px;
   }
 }
 
 @media (max-width: 1200px){
+  .employeeCard{
+    width: 230px;
+  }
   .system{
-    width: 180px;
-    height: 170px;
+    width: 190px;
+    height: 180px;
   }
 }
 
 @media (max-width: 1030px){
   .employeeCard{
-    padding: 10px;
-    width: 230px;
+    padding: 15px;
     p{
       font-size: 15px;
     }
   }  
   .system{
-    width: 170px;
-    height: 160px;
+    width: 200px;
+    height: 190px;
   }
   .headerTitle{
     font-size: 17px;
-    margin: 7px 0;
+    margin-top: 12px;    
   }  
   .actionTitle{
     font-size: 17px;
@@ -113,20 +114,24 @@
     font-size: 17px;
   }
   .system {
-    width: 180px;
+    width: 190px;
+    height: 180px;
   }
 }
 
 @media (max-width: 375px){
   .employeeCard{
-    width: 180px;
+    width: 200px;
     p{
       font-size: 14px;
     }
   }
   .system{
-    width: 150px;
-    height: 140px;
+    width: 170px;
+    height: 160px;
+  }
+  .headerTitle{
+    margin-top: 7px;
   }
 }
 
