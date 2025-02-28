@@ -26,11 +26,10 @@
 .contactInfo {
   flex: 1;
   padding-right: 85px;
-}
-
-.contactInfo p {
-  font-size: 16px;
-  margin: 7px 0;
+  p {
+    font-size: 16px;
+    margin: 7px 0;
+  }
 }
 
 .languageSwitch {
@@ -172,10 +171,9 @@ nav ul li a:hover::after {
   justify-content: space-between;
   position: relative;
   margin: 15px;
-}
-
-.menuToggle.active {
-  background: #ffffff;
+  &.active {
+    background: #ffffff;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -187,10 +185,10 @@ nav ul li a:hover::after {
   }
   .contactInfo {
     padding-right: 75px;
-  }
-  .contactInfo p {
-    font-size: 15px;
-    margin: 6px 0;
+    p {
+      font-size: 15px;
+      margin: 6px 0;
+    }
   }
   .headerIcon {
     width: 17px;
@@ -199,32 +197,32 @@ nav ul li a:hover::after {
   nav ul {
     padding: 12px 0;
     font-size: 17px;
-  }
-  nav ul li {
-    margin: 0 10px;
-  }
-  nav ul li a {
-    padding: 5px 20px;
-    font-size: 17px;
-  }
-  nav ul li a.active {
-    font-size: 18px;
+    li {
+      margin: 0 10px;
+      a {
+        padding: 5px 20px;
+        font-size: 17px;
+        &.active {
+          font-size: 18px;
+        }
+      }
+    }
   }
 }
 
 @media (max-width: 1195px) {
   nav ul {
     font-size: 16px;
-  }
-  nav ul li {
-    margin: 0 5px;
-  }
-  nav ul li a {
-    padding: 8px 15px;
-    font-size: 16px;
-  }
-  nav ul li a.active {
-    font-size: 17px;
+    li {
+      margin: 0 5px;
+      a {
+        padding: 8px 15px;
+        font-size: 16px;
+        &.active {
+          font-size: 17px;
+        }
+      }
+    }
   }
   .logoIcon {
     width: 200px;
@@ -251,21 +249,24 @@ nav ul li a:hover::after {
   .navMenu {
     --padding: 5px;
     --font-size: 14px;
-    --height: 0px;
+    --max-height: 0px;
 
     flex-direction: column;
     position: absolute;
     width: 100%;
     left: 0;
     top: 46px;
-    height: var(--height);
-    transition: 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    max-height: var(--max-height);
+    transition: max-height 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     background: linear-gradient(#0019a5, #03000e);
     z-index: 100;
-  }
-  .navMenu.active {
-    --height: calc((((var(--padding) * 2) + (var(--font-size) * 1.5))) * var(--childenNumber));
-    transition: 2s ease;
+    padding-bottom: 4px;
+    overflow: hidden; /* Скрываем содержимое до начала анимации */
+
+    &.active {
+      --max-height: 500px;
+      transition: max-height 4.5s ease;
+    }
   }
   .menuToggle {
     display: flex;
@@ -280,9 +281,9 @@ nav ul li a:hover::after {
   nav ul li a {
     padding: 4px 15px;
     font-size: 16px;
-  }
-  nav ul li a.active {
-    font-size: 18px;
+    &.active {
+      font-size: 18px;
+    }
   }
   .menuIcon {
     height: 22px;
@@ -312,16 +313,16 @@ nav ul li a:hover::after {
   }
   .contactInfo {
     padding-right: 15px;
-  }
-  .contactInfo p {
-    font-size: 15px;
-    margin: 3px 0;
+    p {
+      font-size: 15px;
+      margin: 3px 0;
+    }
   }
   .languageSwitch {
     font-size: 15px;
-  }
-  .languageSwitch a {
-    padding: 7px 11px;
+    a {
+      padding: 7px 11px;
+    }
   }
   .navMenu {
     top: 45px;
@@ -333,9 +334,9 @@ nav ul li a:hover::after {
   nav ul li a {
     padding: 3px 12px;
     font-size: 15px;
-  }
-  nav ul li a.active {
-    font-size: 16px;
+    &.active{
+      font-size: 16px;
+    }
   }
 }
 
@@ -362,9 +363,11 @@ nav ul li a:hover::after {
     gap: 0px;
     padding: 0px;
   }
-  .contactInfo p {
-    font-size: 14px;
-    margin: 2px 0;
+  .contactInfo{
+    p {
+      font-size: 14px;
+      margin: 2px 0;
+    }
   }
   .languageSwitch {
     margin-left: auto;
@@ -374,11 +377,13 @@ nav ul li a:hover::after {
 }
 
 @media (max-width: 430px) {
-  .buttonMenu:hover{
-    background: #0051ff;
-  }
-  .buttonMenu:before{
-    background: none;
+  .buttonMenu{
+    &:hover{
+      background: #0051ff;
+    }
+    &:before{
+      background: none;
+    }
   }
   .headerContainer {
     padding: 5px;
@@ -404,9 +409,9 @@ nav ul li a:hover::after {
   nav ul li a {
     padding: 5px 15px;
     font-size: 14px;
-  }
-  nav ul li a.active {
-    font-size: 15px;
+    &.active {
+      font-size: 15px;
+    }
   }
   .menuIcon {
     height: 18px;
