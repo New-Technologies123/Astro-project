@@ -34,13 +34,7 @@ export const News = () => {
         </div>
 
         <div className={Styles.newsItem}>
-          <img
-            src={news_1.src}
-            className={Styles.thumbnail}
-            onClick={() => {
-              setPhotoIsOpen(true);
-            }}
-          />
+          <img src={news_1.src} className={Styles.thumbnail} onClick={() => { setPhotoIsOpen(true); }}/>
           <p>
             {t('Конкурс')}
           </p>

@@ -26,11 +26,9 @@
 .thumbnail {
   float: right;
   padding: 10px;
-  width: 350px;
+  width: 300px;
   cursor: zoom-in; // Курсор в виде лупы
-  // cursor: pointer;
-  transition: transform 0.2s; /* Плавный переход */
-  // overflow: hidden; /* Предотвращает выход изображений за пределы контейнера */
+  // transition: transform 0.2s; /* Плавный переход */
   transition: transform 0.9s ease, z-index 0.6s ease; /* Плавное увеличение */
   &:hover{
     transform: scale(1.03); /* Увеличение при наведении */
@@ -38,47 +36,34 @@
 }
 
 @media (max-width: 1400px) {
-  // h2 {
-  //   font-size: 24px;
-  // }
-  .newsItem p {
-    font-size: 18px;
-  }
-  // .thumbnail{
-  //   width: 350px;
-  // }
+  .newsItem{
+    p {
+      font-size: 18px;
+    }
+  } 
 }
 
-@media (max-width: 1245px){  
-  .thumbnail {
-    width: 300px;
-  }
-}
 
 @media (max-width: 1030px) {
-  // h2 {
-  //   font-size: 22px;
-  // }
   .title{
     margin-top: 5px;
   }
   .newsItem{
     padding: 10px;
-  }
-  .newsItem p {
-    font-size: 17px;
-  }
+    p {
+      font-size: 17px;
+    }
+  } 
   .thumbnail {
     width: 250px;
   }
 }
 
 @media (max-width: 770px) {
-  // h2 {
-  //   font-size: 20px;
-  // }
-  .newsItem p {
-    font-size: 16px;
+  .newsItem{
+    p {
+      font-size: 16px;
+    }
   }
   .thumbnail {
     width: 200px;
@@ -87,9 +72,6 @@
 }
 
 @media (max-width: 560px) {
-  // .newsItem p {
-  //   font-size: 14px;
-  // }
   .newsItem{
     display: grid;
     p{
