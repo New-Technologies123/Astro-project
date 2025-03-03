@@ -14,7 +14,6 @@ export const AccountingSystem = () => {
   const [firstIsOpen, setFirstIsOpen] = useState(false);
   const [secondIsOpen, setSecondIsOpen] = useState(false);
   const [thirdIsOpen, setThirdIsOpen] = useState(false);
-  // const [isButtonActive, setIsButtonActive] = useState(false); // Состояние для кнопки "Наверх"
 
   const handleClick = useClickToScroll();
 
@@ -44,15 +43,6 @@ export const AccountingSystem = () => {
       window.removeEventListener('scroll', toggleVisibility);
     };
   }, []);
-
-  // Обработчики событий для кнопки "Наверх"
-  // const handleTouchStart = () => {
-  //   setIsButtonActive(true);
-  // };
-
-  // const handleTouchEnd = () => {
-  //   setIsButtonActive(false);
-  // };
 
   return (
     <div className={Styles.wrapper}>

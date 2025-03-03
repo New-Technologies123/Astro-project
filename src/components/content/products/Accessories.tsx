@@ -60,7 +60,9 @@ export const Accessories = () => {
       <div className={Styles.productsInfo}>
         <section className={Styles.productsText}>
           <h3 id="products-1">{t('Расходомер')}</h3>
-          <img src={product_2.src} alt="ВР" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2.src);}}/>
+          <div className={Styles.ikon}>
+            <img src={product_2.src} alt="ВР" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2.src);}}/>
+          </div>          
           <h1>{t('Назначение')}</h1>
           <p>{t('Стабильность')}</p>
           <p>{t('Колибровка')}</p>
@@ -71,35 +73,45 @@ export const Accessories = () => {
 
         <section className={Styles.productsText}>
           <h3 id="products-2">{t('УРПД')}</h3>
-          <img src={product_2_1.src}alt="УРПД" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2_1.src);}}/>
+          <div className={Styles.ikon}>
+            <img src={product_2_1.src}alt="УРПД" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2_1.src);}}/>
+          </div>          
           <h1>{t('Назначение')}</h1>
           <p>{t('Регулирование')}</p>
         </section>
 
         <section className={Styles.productsText}>
           <h3 id="products-3">{t('ПСМ')}</h3>
-          <img src={product_2_2.src} alt="ПСМ" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2_2.src);}}/>
+          <div className={Styles.ikon}>
+            <img src={product_2_2.src} alt="ПСМ" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2_2.src);}}/>
+          </div>          
           <h1>{t('Назначение')}</h1>
           <p>{t('Становка')}</p>
         </section>
 
         <section className={Styles.productsText}>
           <h3 id="products-4">{t('КМР')}</h3>
-          <img src={product_2_3.src} alt="КМР" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2_3.src);}}/>
+          <div className={Styles.ikon}>
+            <img src={product_2_3.src} alt="КМР" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2_3.src);}}/>
+          </div>          
           <h1>{t('Назначение')}</h1>
           <p>{t('Расход')}</p>
         </section>
 
         <section className={Styles.productsText}>
           <h3 id="products-5">{t('Гидропривод')}</h3>
-          <img src={product_2_4.src} alt="Г" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2_4.src);}}/>
+          <div className={Styles.ikon}>
+            <img src={product_2_4.src} alt="Г" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2_4.src);}}/>
+          </div>          
           <h1>{t('Назначение')}</h1>
           <p>{t('Давление')}</p>
         </section>
 
         <section className={Styles.productsText}>
           <h3 id="products-6">{t('Емкость')}</h3>
-          <img src={product_2_5.src} alt="СЕ" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2_5.src);}}/>
+          <div className={Styles.ikon}>
+            <img src={product_2_5.src} alt="СЕ" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2_5.src);}}/>
+          </div>          
           <h1>{t('Назначение')}</h1>
           <p>{t('Нефтезаговых')}</p>
         </section>
