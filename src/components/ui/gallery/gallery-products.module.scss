@@ -3,7 +3,7 @@
     max-width: 100%;
     position: relative;
     margin: auto;
-    height: 665px;
+    height: 660px;
     display: flex;
     align-items: center;
     /* Анимация слайдов */
@@ -25,122 +25,101 @@
   padding: 10px;
   width: 100%;
   cursor: pointer;
-  transition: transform 0.2s; /* Плавный переход */
+  transition: transform 0.9s; /* Плавный переход */
   &:hover{
     transform: scale(1.03); /* Увеличение при наведении */
   }
 }
   
   /* Кнопки вперед и назад */
-  .previousProducts, .nextProducts {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -24px;
-    padding: 10px;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 42px;
-    transition: 0.6s ease;
-  }
-  .previousProducts {
-    left: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  .nextProducts {
-    right: 0;
-    border-radius: 0 3px 3px 0;
-  }
-  /* При наведении на кнопки добавляем фон кнопок */
-  .previousProducts:hover,
-  .nextProducts:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
+.previousProducts, .nextProducts {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -24px;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 42px;
+  transition: 0.6s ease;
+}
+.previousProducts {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+.nextProducts {
+  right: 0;
+  border-radius: 0 3px 3px 0;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+.previousProducts:hover,
+.nextProducts:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
   
-  @keyframes fade {
-    from {
-      opacity: 0.2;
-    }
-    to {
-      opacity: 1;
-    }
+@keyframes fade {
+  from {
+    opacity: 0.2;
   }
+  to {
+    opacity: 1;
+  }
+}
   
-  // @media (max-width: 1400px){
-  //   .slider{
-  //     height: 478.42px;
-  //   }
-  //   .thumbnail {
-  //     width: 350px;
-  //   }
-  // }
-  
-  @media (max-width: 1245px){
-    .sliderProducts{
-      height: 600px;
-      .itemProducts{
-        img{
-          width: 450px;
-        }
+@media (max-width: 1245px){
+  .sliderProducts{
+    height: 595px;
+    .itemProducts{
+      img{
+        width: 450px;
       }
     }
   }
-  
-  @media (max-width: 1030px){
-    .sliderProducts{
-      height: 470px;
-      .itemProducts{
-        img{
-          width: 350px;
-        }
+  .previousProducts, .nextProducts{
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 1030px){
+  .sliderProducts{
+    height: 460px;
+    .itemProducts{
+      img{
+        width: 350px;
       }
     }
-    .previousProducts, .nextProducts{
-      font-size: 20px;
-    }
   }
-  
-  @media (max-width: 770px){
-    // .sliderProducts{
-    //   height: 270.05px;
-    // }
-    .sliderProducts{
-      height: 410px;
-      .itemProducts{
-        img{
-          width: 300px;
-        }
+  .previousProducts, .nextProducts{
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 770px){
+  .sliderProducts{
+    height: 410px;
+    .itemProducts{
+      img{
+        width: 300px;
       }
     }
-    .thumbnailProducts {
-      width: 200px;
-      padding: 5px;
-    }
   }
-  
-  @media (max-width: 560px){
-    .sliderProducts{
-      height: 320px;
-      .itemProducts{
-        img{
-          width: 250px;
-        }
+  .thumbnailProducts {
+    width: 200px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 560px){
+  .sliderProducts{
+    height: 320px;
+    .itemProducts{
+      img{
+        width: 250px;
       }
     }
-    .thumbnailProducts {
-      width: 180px;
-    }
   }
-  
-  // @media (max-width: 525px) {
-    
-  // .slider {
-  //   height: 242.27px;
-  //   padding-bottom: 0px;
-  // }
-  // .thumbnail {
-  //   width: 180px;
-  // }
-  // }
-  
+  .thumbnailProducts {
+    width: 180px;
+  }
+}
