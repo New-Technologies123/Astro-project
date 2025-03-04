@@ -1,14 +1,11 @@
 .companyInfo {
-  padding: 0 5px ;
+  padding: 20px 15px;
   text-align: center;
-  // background: linear-gradient(135deg, #d3f8ff, #c1d8ff);
   background-color: #f1f1f1;
   margin: 25px 20px;
-}
-
-.companyInfo p {
-  font-size: 20px;
-  color: #555;
+  p{
+    font-size: 20px;
+  }
 }
 
 .team {
@@ -23,11 +20,10 @@
 
 @media (max-width: 1400px){
   .companyInfo{
-    padding: 15px;
     margin: 20px 15px;
-  }
-  .companyInfo p{
-    font-size: 18px;
+    p{
+      font-size: 20px;
+    }
   }
   .team{
     padding: 35px 10px;
@@ -35,13 +31,22 @@
   }
 }
 
+@media (max-width: 1200px){
+  .companyInfo{
+    padding: 15px 10px;
+    margin: 15px 10px;
+    p{
+      font-size: 18px;
+    }
+  }
+}
+
 @media (max-width: 1030px) {
   .companyInfo {
     padding: 10px;
-    margin: 15px 10px;
-  }
-  .companyInfo p {
-    font-size: 16px;
+    p{
+      font-size: 16px;
+    }
   }
   .team {
     gap: 65px;
@@ -64,9 +69,9 @@
   .companyInfo {
     padding: 7px;
     margin: 8px;
-  }
-  .companyInfo p {
-    font-size: 14px;
+    p {
+      font-size: 14px;
+    }
   }
   .team {
     gap: 20px;
