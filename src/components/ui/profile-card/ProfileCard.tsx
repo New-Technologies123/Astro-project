@@ -1,4 +1,4 @@
-import Styles from './about-card.module.scss';
+import Styles from './profile-card.module.scss';
 import { useTranslation } from 'react-i18next';
 
 type TProps = {
@@ -7,7 +7,7 @@ type TProps = {
   header?: string;
 };
 
-export const AboutCard = ({ imgSrc, title, header }: TProps) => {
+export const ProfileCard = ({ imgSrc, title, header }: TProps) => {
   const { t } = useTranslation('layout');
   
   return (

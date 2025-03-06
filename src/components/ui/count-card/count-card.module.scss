@@ -1,0 +1,22 @@
+.bloc {
+    display: block;
+    background-color: #e6f7ffb6;
+    // background-color: #6acdff;
+    padding: 10px 5px; 
+    width: 250px; 
+    text-align: left;
+    color: #000000;
+    // border-radius: 8px;
+    h1{
+        font-size: 19px;
+    }
+    h3{
+        font-size: 40px;
+        font-weight: bold;
+        // margin-top: 10px;   
+        // margin-bottom: 2px;
+    }
+    p{
+        font-size: 18px;
+    }
+}
