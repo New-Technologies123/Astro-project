@@ -16,10 +16,10 @@ export const Cards = ({ selectId }) => {
         <List title={t('Учет')} onClick={() => handleCardClick('accountingSystem')} />
       )}
       {(selectId === 'all' || selectId === 'components') && (
-        <List title="Документ Комплектующие" onClick={() => handleCardClick('components')} />
+        <List title="Документ комплектующие" onClick={() => handleCardClick('components')} />
       )}
       {(selectId === 'all' || selectId === 'components') && (
-        <List title="Документ Комплектующие" onClick={() => handleCardClick('components')} />
+        <List title="Документ комплектующие" onClick={() => handleCardClick('components')} />
       )}
       {/* {(selectId === 'all' || selectId === 'measurementSystem') && (
         <List imgSrc="" title="Документ Система измерения" onClick={() => handleCardClick('measurementSystem')} />
