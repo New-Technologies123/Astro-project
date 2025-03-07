@@ -13,7 +13,6 @@ export const Repair = () => {
 
   return (
     <>
-      
       <img src={serves_1.src} alt="сервис" className={Styles.servesImg} onClick={() => {setPhotoIsOpen(true);}}/>
       <div className={Styles.servesText}>
         <h3>

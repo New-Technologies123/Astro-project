@@ -8,7 +8,7 @@ import { Service } from './Service';
 import { Dewaxing } from './Dewaxing';
 import serves_12 from '../../../images/services/serves_12.png';
 import serves_3 from '../../../images/services/serves_3.png';
-import serves_5 from '../../../images/services/serves_5.png';
+import serves_5 from '../../../images/services/serves_5.webp';
 import { useTranslation } from 'react-i18next';
 
 type TServices = 'repair' | 'metering' | 'service' | 'dewaxing';
