@@ -24,8 +24,8 @@ export const News = () => {
         <div className={Styles.newsItem}>
           <Gallery
             photos={[
-              { id: 1, src: news_2.src, alt: '' },
-              { id: 2, src: news_3.src, alt: '' },
+              { id: 1, src: news_1.src, alt: '' },
+              { id: 2, src: news_2.src, alt: '' },
             ]}
           />
           <p>
@@ -34,7 +34,7 @@ export const News = () => {
         </div>
 
         <div className={Styles.newsItem}>
-          <img src={news_1.src} className={Styles.thumbnail} onClick={() => { setPhotoIsOpen(true); }}/>
+          <img src={news_3.src} className={Styles.thumbnail} onClick={() => { setPhotoIsOpen(true); }}/>
           <p>
             {t('Конкурс')}
           </p>
