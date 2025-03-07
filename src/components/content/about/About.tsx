@@ -27,7 +27,7 @@ export const About = () => {
 
         <CountCard
           number='31404'
-          text='м'
+          text={t('М')}
           offer='2'
           title={t('Площадь')}
         />
@@ -37,7 +37,7 @@ export const About = () => {
           title={t('Успешно')}
         />
         <CountCard
-          number='100%'
+          number='100 %'
           title={t('Следование')}
         />
         <CountCard

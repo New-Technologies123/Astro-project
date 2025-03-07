@@ -8,13 +8,17 @@
     margin-bottom: 20px;
 }
 
-@media (max-width: 1030px){
+@media (max-width: 1200px){
     .numberAbout{
         gap: 50px;
         margin-bottom: 15px;
+        padding: 15px;
     }
 }
 
-@media (max-width: 430px){
-    
+@media (max-width: 1030px){
+    .numberAbout{
+        gap: 35px;
+        padding: 10px;
+    }
 }
