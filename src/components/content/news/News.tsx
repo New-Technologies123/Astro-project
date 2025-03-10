@@ -39,7 +39,7 @@ export const News = () => {
             {t('Конкурс')}
           </p>
 
-          {photoIsOpen && <BigPhoto src={news_1.src} onClose={() => setPhotoIsOpen(false)} />}
+          {photoIsOpen && <BigPhoto src={news_3.src} onClose={() => setPhotoIsOpen(false)} />}
 
           
         </div>
