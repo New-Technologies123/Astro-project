@@ -29,7 +29,7 @@ export const Documents = () => {
       id: 'measurementSystem',
       title: t('Система измерения'),
     },
-    {
+    { 
       id: 'trainingSystem',
       title: t('Системы подготовки'),
     },
