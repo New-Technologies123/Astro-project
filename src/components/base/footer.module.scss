@@ -8,6 +8,7 @@ footer {
   background-color: #8ad7fd;
   color: #000000;
   padding: 15px 0;
+  margin-top: 10px;
 }
 
 .footerContainer{
@@ -58,7 +59,6 @@ footer {
   p, a{
     font-size: 17px;
     text-decoration: none;
-    margin-bottom: 3px;
     text-indent: 10px;
     color: black;
   }
@@ -165,7 +165,7 @@ footer {
   } 
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .footerText{
     max-width: 300px;
     h3{
@@ -196,12 +196,30 @@ footer {
   }  
 }
 
-@media screen and (max-width: 490px){
+@media (max-width: 490px){
+  .footerText{
+    margin-bottom: 3px;
+    p, a{
+      margin: 0px;      
+    }
+  }
   .footerContainer{
     display: grid;
   }
   .footerLogo{
     margin-left: 0;
     margin-top: 3px;
+  }
+}
+
+@media (max-width: 375px){
+  .footerContainerText{
+    width: 300px;
+  }
+  .footerContainer{
+    padding: 0 10px;
+  }
+  .footerSection{
+    margin-right: 5px;
   }
 }
