@@ -16,10 +16,13 @@ export const Cards = ({ selectId }) => {
         <List title={t('Учет')} onClick={() => handleCardClick('accountingSystem')} />
       )}
       {(selectId === 'all' || selectId === 'components') && (
-        <List title="Документ комплектующие" onClick={() => handleCardClick('components')} />
+        <List title="Гидропривод" onClick={() => handleCardClick('hydrodrive')} />
       )}
-      {(selectId === 'all' || selectId === 'components') && (
-        <List title="Документ комплектующие" onClick={() => handleCardClick('components')} />
+      {(selectId === 'all' || selectId === 'measurementSystem') && (
+        <List title="Установка дозирования химического реагента" onClick={() => handleCardClick('bdr')} />
+      )}
+      {(selectId === 'all' || selectId === 'trainingSystem') && (
+        <List title="Устройство очистки колонны УОК-НКТ" onClick={() => handleCardClick('uokCnt')} />
       )}
       {/* {(selectId === 'all' || selectId === 'measurementSystem') && (
         <List imgSrc="" title="Документ Система измерения" onClick={() => handleCardClick('measurementSystem')} />

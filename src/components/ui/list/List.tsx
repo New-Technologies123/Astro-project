@@ -12,8 +12,8 @@ export const List = ({ title, onClick }: TProps) => {
   
   return (
     <div className={Styles.employeeList} onClick={onClick}>            
-      <p className={onClick ? Styles.actionTitle : Styles.title}>
-        <img src={sign.src} className={Styles.systemImg} ></img>
+      <p className={Styles.actionTitle}>
+        <img src={sign.src}></img>
         {t(title)}
       </p>
     </div>
