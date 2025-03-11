@@ -17,7 +17,10 @@ export const About = () => {
           <ProfileCard imgSrc="" title="Рамиловна" header="Коммерческий" />
         </>
       </Layout>
-      <Title text={t('Цифра')}></Title>
+
+      <div className={Styles.titleAbout}>
+        <Title text={t('Цифра')}></Title>
+      </div>      
       <div className={Styles.numberAbout}>
         <CountCard 
           header={t('Более')}
