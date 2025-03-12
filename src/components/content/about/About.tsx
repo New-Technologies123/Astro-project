@@ -27,7 +27,6 @@ export const About = () => {
           number='300'
           title={t('Штатных')}
         />
-
         <CountCard
           number='31404'
           text={t('М')}
@@ -45,7 +44,7 @@ export const About = () => {
         />
         <CountCard
           number='79'
-          offer='Единиц вездеходной техники'
+          offer={t('Единиц')}
           title={t('Краны')}
         />
       </div>
