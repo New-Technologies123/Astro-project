@@ -39,7 +39,7 @@
   margin-bottom: 5px;
   flex: auto;
   .ikon{
-    width: 40%;
+    width: 35%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -48,7 +48,7 @@
     padding: 7px;
     cursor: zoom-in; // Курсор в виде лупы
     overflow: hidden; /* Предотвращает выход изображений за пределы контейнера */
-    transition: transform 0.9s ease, z-index 0.6s ease; /* Плавное увеличение */
+    transition: transform 0.9s ease; /* Плавное увеличение */
   
     &:hover {
       transform: scale(1.03);
@@ -141,6 +141,9 @@
     p{
       font-size: 16px;
     }
+    .ikon{
+      width: 45%;
+    }
   }
 }
 
@@ -155,7 +158,7 @@
   }
   .productsGallery{
     width: 450px;
-  }
+  }  
 }
 
 @media (max-width: 1030px){
@@ -212,7 +215,10 @@
     }
     p{
       font-size: 14px;
-    }    
+    }
+    .ikon{
+      width: 65%;
+    }
   }  
   .productsGallery{
     width: 300px;
@@ -237,8 +243,12 @@
     margin-left: 0px;
   }
   .productsText{
+    .ikon{
+      width: 50%;
+    }
     .mainImg{
       width: 100%;
+      padding: 2px 4px;
     }
   }
   .backUp{
@@ -260,7 +270,7 @@
 
 @media (max-width: 430px) {
   .verticalMenu {
-    font-size: 14px;
+    // font-size: 14px;
     a{
       padding: 5px;
     }
