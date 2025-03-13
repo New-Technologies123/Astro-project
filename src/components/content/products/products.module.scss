@@ -45,7 +45,7 @@
   }
   .mainImg{
     width: 55%;
-    padding: 7px;
+    padding: 7px 0;
     cursor: zoom-in; // Курсор в виде лупы
     overflow: hidden; /* Предотвращает выход изображений за пределы контейнера */
     transition: transform 0.9s ease; /* Плавное увеличение */
@@ -58,7 +58,6 @@
   h3{
     font-size: 20px;
     text-align: center;
-    margin-bottom: 5px;
   }
   h1{
     font-size: 18px;
@@ -117,7 +116,7 @@
 
 .blocImg{
   display: flex;
-  padding: 5px;
+  padding: 5px 0;
   gap: 12px;
   cursor: zoom-in; // Курсор в виде лупы
   overflow: hidden; /* Предотвращает выход изображений за пределы контейнера */
@@ -158,7 +157,10 @@
   }
   .productsGallery{
     width: 450px;
-  }  
+  }
+  .blocImg{
+    gap: 9px;
+  }
 }
 
 @media (max-width: 1030px){
@@ -174,6 +176,8 @@
     padding: 0px 7px;
     .mainImg{
       width: 80%;
+      padding: 4px 0;
+      margin-top: 2px;
     }
     h3{
       font-size: 18px;
@@ -197,6 +201,9 @@
   }
   .productsGallery{
     width: 350px;
+  }
+  .blocImg{
+    gap: 7px;
   }
 }
 
@@ -266,11 +273,13 @@
   .productsGallery{
     width: 250px;
   }
+  .blocImg{
+    gap: 5px;
+  }
 }
 
 @media (max-width: 430px) {
   .verticalMenu {
-    // font-size: 14px;
     a{
       padding: 5px;
     }
