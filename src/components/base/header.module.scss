@@ -214,12 +214,12 @@ nav ul li a:hover::after {
   nav ul {
     font-size: 16px;
     li {
-      margin: 0 5px;
+      margin: 0 5px;      
       a {
         padding: 8px 15px;
         font-size: 16px;
         &.active {
-          font-size: 17px;
+          font-size: 17px;          
         }
       }
     }
@@ -260,7 +260,6 @@ nav ul li a:hover::after {
     transition: max-height 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     background: linear-gradient(#0019a5, #03000e);
     z-index: 100;
-    padding-bottom: 4px;
     overflow: hidden; /* Скрываем содержимое до начала анимации */
 
     &.active {
@@ -275,12 +274,12 @@ nav ul li a:hover::after {
   nav ul {
     display: flex;
     list-style: none;
-    padding: 0;
+    padding: 0;    
     margin: 0;
   }
   nav ul li a {
     padding: 4px 15px;
-    font-size: 16px;
+    font-size: 16px;    
     &.active {
       font-size: 18px;
     }

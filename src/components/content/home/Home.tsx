@@ -19,18 +19,10 @@ export const Home = () => {
 
   return (
     <>
-      <div className={Styles.homeInfo}>
-        <img src={homeItem_1.src} alt="Главная картинка" className={Styles.homeImg} />
-        {/* <div className={Styles.title}>
-          <Title text={t('Поставки')}></Title>
-        </div> */}
-        <Title text={t('Поставки')}></Title>
-        <img src={homeItem_2.src} alt="Карта поставок" className={Styles.homeImg} />
-        <div className={Styles.title}>
-          <Title text={t('Заказчики')}></Title>
-        </div>
-      </div>
-      
+      <img src={homeItem_1.src} alt="Главная картинка" className={Styles.homeImg} />
+      <Title text={t('Поставки')}></Title>
+      <img src={homeItem_2.src} alt="Карта поставок" className={Styles.homeImg} />
+      <Title text={t('Заказчики')}></Title>
       
 
       <div className={Styles.brandParent}>
