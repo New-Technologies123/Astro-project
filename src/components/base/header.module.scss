@@ -5,16 +5,9 @@
   background-color: #ffffff;
   position: relative;
   z-index: 2;
-}
-
-.logoIcon {
-  width: 220px;
-}
-
-.headerIcon {
-  height: 18px;
-  width: 18px;
-  margin-right: 8px;
+  img{
+    width: 220px;
+  }
 }
 
 .contactBloc {
@@ -29,6 +22,11 @@
   p {
     font-size: 16px;
     margin: 7px 0;
+    img{
+      height: 18px;
+      width: 18px;
+      margin-right: 8px;
+    }
   }
 }
 
@@ -179,20 +177,20 @@ nav ul li a:hover::after {
 @media (max-width: 1400px) {
   .headerContainer {
     padding: 13px 32px;
-  }
-  .logoIcon {
-    width: 210px;
+    img{
+      width: 210px;
+    }
   }
   .contactInfo {
     padding-right: 75px;
     p {
       font-size: 15px;
       margin: 6px 0;
+      img{
+        width: 17px;
+        height: 17px;
+      }
     }
-  }
-  .headerIcon {
-    width: 17px;
-    height: 17px;
   }
   nav ul {
     padding: 12px 0;
@@ -211,6 +209,11 @@ nav ul li a:hover::after {
 }
 
 @media (max-width: 1195px) {
+  .headerContainer{
+    img{
+      width: 200px;
+    }
+  }
   nav ul {
     font-size: 16px;
     li {
@@ -224,20 +227,25 @@ nav ul li a:hover::after {
       }
     }
   }
-  .logoIcon {
-    width: 200px;
-  }
 }
 
 @media (max-width: 1000px) {
   .headerContainer {
     padding: 8px 16px;
+    img{
+      width: 190px;
+    }
   }
   .contactInfo {
     padding-right: 30px;
-  }
-  .contactInfo p {
-    font-size: 15px;
+    p{
+      font-size: 15px;
+      img{
+        height: 16px;
+        width: 16px;
+        margin-right: 5px;
+      }
+    }
   }
   nav {
     background-color: #444;
@@ -288,33 +296,25 @@ nav ul li a:hover::after {
     height: 22px;
     width: 22px;
   }
-  .headerIcon {
-    height: 16px;
-    width: 16px;
-    margin-right: 5px;
-  }
-  .logoIcon {
-    width: 190px;
-  }
 }
 
 @media (max-width: 770px) {
   .headerContainer {
     padding: 8px 13px;
     gap: 20px;
-  }
-  .headerIcon {
-    height: 15px;
-    width: 15px;
-  }
-  .logoIcon {
-    width: 180px;
+    img{
+      width: 180px;
+    }
   }
   .contactInfo {
     padding-right: 15px;
     p {
       font-size: 15px;
       margin: 3px 0;
+      img{
+        height: 15px;
+        width: 15px;
+      }
     }
   }
   .languageSwitch {
@@ -342,15 +342,11 @@ nav ul li a:hover::after {
 @media (max-width: 660px) {
   .headerContainer {
     display: grid;
-  }
-  .headerIcon {
-    height: 14px;
-    width: 14px;
-  }
-  .logoIcon {
-    margin-left: auto;
-    margin-right: auto;
-    width: 170px;
+    img{
+      margin-left: auto;
+      margin-right: auto;
+      width: 170px;
+    }
   }
   .contactBloc {
     margin-left: auto;
@@ -366,6 +362,10 @@ nav ul li a:hover::after {
     p {
       font-size: 14px;
       margin: 2px 0;
+      img{
+        height: 14px;
+        width: 14px;
+      }
     }
   }
   .languageSwitch {
@@ -375,21 +375,9 @@ nav ul li a:hover::after {
   }
 }
 
-@media (max-width: 430px) {
-  .buttonMenu{
-    &:hover{
-      background: #0051ff;
-    }
-    &:before{
-      background: none;
-    }
-  }
+@media (max-width: 430px) {  
   .headerContainer {
     padding: 5px;
-  }
-  .headerIcon {
-    height: 13px;
-    width: 13px;
   }
   .contactBloc {
     display: grid;
@@ -401,6 +389,21 @@ nav ul li a:hover::after {
     margin-left: auto;
     margin-right: auto;
     padding-right: 0px;
+    P{
+      margin: 1px 0;
+      img{
+        height: 13px;
+        width: 13px;
+      }
+    }
+  }
+  .buttonMenu{
+    &:hover{
+      background: #0051ff;
+    }
+    &:before{
+      background: none;
+    }
   }
   .navMenu {
     top: 45px;

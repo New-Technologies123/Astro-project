@@ -55,19 +55,19 @@ export const Header = ({ pageType }) => {
     <>
       <header>
         <div className={Styles.headerContainer}>
-          <img src={logo.src} alt="Новые Технологии" className={Styles.logoIcon} />
+          <img src={logo.src} alt="Новые Технологии"/>
           <div className={Styles.contactBloc}>
             <div className={Styles.contactInfo}>
               <p>
-                <img src={location.src} alt="Адрес" className={Styles.headerIcon} />
+                <img src={location.src} alt="Адрес"/>
                 {t('Адрес')}
               </p>
               <p>
-                <img src={email.src} alt="Email" className={Styles.headerIcon} />
+                <img src={email.src} alt="Email"/>
                 Email: nt@tech-new.ru
               </p>
               <p>
-                <img src={phone.src} alt="Телефон" className={Styles.headerIcon} />
+                <img src={phone.src} alt="Телефон"/>
                 {t('Телефон')}
               </p>
             </div>

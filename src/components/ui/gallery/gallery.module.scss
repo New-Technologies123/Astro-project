@@ -3,8 +3,7 @@
   max-width: 100%;
   position: relative;
   margin: auto;
-  // height: 478.42px;
-  height: 408.97px;
+  height: 367.3px;
   display: flex;
   align-items: center;
   /* Анимация слайдов */
@@ -22,7 +21,7 @@
 .thumbnail {
   float: right;
   padding: 10px;
-  width: 300px;
+  width: 270px;
   cursor: zoom-in; // Курсор в виде лупы  
   transition: transform 0.9s; /* Плавный переход */
   &:hover{
