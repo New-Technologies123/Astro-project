@@ -11,16 +11,12 @@ footer {
 }
 
 .footerContainerText {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  
+  display: flex;  
 }
 
 .footerText {
   flex: 1;
   margin-right: 30px;
-  max-width: 380px;
   h3 {
     font-size: 18px;
     font-weight: bold;
@@ -39,26 +35,24 @@ footer {
 }
 
 .footerBloc{
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  width: 400px;
-  margin-right: auto;
+  display: flex;  
 }
 
 .footerSection {
   flex: 1;
-  margin-right: 30px;
+  margin-right: 20px;
   width: 170px;
   h3 {
     font-size: 18px;
     font-weight: bold;
   }
-  p, a{
-    font-size: 17px;
-    text-decoration: none;
+  p{
     text-indent: 10px;
-    color: black;
+    a{
+      font-size: 17px;
+      text-decoration: none;
+      color: black;   
+    }
   }
 }
 
@@ -75,8 +69,34 @@ footer {
 
 @media (max-width: 1400px){
   .footerText{
-    max-width: 345px;
     margin-right: 20px;
+    h3{
+      font-size: 17px;
+    }
+    p{
+      font-size: 16px;
+    }
+  }
+  .footerSection{
+    max-width: 160px;
+    h3{
+      font-size: 17px;
+    }
+    p{
+      a{
+        font-size: 16px;
+      }
+    }
+  }
+  .footerLogo{
+    img{
+      width: 160px;
+    }
+  } 
+}
+
+@media (max-width: 1200px){
+  .footerText{    
     h3{
       font-size: 16px;
     }
@@ -84,50 +104,44 @@ footer {
       font-size: 15px;
     }
   }
-  .footerBloc{
-    width: 360px;
-  }
   .footerSection{
-    max-width: 160px;
-    margin-right: 20px;
+    max-width: 150px;
     h3{
       font-size: 16px;
     }
-    p, a{
-      font-size: 15px;
+    p{
+      a{
+        font-size: 15px;
+      }
     }
   }
   .footerLogo{
     img{
-      width: 155px;
+      width: 150px;
     }
-  } 
+  }
 }
 
 @media (max-width: 1030px){
-  footer{
-    margin-top: 15px;
-  }
   .footerText{
-    max-width: 300px;
+    width: 313px;
     h3{
-      font-size: 14px;
+      font-size: 15px;
     }
-    p, a{
-    font-size: 13px;
+    p{
+    font-size: 14px;
     }
-  }
-  .footerBloc{
-    width: 320px;
   }
   .footerSection{
-    max-width: 140px;
+    margin-right: 15px;
     h3{
-      font-size: 14px;
+      font-size: 15px;
     }
-    p, a{
-    font-size: 13px;
-    }
+    p{      
+      a{
+        font-size: 14px;
+      }
+    } 
   }
   .footerLogo{
     img{
@@ -137,21 +151,21 @@ footer {
 }
 
 @media (max-width: 840px){
-  .footerContainer{
-    padding: 0 25px;
+  footer{
+    padding: 13px 20px;
   }
   .footerContainerText{
     display: grid;
     justify-content: left;
   }
   .footerText{
-    max-width: 320px;
     margin-right: 0;
     h3{
       font-size: 15px;
     }
     p{
-    font-size: 14px;
+      margin: 3px 0;
+      font-size: 14px;
     }
   }
   .footerBloc{
@@ -170,46 +184,15 @@ footer {
   } 
 }
 
-@media (max-width: 600px) {
-  footer{
-    margin-top: 10px;
-  }
+@media (max-width: 515px){
   .footerText{
-    max-width: 300px;
-    h3{
-      font-size: 14px;
-    }
+    margin-bottom: 2px;
     p{
-      font-size: 13px;
-      margin: 3px 0;
+      margin: 1px 0;
       img{
         width: 12px;
         height: 12px;
-      }
-    }
-  }
-  .footerBloc{
-    width: 310px;
-  }
-  .footerSection{
-    max-width: 140px;
-    h3{
-      font-size: 14px;
-    }
-    p, a{
-    font-size: 13px;
-    }
-  }
-  .footerLogo img{
-    width: 135px;
-  }  
-}
-
-@media (max-width: 490px){
-  .footerText{
-    margin-bottom: 3px;
-    p, a{
-      margin: 0px;      
+      }     
     }
   }
   .footerContainer{
@@ -218,17 +201,44 @@ footer {
   .footerLogo{
     margin-left: 0;
     margin-top: 3px;
+    img{
+      width: 130px;
+    }
   }
 }
 
-@media (max-width: 375px){
-  .footerContainerText{
-    width: 300px;
+@media (max-width: 430px){
+  footer{
+    padding: 10px 15px;
   }
-  .footerContainer{
-    padding: 0 10px;
+  .footerText{
+    h3{
+      font-size: 14px;
+    }
+    p{
+      font-size: 13px;  
+    }
   }
   .footerSection{
+    max-width: 140px;
+    margin-right: 10px;
+    h3{
+      font-size: 14px;
+    }
+    p, a {
+    font-size: 13px;
+    }
+  } 
+}
+
+@media (max-width: 375px){
+  .footerSection{
     margin-right: 5px;
-  }
+    h3{
+      font-size: 13px;
+    }
+    p, a {
+    font-size: 12px;
+    }
+  } 
 }
