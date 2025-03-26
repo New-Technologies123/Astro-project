@@ -7,11 +7,12 @@ footer {
 
 .footerContainer{
   display: flex;
-  max-width: 100%;
+  width: auto;
 }
 
 .footerContainerText {
-  display: flex;  
+  display: flex;
+  width: auto;
 }
 
 .footerText {
@@ -232,6 +233,14 @@ footer {
 }
 
 @media (max-width: 375px){
+  .footerText{
+    h3{
+      font-size: 13px;
+    }
+    p{
+      font-size: 12px;  
+    }
+  }
   .footerSection{
     margin-right: 5px;
     h3{

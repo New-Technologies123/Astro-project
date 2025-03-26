@@ -360,11 +360,11 @@ nav ul li a:hover::after {
   }
   .contactInfo{
     p {
-      font-size: 14px;
+      // font-size: 14px;
       margin: 2px 0;
       img{
-        height: 14px;
-        width: 14px;
+        height: 13px;
+        width: 13px;
       }
     }
   }
@@ -375,9 +375,12 @@ nav ul li a:hover::after {
   }
 }
 
-@media (max-width: 430px) {  
+@media (max-width: 440px) {  
   .headerContainer {
     padding: 5px;
+    img{
+      width: 160px;
+    }
   }
   .contactBloc {
     display: grid;
@@ -418,5 +421,16 @@ nav ul li a:hover::after {
   .menuIcon {
     height: 18px;
     width: 18px;
+  }
+}
+
+@media (max-width: 375px){
+  .contactInfo {
+    P{
+      font-size: 14px;
+    }
+  }
+  .languageSwitch {
+    font-size: 13px;
   }
 }
