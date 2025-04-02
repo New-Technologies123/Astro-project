@@ -13,7 +13,16 @@ export const Cards = ({ selectId }) => {
   return (
     <div className={Styles.team}>
       {(selectId === 'all' || selectId === 'accountingSystem') && (
-        <List title={t('Учет')} onClick={() => handleCardClick('accountingSystem')} />
+        <List title={t('Сделано')} onClick={() => handleCardClick('MadeInRussia')} />
+      )}
+      {(selectId === 'all' || selectId === 'accountingSystem') && (
+        <List title={t('Декларация')} onClick={() => handleCardClick('Declaration')} />
+      )}
+      {(selectId === 'all' || selectId === 'accountingSystem') && (
+        <List title={t('Заключение')} onClick={() => handleCardClick('Conclusion')} />
+      )}
+      {(selectId === 'all' || selectId === 'accountingSystem') && (
+        <List title={t('Сертификат')} onClick={() => handleCardClick('Certificate')} />
       )}
       {(selectId === 'all' || selectId === 'components') && (
         <List title={t('Гидропривод')} onClick={() => handleCardClick('hydrodrive')} />
@@ -24,15 +33,10 @@ export const Cards = ({ selectId }) => {
       {(selectId === 'all' || selectId === 'trainingSystem') && (
         <List title={t('Очистки')} onClick={() => handleCardClick('uokCnt')} />
       )}
-      {/* {(selectId === 'all' || selectId === 'measurementSystem') && (
-        <List imgSrc="" title="Документ Система измерения" onClick={() => handleCardClick('measurementSystem')} />
-      )} 
-      {(selectId === 'all' || selectId === 'trainingSystem') && (
-        <List imgSrc="" title="Документ Системы подготовки" onClick={() => handleCardClick('trainingSystem')} />
-      )} 
-      {(selectId === 'all' || selectId === 'pumpingStations') && (
+      
+      {/* {(selectId === 'all' || selectId === 'pumpingStations') && (
         <List imgSrc="" title="Документ Насосные станции" onClick={() => handleCardClick('pumpingStations')} />
-      )}  */}
+      )} */}
     </div>
   );
 };

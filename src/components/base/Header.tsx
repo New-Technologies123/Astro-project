@@ -1,5 +1,7 @@
 import Styles from './header.module.scss';
-import logo from '../../images/logo.webp';
+import logoRu from '../../images/logo_ru.webp';
+import logoEn from '../../images/logo_en.webp';
+
 import menu from '../../images/header/menu.svg';
 import cross from '../../images/header/cross.svg';
 import location from '../../images/location.svg';
@@ -44,18 +46,31 @@ export const Header = ({ pageType }) => {
       }
     };
 
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('click', handleClickOutside);    
 
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
   }, [isActiveMobileMenu]);
 
+  // Выбираем логотип в зависимости от текущего языка
+  const getLogoByLanguage = (language) => {
+    switch(language) {
+      case 'en':
+        return logoEn;
+      case 'ru':
+        return logoRu;
+    }
+  };
+
+  const currentLogo = getLogoByLanguage(i18n.language);
+
   return (
     <>
       <header>
         <div className={Styles.headerContainer}>
-          <img src={logo.src} alt="Новые Технологии"/>
+          {/* <img src={logo.src} alt="Новые Технологии"/> */}
+          <img src={currentLogo.src} alt="Новые Технологии" />
           <div className={Styles.contactBloc}>
             <div className={Styles.contactInfo}>
               <p>

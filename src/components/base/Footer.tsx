@@ -1,4 +1,6 @@
-import logo from '../../images/logo.webp';
+import logoRu from '../../images/logo_ru.webp';
+import logoEn from '../../images/logo_en.webp';
+
 import location from '../../images/location.svg';
 import email from '../../images/email.svg';
 import phone from '../../images/phone.svg';
@@ -7,6 +9,18 @@ import { useTranslation } from 'react-i18next';
 
 export const Footer = ({ }) => {
   const { t, i18n } = useTranslation('footer');
+
+   // Выбираем логотип в зависимости от текущего языка
+   const getLogoByLanguage = (language) => {
+    switch(language) {
+      case 'en':
+        return logoEn;
+      case 'ru':
+        return logoRu;
+    }
+  };
+
+  const currentLogo = getLogoByLanguage(i18n.language);
 
   return (
     <footer>
@@ -58,7 +72,7 @@ export const Footer = ({ }) => {
           </div>
         </div>
         <div className={Styles.footerLogo}>
-          <img src={logo.src} alt="Новые Технологии" />
+          <img src={currentLogo.src} alt="Новые Технологии" />
         </div>
       </div>
       
