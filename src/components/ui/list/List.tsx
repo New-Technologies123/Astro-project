@@ -11,7 +11,7 @@ export const List = ({ title, onClick }: TProps) => {
   const { t } = useTranslation('layout');
   
   return (
-    <div className={Styles.employeeList} onClick={onClick}>            
+    <div className={Styles.certificatesList} onClick={onClick}>            
       <p className={Styles.actionTitle}>
         <img src={sign.src}></img>
         {t(title)}

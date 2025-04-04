@@ -101,21 +101,15 @@
 }
 
 
-// @media (max-width: 430px) {
-//   .selectedOption {
-//     font-size: 14px;
-//   }
-//   .options {
-//     font-size: 14px;
-//   }
-//   // .option {
-//   //   padding: 4px;
-//   // }
-// }
+@media (max-width: 430px) {
+  .customSelect{
+    width: 320px;
+  }
+}
 
-@media (max-width: 380px) {
+@media (max-width: 360px) {
   .customSelect {
-    width: 300px;
+    width: 280px;
   }
   .selectedOption {
     font-size: 13px;
@@ -124,16 +118,3 @@
     font-size: 13px;
   }
 }
-
-// @media (max-width: 320px) {
-//   .customSelect {
-//     margin: 5px;
-//     width: 280px;
-//   }
-//   .selectedOption {
-//     font-size: 12px;
-//   }
-//   .options {
-//     font-size: 12px;
-//   }
-// }
