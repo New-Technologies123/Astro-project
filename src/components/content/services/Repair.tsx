@@ -15,9 +15,7 @@ export const Repair = () => {
     <>
       <img src={serves_1.src} alt="сервис" className={Styles.servesImg} onClick={() => {setPhotoIsOpen(true);}}/>
       <div className={Styles.servesText}>
-        <h3>
-          {t('Капитальный')}
-        </h3>
+        <h3>{t('Капитальный')}</h3>
         <p>
           <img src={dot.src}/>
           {t('Сепарационной')}

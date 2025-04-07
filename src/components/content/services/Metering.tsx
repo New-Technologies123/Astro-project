@@ -12,7 +12,9 @@ export const Metering = () => {
 
   return (
     <>
-      <img src={serves_3.src} alt="сервис" className={Styles.servesImg} onClick={() => { setPhotoIsOpen(true); }}/>
+      <div className={Styles.servesFrame}>
+        <img src={serves_3.src} alt="сервис" className={Styles.servesImg} onClick={() => { setPhotoIsOpen(true); }}/>
+      </div>
 
       <div className={Styles.servesText}>
         <h3>{t('Установки')}</h3>

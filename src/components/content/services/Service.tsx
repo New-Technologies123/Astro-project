@@ -12,19 +12,12 @@ export const Service = () => {
 
   return (
     <>
-      <img
-        src={serves_5.src}
-        alt="сервис"
-        className={Styles.servesImg}
-        onClick={() => {
-          setPhotoIsOpen(true);
-        }}
-      />
+      <div className={Styles.servesFrame}>
+        <img src={serves_5.src} alt="сервис" className={Styles.servesImg} onClick={() => { setPhotoIsOpen(true); }} />
+      </div>
 
       <div className={Styles.servesText}>
-        <h3>
-          {t('Техническое')}
-        </h3>
+        <h3>{t('Техническое')}</h3>
         <p>
           <img src={dot.src} className={Styles.dotIcon}/>
           {t('Внешний')}

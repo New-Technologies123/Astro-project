@@ -60,7 +60,7 @@ export const Accessories = () => {
       <div className={Styles.productsInfo}>
         <section className={Styles.productsText}>
           <h3 id="products-1">{t('Расходомер')}</h3>
-          <div className={Styles.ikon}>
+          <div className={Styles.productsFrame}>
             <img src={product_2.src} alt="ВР" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2.src);}}/>
           </div>          
           <h1>{t('Назначение')}</h1>
@@ -73,7 +73,7 @@ export const Accessories = () => {
 
         <section className={Styles.productsText}>
           <h3 id="products-2">{t('УРПД')}</h3>
-          <div className={Styles.ikon}>
+          <div className={Styles.productsFrame}>
             <img src={product_2_1.src}alt="УРПД" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2_1.src);}}/>
           </div>          
           <h1>{t('Назначение')}</h1>
@@ -82,7 +82,7 @@ export const Accessories = () => {
 
         <section className={Styles.productsText}>
           <h3 id="products-3">{t('ПСМ')}</h3>
-          <div className={Styles.ikon}>
+          <div className={Styles.productsFrame}>
             <img src={product_2_2.src} alt="ПСМ" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2_2.src);}}/>
           </div>          
           <h1>{t('Назначение')}</h1>
@@ -91,7 +91,7 @@ export const Accessories = () => {
 
         <section className={Styles.productsText}>
           <h3 id="products-4">{t('КМР')}</h3>
-          <div className={Styles.ikon}>
+          <div className={Styles.productsFrame}>
             <img src={product_2_3.src} alt="КМР" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2_3.src);}}/>
           </div>          
           <h1>{t('Назначение')}</h1>
@@ -100,7 +100,7 @@ export const Accessories = () => {
 
         <section className={Styles.productsText}>
           <h3 id="products-5">{t('Гидропривод')}</h3>
-          <div className={Styles.ikon}>
+          <div className={Styles.productsFrame}>
             <img src={product_2_4.src} alt="Г" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2_4.src);}}/>
           </div>          
           <h1>{t('Назначение')}</h1>
@@ -109,7 +109,7 @@ export const Accessories = () => {
 
         <section className={Styles.productsText}>
           <h3 id="products-6">{t('Емкость')}</h3>
-          <div className={Styles.ikon}>
+          <div className={Styles.productsFrame}>
             <img src={product_2_5.src} alt="СЕ" className={Styles.mainImg} onClick={() => {setSrcForBigPhoto(product_2_5.src);}}/>
           </div>          
           <h1>{t('Назначение')}</h1>

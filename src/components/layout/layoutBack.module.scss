@@ -2,25 +2,23 @@
 .boxButtonText {
   display: flex;
   align-items: center;
-  margin: 5px;
+  margin: 5px 0;
+  margin-left: 10px;
   img{
     text-decoration: none;
     cursor: pointer;
     margin-left: 10px;
     width: 60px;
     height: 60px;
-    // margin-left: 15px;
   }
 }
 
 .content {
   margin: 0 20px;
-  margin-bottom: 20px;
   padding: 15px;
   background-color: #f1f1f1;
   border-radius: 8px;
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 
@@ -40,6 +38,7 @@
 
 @media (max-width: 770px){
   .boxButtonText{
+    margin-left: 5px;
     img{
       width: 50px;
       height: 50px;

@@ -38,10 +38,13 @@
   padding: 0 10px;
   margin-bottom: 5px;
   flex: auto;
-  .ikon{
-    width: 35%;
+  .productsFrame{
+    width: 33%;
     margin-left: auto;
     margin-right: auto;
+    img{
+      width: 100%;
+    }
   }
   .mainImg{
     width: 55%;
