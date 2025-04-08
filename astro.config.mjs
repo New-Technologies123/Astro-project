@@ -7,7 +7,7 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
-  experimental: {
-    viewTransitions: true, // Включаем View Transitions
-  },
+  // experimental: {
+  //   viewTransitions: true, // Включаем View Transitions
+  // },
 });
