@@ -45,6 +45,9 @@
 }
 
 @media (max-width: 1400px){
+  .servesFrame{
+    width: 30%;
+  }
   .servesText{
     h3{
       font-size: 20px;
@@ -55,7 +58,21 @@
   }
 }
 
-@media (max-width: 1030px){  
+@media (max-width: 1200px){
+  .servesFrame{
+    width: 34%;
+  }
+}
+
+@media (max-width: 1030px){
+  .servesFrame{
+    width: 38%;
+    margin-left: auto;
+    margin-right: auto;
+    img{
+      margin: 0px;
+    }
+  }
   .servesText{
     margin-top: 3px;
     h3{
@@ -74,6 +91,9 @@
 }
 
 @media (max-width: 770px){
+  .servesFrame{
+    width: 45%;
+  }
   .servesImg{    
     float: none;
     margin-left: auto;
@@ -82,7 +102,7 @@
     // margin-top: 10px;
   }
   .servesText{
-    margin-top: 12px;
+    margin-top: 0px;
     h3{
       font-size: 16px;
     }
@@ -92,7 +112,16 @@
   }
 }
 
+@media (max-width: 600px){
+  .servesFrame{
+    width: 50%;
+  }
+}
+
 @media (max-width: 430px) {
+  .servesFrame{
+    width: 60%;
+  }
   .servesText {
     margin: 7px;
     h3 {
@@ -111,6 +140,9 @@
 }
 
 @media (max-width: 375px) {
+  .servesFrame{
+    width: 65%;
+  }
   .servesText {
     margin: 4px;
   }
