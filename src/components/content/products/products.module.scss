@@ -39,7 +39,7 @@
   margin-bottom: 5px;
   flex: auto;
   .productsFrame{
-    width: 33%;
+    width: 21%;
     margin-left: auto;
     margin-right: auto;
     img{
@@ -133,6 +133,9 @@
 
 @media (max-width: 1400px){
   .productsText{
+    .productsFrame{
+      width: 23%;
+    }
     h3{
       font-size: 19px;
     }
@@ -141,9 +144,6 @@
     }
     p{
       font-size: 16px;
-    }
-    .ikon{
-      width: 45%;
     }
   }
 }
@@ -163,6 +163,11 @@
   .blocImg{
     gap: 9px;
   }
+  .productsText{
+    .productsFrame{
+      width: 26%;
+    }
+  }
 }
 
 @media (max-width: 1030px){
@@ -176,6 +181,9 @@
   }
   .productsText{
     padding: 0px 7px;
+    .productsFrame{
+      width: 30%;
+    }
     .mainImg{
       width: 80%;
       padding: 4px 0;
@@ -216,6 +224,9 @@
     font-size: 13px;
   }
   .productsText{
+    .productsFrame{
+      width: 32%;
+    }
     h3{
       font-size: 16px;
     }
@@ -237,9 +248,10 @@
 @media (max-width: 560px){
   .wrapper{
     display: grid;
+    gap: 15px;
   }
   .verticalMenu{
-    font-size: 13px;
+    font-size: 15px;
     max-width: 100%;
     a{
       &:hover{
@@ -252,8 +264,8 @@
     margin-left: 0px;
   }
   .productsText{
-    .ikon{
-      width: 50%;
+    .productsFrame{
+      width: 37%;
     }
     .mainImg{
       width: 100%;
@@ -282,6 +294,7 @@
 
 @media (max-width: 430px) {
   .verticalMenu {
+    font-size: 14px;
     a{
       padding: 5px;
     }
@@ -292,6 +305,9 @@
   }
   .productsText {
     padding: 3px;
+    .productsFrame{
+      width: 45%;
+    }
     h3 {
       font-size: 15px;
     }
