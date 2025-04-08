@@ -6,7 +6,7 @@ export default defineConfig({
   integrations: [react(), astroI18next()],
   devToolbar: {
     enabled: false,
-  },
+  }
   // experimental: {
   //   viewTransitions: true, // Включаем View Transitions
   // },
