@@ -8,7 +8,7 @@ export const Contact = () => {
   // Определяем URL карты в зависимости от текущего языка
   const mapUrl = i18n.language === 'en' 
     ? "https://yandex.ru/map-widget/v1/?um=constructor%3A7e310988bcfd232d57415d059b582e872e6f9b30a42d2aad2a15aa82885ad21f&amp;source=constructor"
-    : "https://yandex.ru/map-widget/v1/?um=constructor%3Ab53b3618b02478d6cb63f80a7fa6df1cea0c7c3c6b4c63b5e05478c148831d61&amp;source=constructor";
+    : "https://yandex.ru/map-widget/v1/?um=constructor%3Af1bd327c32b7c5c037613d0c1228b955362997bce9338237e5b612e6449e8c86&amp;source=constructor";
 
   return (
     <>
@@ -18,10 +18,8 @@ export const Contact = () => {
       
       <section className={Styles.contactContent}>        
         <div className={Styles.contactText}>
-          <div className={Styles.contactBloc}>
-            <h4>{t('Офис')}</h4>
-            <p>{t('Валиди')}</p>
-          </div>
+          <h4>{t('Офис')}</h4>
+          <p>{t('Валиди')}</p>
         </div>
         <figure className={Styles.leftContent}>          
           <iframe 
