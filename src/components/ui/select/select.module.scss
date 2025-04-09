@@ -3,7 +3,7 @@
   border: 1px solid #4de1fc;
   border-radius: 6px;
   cursor: pointer;
-  width: 700px; /* Регулируемая ширина */
+  width: 800px; /* Регулируемая ширина */
   margin: 10px;
 }
 
@@ -17,7 +17,7 @@
 
 .selectedOption {
   flex-grow: 1; /* Занимает все доступное пространство */
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .arrow {
@@ -47,7 +47,7 @@
   z-index: 1;
 
   border-radius: 6px;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .option {
@@ -60,7 +60,7 @@
 
 @media (max-width: 1360px){
   .customSelect{
-    width: 500px;
+    width: 600px;
   }
   .selectedOption{
     font-size: 16px;
@@ -70,15 +70,15 @@
   }
 }
 
-@media (max-width: 1020px){
+@media (max-width: 1030px){
   .customSelect{
-    width: 400px;
+    width: 500px;
   }
   .selectedOption{
-    font-size: 15px;
+    font-size: 14px;
   }
   .options{
-    font-size: 15px;
+    font-size: 14px;
   }
   .option {
     padding: 6px;
@@ -90,31 +90,30 @@
     width: 350px;
   }
   .selectedOption {
-    font-size: 14px;
+    font-size: 15px;
   }
   .options {
-    font-size: 14px;
+    font-size: 15px;
   }
   .option {
     padding: 4px;
   }
 }
 
-
 @media (max-width: 430px) {
   .customSelect{
     width: 320px;
+  }
+  .selectedOption {
+    font-size: 14px;
+  }
+  .options {
+    font-size: 14px;
   }
 }
 
 @media (max-width: 360px) {
   .customSelect {
-    width: 280px;
-  }
-  .selectedOption {
-    font-size: 13px;
-  }
-  .options {
-    font-size: 13px;
-  }
+    width: 270px;
+  }  
 }
