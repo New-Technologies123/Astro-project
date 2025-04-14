@@ -10,6 +10,7 @@ import serves_12 from '../../../images/services/serves_12.png';
 import serves_3 from '../../../images/services/serves_3.png';
 import serves_5 from '../../../images/services/serves_5.webp';
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 type TServices = 'repair' | 'metering' | 'service' | 'dewaxing';
 
@@ -23,11 +24,15 @@ export const Services = () => {
     dewaxing: t('Депарафинизация'),
   };
 
-  const [typeLayoutBackOpen, setTypeLayoutBackOpen] = useState<TServices | null>(() => {
-    const queryParams = new URLSearchParams(window.location.search);
-    const typeFromQuery = queryParams.get('type');
-    return typeFromQuery ? (typeFromQuery as TServices) : null;
-  });
+  const [typeLayoutBackOpen, setTypeLayoutBackOpen] = useState<TServices | null>(null);
+
+  useEffect(() => {
+    setTypeLayoutBackOpen(() => {
+        const queryParams = new URLSearchParams(window.location.search);
+        const typeFromQuery = queryParams.get('type');
+        return typeFromQuery ? (typeFromQuery as TServices) : null;
+    });
+  }, []);
 
   const onBack = () => {
     setTypeLayoutBackOpen(null);

@@ -13,6 +13,7 @@ import product_3 from '../../../images/products/product_3.webp';
 import product_4 from '../../../images/products/product_4.webp';
 import product_5 from '../../../images/products/product_5.webp';
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 type TProducts = 'accountingSystem' | 'accessories' | 'measuringSystem' | 'preparationSystems' | 'pumpingStations';
 
@@ -27,11 +28,15 @@ export const Products = () => {
     pumpingStations: t('Насосные станции'),
   };
 
-  const [typeLayoutBackOpen, setTypeLayoutBackOpen] = useState<TProducts | null>(() => {
-    const queryParams = new URLSearchParams(window.location.search);
-    const typeFromQuery = queryParams.get('type');
-    return typeFromQuery ? (typeFromQuery as TProducts) : null;
-  });
+  const [typeLayoutBackOpen, setTypeLayoutBackOpen] = useState<TProducts | null>(null);
+
+  useEffect(() => {
+    setTypeLayoutBackOpen(() => {
+      const queryParams = new URLSearchParams(window.location.search);
+      const typeFromQuery = queryParams.get('type');
+      return typeFromQuery ? (typeFromQuery as TProducts) : null;
+    });
+  }, []);
 
   const onBack = () => {
     setTypeLayoutBackOpen(null);

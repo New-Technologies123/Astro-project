@@ -6,23 +6,28 @@ import { Vacancy1 } from './Vacancy1';
 import { Vacancy2 } from './Vacancy2';
 import { useState } from 'react';
 import { Title } from '../../ui/title/Title';
+import { useEffect } from 'react';
 
 
-type TProducts = 'vacancy1' | 'vacancy2' ;
+type TCareers = 'vacancy1' | 'vacancy2' ;
 
 export const Careers = () => {
     const { t, i18n } = useTranslation('careers');
 
-    const cardTitle: Record<TProducts, string> = {
+    const cardTitle: Record<TCareers, string> = {
         vacancy1: t('Карточка'),
         vacancy2: t('Карточка'),
     };
+
+    const [typeLayoutBackOpen, setTypeLayoutBackOpen] = useState<TCareers | null>(null);
     
-    const [typeLayoutBackOpen, setTypeLayoutBackOpen] = useState<TProducts | null>(() => {
-        const queryParams = new URLSearchParams(window.location.search);
-        const typeFromQuery = queryParams.get('type');
-        return typeFromQuery ? (typeFromQuery as TProducts) : null;
-      });
+    useEffect(() => {
+        setTypeLayoutBackOpen(() => {
+            const queryParams = new URLSearchParams(window.location.search);
+            const typeFromQuery = queryParams.get('type');
+            return typeFromQuery ? (typeFromQuery as TCareers) : null;
+        });
+    }, []);
     
     const onBack = () => {
         setTypeLayoutBackOpen(null);
@@ -31,7 +36,7 @@ export const Careers = () => {
         window.history.pushState({}, '', newUrl);
     };
     
-    const onClickCard = (typeProduct: TProducts) => {
+    const onClickCard = (typeProduct: TCareers) => {
         setTypeLayoutBackOpen(typeProduct);
     
         const newUrl = `${window.location.origin}${window.location.pathname}?type=${typeProduct}`;
