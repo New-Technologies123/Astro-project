@@ -14,9 +14,9 @@ type TCareers = 'vacancy1' | 'vacancy2' ;
 export const Careers = () => {
     const { t, i18n } = useTranslation('careers');
 
-    const cardTitle: Record<TCareers, string> = {
-        vacancy1: t('Карточка'),
-        vacancy2: t('Карточка'),
+    const vacancyLinks: Record<TCareers, string> = {
+        vacancy1: "https://ufa.hh.ru/vacancy/119464390?hhtmFrom=vacancy_search_list",
+        vacancy2: "https://ufa.hh.ru/vacancy/119256964?hhtmFrom=vacancy_search_list",
     };
 
     const [typeLayoutBackOpen, setTypeLayoutBackOpen] = useState<TCareers | null>(null);
@@ -49,36 +49,24 @@ export const Careers = () => {
                 <>
                     <div className={Styles.title}>
                         <Title text={t('Вакансии')}></Title>
-                    </div>
-                    
+                    </div>                    
                     
                     <div className={Styles.team}>
                         <Vacancy
                             header={t('Карточка')}
                             title={t('Опыт1')}
                             experience={t('Занятость')}
-                            onClick={() => {onClickCard('vacancy1');}}
+                            onClick={() => window.open(vacancyLinks.vacancy1, "_blank")}
                         />
                         <Vacancy
                             header={t('Карточка')}
                             title={t('Опыт2')}
                             experience={t('Занятость')}
-                            onClick={() => {onClickCard('vacancy2');}}
+                            onClick={() => window.open(vacancyLinks.vacancy2, "_blank")}
                         />
-                    </div>
-                    
+                    </div>                    
                 </>
             )}
-            {typeLayoutBackOpen === 'vacancy1' && (
-                <LayoutBack onBack={onBack} title={cardTitle.vacancy1}>
-                    <Vacancy1 />
-                </LayoutBack>
-            )}
-            {typeLayoutBackOpen === 'vacancy2' && (
-                <LayoutBack onBack={onBack} title={cardTitle.vacancy2}>
-                    <Vacancy2 />
-                </LayoutBack>
-            )}            
         </>
       );
   };
