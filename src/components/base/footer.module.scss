@@ -1,29 +1,28 @@
 .footer {
   background-color: #1a1a1a;
   color: #ffffff;
-  padding: 3rem 0 0;
+  padding-top: 42px;
   font-family: 'Inter', sans-serif;
+  margin-top: 25px;
 }
 
 .container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 155px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
 }
 
 .contactSection {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 25px;
 }
 
 .logoContainer {
   img {
     width: 180px;
-    height: auto;
     filter: brightness(0) invert(1);
   }
 }
@@ -31,48 +30,44 @@
 .contactInfo {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
-}
-
-.contactItem {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.9375rem;
-  line-height: 1.5;
-  
-  a {
-    color: #b3b3b3;
-    text-decoration: none;
-    transition: color 0.2s ease;
-    
-    &:hover {
-      color: #ffffff;
+  gap: 4px;
+  p{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    line-height: 1.5;
+    a {
+      color: #b3b3b3;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      
+      &:hover {
+        color: #ffffff;
+      }
     }
   }
 }
 
 .navSections {
   display: flex;
-  gap: 3rem;
+  gap: 60px;
 }
 
 .navColumn {
   flex: 1;
   h3{
-    font-size: 1.125rem;
+    font-size: 16px;
     font-weight: 600;
-    margin-bottom: 0.95rem;
+    margin-bottom: 15px;
     color: #f8f8f8;
     position: relative;
-    padding-bottom: 0.5rem;
-    
+    padding-bottom: 8px;    
     &::after {
       content: '';
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 110px;
+      width: 95px;
       height: 2px;
       background-color: #0066cc;
     }
@@ -82,14 +77,14 @@
 .navList {
   list-style: none;
   padding: 0;
-  margin: 0 0 2rem 0;
+  margin: 0 0 32px 0;
   
   li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
     a{
       color: #b3b3b3;
       text-decoration: none;
-      font-size: 0.9375rem;
+      font-size: 15px;
       transition: color 0.2s ease;
       position: relative;
       display: inline-block;
@@ -119,39 +114,113 @@
 
 .footerBottom {
   background-color: #121212;
-  padding: 1.5rem 0;
-  margin-top: 3rem;
+  padding: 25px 0;
+  margin-top: 15px;
   width: 100%;
   p{
-    font-size: 0.8125rem;
+    font-size: 13px;
     color: #999;
     margin: 0;
     text-align: center;
   }
 }
 
-@media (max-width: 768px) {
-  .container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .navSections {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .contactSection {
-    align-items: center;
-    text-align: center;
-    
-    .sectionTitle::after {
-      left: 50%;
-      transform: translateX(-50%);
+@media (max-width: 1400px){
+  .container{
+    gap: 32px;
+    padding: 0 105px;
+  }  
+  .logoContainer{
+    img{
+      width: 160px;
     }
   }
-  
-  .contactItem {
-    justify-content: center;
+  .contactInfo{
+    p{
+      font-size: 14px;
+    }
+  }
+  .navSections{
+    gap: 30px;
+  }
+  .navColumn{
+    h3{
+      font-size: 15px;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      &::after{
+        width: 79px;
+      }
+    }
+  }
+  .navList{    
+    li{
+      margin-bottom: 5px;
+      a{
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px){
+  .container{
+    padding: 0 80px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 735px){
+  .footer{
+    padding-top: 30px;
+  }
+  .container{
+    padding: 0 40px;
+    grid-template-columns: none;
+  }
+  .contactSection{
+    gap: 15px;
+  }
+  .logoContainer{
+    img{
+      width: 150px;
+    }
+  }
+  .contactInfo{
+    p{
+      font-size: 13px;
+    }
+  }
+  .navColumn{
+    h3{
+      font-size: 14px;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      &::after{
+        width: 74px;
+      }
+    }
+  }
+  .navList{
+    margin: 0 0 20px 0;
+    li{
+      margin-bottom: 2px;
+      a{
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px){
+  .logoContainer{
+    img{
+      width: 140px;
+    }
+  }
+  .contactInfo{
+    p{
+      font-size: 12px;
+    }
   }
 }

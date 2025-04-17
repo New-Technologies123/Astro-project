@@ -1,14 +1,15 @@
 {
-    "О компании": "About us",
     "Каталог": "Catalog",
+    "Компания": "Company",
+    "О компании": "About us",
     "Продукция": "Products",
     "Сервисные услуги": "Service services",
     "Документы": "Documents",
     "Новости": "News",
     "Карьера": "Career",
     "Контакты": "Contacts",
-    "Адрес": "Address: 450076, Ufa, Zaki Validi st. 32/2",
-    "Телефон": "Phone: +7(347) 293-93-33",
+    "Адрес": "Ufa, Zaki Validi st. 32/2",
+    "Телефон": "+7(347) 293-93-33",
     "Вакансия": "Open vacancies",
     "Права": "LLC IPP New Technologies. All rights reserved."
 }

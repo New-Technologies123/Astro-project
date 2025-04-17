@@ -22,22 +22,19 @@ export const Footer = () => {
         {/* Контактная информация */}
         <div className={Styles.contactSection}>
           <div className={Styles.logoContainer}>
-            <img 
-              src={currentLogo.src} 
-              alt="Новые Технологии"
-            />
+            <img src={currentLogo.src} alt="Новые Технологии"/>
           </div>
           
           <div className={Styles.contactInfo}>
-            <div className={Styles.contactItem}>
-              <span>{t('Адрес')}</span>
-            </div>
-            <div className={Styles.contactItem}>
-              <a href="mailto:nt@tech-new.ru">nt@tech-new.ru</a>
-            </div>
-            <div className={Styles.contactItem}>
+            <p>
+              {t('Адрес')}
+            </p>
+            <p>
               <a href="tel:+74951234567">{t('Телефон')}</a>
-            </div>
+            </p>
+            <p>
+              <a href="mailto:nt@tech-new.ru">nt@tech-new.ru</a>
+            </p>           
           </div>
         </div>
 
@@ -47,49 +44,35 @@ export const Footer = () => {
             <h3>{t('Каталог')}</h3>
             <ul className={Styles.navList}>
               <li>
-                <a href={`/${i18n.language}/products`}>
-                  {t('Продукция')}
-                </a>
+                <a href={`/${i18n.language}/products`}>{t('Продукция')}</a>
               </li>
               <li>
-                <a href={`/${i18n.language}/services`}>
-                  {t('Сервисные услуги')}
-                </a>
+                <a href={`/${i18n.language}/services`}>{t('Сервисные услуги')}</a>
               </li>
             </ul>
             
             <h3>{t('Карьера')}</h3>
             <ul className={Styles.navList}>
               <li>
-                <a href={`/${i18n.language}/careers`}>
-                  {t('Вакансия')}
-                </a>
+                <a href={`/${i18n.language}/careers`}>{t('Вакансия')}</a>
               </li>
             </ul>
           </div>
 
           <div className={Styles.navColumn}>
-            <h3>{t('О компании')}</h3>
+            <h3>{t('Компания')}</h3>
             <ul className={Styles.navList}>
               <li>
-                <a href={`/${i18n.language}/about`}>
-                  {t('О нас')}
-                </a>
+                <a href={`/${i18n.language}/about`}>{t('О компании')}</a>
               </li>
               <li>
-                <a href={`/${i18n.language}/documents`}>
-                  {t('Документы')}
-                </a>
+                <a href={`/${i18n.language}/documents`}>{t('Документы')}</a>
               </li>
               <li>
-                <a href={`/${i18n.language}/news`}>
-                  {t('Новости')}
-                </a>
+                <a href={`/${i18n.language}/news`}>{t('Новости')}</a>
               </li>
               <li>
-                <a href={`/${i18n.language}/contact`}>
-                  {t(' Контакты')}
-                </a>
+                <a href={`/${i18n.language}/contact`}>{t(' Контакты')}</a>
               </li>
             </ul>
           </div>
