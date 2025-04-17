@@ -44,9 +44,7 @@ export const Careers = () => {
         <>
             {typeLayoutBackOpen === null && (
                 <>
-                    <div className={Styles.title}>
-                        <Title text={t('Вакансии')}></Title>
-                    </div>                    
+                    <Title text={t('Вакансии')}></Title>                   
                     
                     <div className={Styles.team}>
                         <Vacancy

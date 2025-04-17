@@ -12,9 +12,7 @@ export const Contact = () => {
 
   return (
     <>
-      <div className={Styles.title}>
-        <Title text={t('Контакты')}></Title>
-      </div>      
+      <Title text={t('Контакты')}></Title>     
       
       <section className={Styles.contactContent}>        
         <div className={Styles.contactText}>

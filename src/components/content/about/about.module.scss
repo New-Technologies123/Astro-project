@@ -6,10 +6,6 @@
     flex-wrap: wrap;
 }
 
-.titleAbout{
-    margin-top: 15px;
-}
-
 @media (max-width: 1200px){
     .numberAbout{
         gap: 50px;
@@ -21,9 +17,6 @@
     .numberAbout{
         gap: 35px;
         padding: 10px;
-    }
-    .titleAbout{
-        margin-top: 10px;
     }
 }
 

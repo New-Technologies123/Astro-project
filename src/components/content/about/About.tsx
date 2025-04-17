@@ -18,9 +18,8 @@ export const About = () => {
         </>
       </Layout>
 
-      <div className={Styles.titleAbout}>
-        <Title text={t('Цифра')}></Title>
-      </div>      
+      <Title text={t('Цифра')}></Title>
+
       <div className={Styles.numberAbout}>
         <CountCard 
           header={t('Более')}

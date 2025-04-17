@@ -15,10 +15,7 @@ export const News = () => {
 
   return (
     <>
-      <div className={Styles.title}>
-        <Title text={t('Новости')}></Title>
-      </div>
-      
+      <Title text={t('Новости')}></Title>      
       
       <section className={Styles.newsContent}>
         <div className={Styles.newsItem}>

@@ -45,9 +45,8 @@ export const Documents = () => {
 
   return (
     <>
-      <div className={Styles.title}>
-        <Title text={t('Документы')}></Title>
-      </div>
+      <Title text={t('Документы')}></Title>
+      
       <div className={Styles.documentList}>
         <p>{t('Выбор')}</p>
         <div className={Styles.list}>

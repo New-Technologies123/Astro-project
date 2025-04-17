@@ -3,10 +3,6 @@
   margin: 0 15px;
 }
 
-.title{
-  margin-top: 10px;
-}
-
 .newsItem {
   margin-bottom: 15px;
   padding: 13px;
@@ -44,9 +40,6 @@
 
 
 @media (max-width: 1030px) {
-  .title{
-    margin-top: 5px;
-  }
   .newsItem{
     padding: 10px;
     p {

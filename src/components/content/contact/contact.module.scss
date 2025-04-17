@@ -24,10 +24,6 @@
     float: right;
 }
 
-.title{
-    margin-top: 10px;
-}
-
 @media (max-width: 1400px){
     .contactText{
         h4{
@@ -60,9 +56,6 @@
 }
 
 @media (max-width: 1000px){
-    .title{
-        margin-top: 5px;
-    }
     .contactText{
         h4{
             font-size: 18px;
