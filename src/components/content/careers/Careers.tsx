@@ -1,9 +1,6 @@
 import Styles from './careers.module.scss';
 import { useTranslation } from 'react-i18next';
-import { LayoutBack } from '../../layout/LayoutBack';
 import { Vacancy } from '../../ui/vacancy/Vacancy';
-import { Vacancy1 } from './Vacancy1';
-import { Vacancy2 } from './Vacancy2';
 import { useState } from 'react';
 import { Title } from '../../ui/title/Title';
 import { useEffect } from 'react';
