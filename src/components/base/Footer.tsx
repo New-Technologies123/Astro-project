@@ -42,7 +42,7 @@ export const Footer = () => {
         <div className={Styles.navSections}>
           <div className={Styles.navColumn}>
             <h3>{t('Каталог')}</h3>
-            <ul className={Styles.navList}>
+            <ul>
               <li>
                 <a href={`/${i18n.language}/products`}>{t('Продукция')}</a>
               </li>
@@ -52,7 +52,7 @@ export const Footer = () => {
             </ul>
             
             <h3>{t('Карьера')}</h3>
-            <ul className={Styles.navList}>
+            <ul>
               <li>
                 <a href={`/${i18n.language}/careers`}>{t('Вакансия')}</a>
               </li>
@@ -61,7 +61,7 @@ export const Footer = () => {
 
           <div className={Styles.navColumn}>
             <h3>{t('Компания')}</h3>
-            <ul className={Styles.navList}>
+            <ul>
               <li>
                 <a href={`/${i18n.language}/about`}>{t('О компании')}</a>
               </li>
