@@ -12,14 +12,13 @@ export const Card = ({ imgSrc, title, header, onClick }: TProps) => {
   const { t } = useTranslation('layout');
   
   return (
-    <div className={Styles.employeeCard} onClick={onClick}>
-      <div className={Styles.system} style={{ backgroundImage: `url(${imgSrc})` }}></div>
-      {header && <h3 className={Styles.headerTitle}>
-        {t(header)}
-      </h3>}
-      <p className={onClick ? Styles.actionTitle : Styles.title}>
-        {t(title)}
-      </p>
+    <div className={Styles.employeeCardWrapper}>
+      <div className={Styles.employeeCard} onClick={onClick}>
+        <div className={Styles.system} style={{ backgroundImage: `url(${imgSrc})` }}></div>
+        <p>
+          {t(title)}
+        </p>
+      </div>
     </div>
   );
 };
