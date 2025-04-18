@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import Styles from './select.module.scss';
 
 type TOption = {
@@ -14,6 +14,7 @@ type TProps = {
 
 export const Select = ({ options, selectedId, onSelect }: TProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const selectRef = useRef<HTMLDivElement>(null);
 
   const selectedOption = useMemo(() => {
     return options.find((option) => option.id === selectedId);
@@ -30,8 +31,7 @@ export const Select = ({ options, selectedId, onSelect }: TProps) => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      const selectElement = document.querySelector(`.${Styles.customSelect}`);
-      if (selectElement && !selectElement.contains(event.target as Node)) {
+      if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     };
@@ -48,20 +48,26 @@ export const Select = ({ options, selectedId, onSelect }: TProps) => {
   }, [isOpen]);
 
   return (
-    <div className={Styles.customSelect}>
-      <div className={Styles.selectHeader} onClick={toggleDropdown}>
-        <span className={Styles.selectedOption}>{selectedOption.title.slice(0, 33)}</span>
+    <div className={Styles.customSelect} ref={selectRef}>
+      <div 
+        className={`${Styles.selectHeader} ${isOpen ? Styles.active : ''}`}
+        onClick={toggleDropdown}
+      >
+        <span className={Styles.selectedOption}>{selectedOption?.title.slice(0, 33)}</span>
         <span className={`${Styles.arrow} ${isOpen ? Styles.up : Styles.down}`}></span>
       </div>
-      {isOpen && (
-        <div className={Styles.options}>
-          {options.map((option) => (
-            <div key={option.id} className={Styles.option} onClick={() => handleOptionClick(option.id)}>
-              {option.title}
-            </div>
-          ))}
-        </div>
-      )}
+      
+      <div className={`${Styles.options} ${isOpen ? Styles.open : ''}`}>
+        {options.map((option) => (
+          <div 
+            key={option.id} 
+            className={Styles.option} 
+            onClick={() => handleOptionClick(option.id)}
+          >
+            {option.title}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

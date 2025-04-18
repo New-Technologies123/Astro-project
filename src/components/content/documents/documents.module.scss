@@ -27,8 +27,18 @@
     cursor: pointer;
     float: right;
     font-size: 18px;
+    border-radius: 6px;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 2px 5px rgba(0, 81, 255, 0.3);
+    
     &:hover {
       background-color: #0014cc;
+      box-shadow: 0 4px 8px rgba(0, 20, 204, 0.3);
+      transform: translateY(-4px);
+    }
+    
+    &:active {
+      transform: translateY(1px);
     }
   }
 }

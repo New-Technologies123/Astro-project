@@ -1,6 +1,7 @@
 import Styles from './cards.module.scss';
 import { List } from '../../ui/list/List';
 import { useTranslation } from 'react-i18next';
+import { useMemo } from 'react';
 
 export const Cards = ({ selectId }) => {
   const { t, i18n } = useTranslation('documents');
@@ -10,33 +11,31 @@ export const Cards = ({ selectId }) => {
     window.open(openUrl, '_blank');
   };
 
+  // Создаем массив карточек с учетом фильтрации
+  const cards = useMemo(() => {
+    const allCards = [
+      { id: 'accountingSystem', condition: (selectId === 'all' || selectId === 'accountingSystem'), title: t('Сделано'), docType: 'MadeInRussia' },
+      { id: 'accountingSystem', condition: (selectId === 'all' || selectId === 'accountingSystem'), title: t('Декларация'), docType: 'Declaration' },
+      { id: 'accountingSystem', condition: (selectId === 'all' || selectId === 'accountingSystem'), title: t('Заключение'), docType: 'Conclusion' },
+      { id: 'accountingSystem', condition: (selectId === 'all' || selectId === 'accountingSystem'), title: t('Сертификат'), docType: 'Certificate' },
+      { id: 'components', condition: (selectId === 'all' || selectId === 'components'), title: t('Гидропривод'), docType: 'hydrodrive' },
+      { id: 'measurementSystem', condition: (selectId === 'all' || selectId === 'measurementSystem'), title: t('Дозирования'), docType: 'bdr' },
+      { id: 'trainingSystem', condition: (selectId === 'all' || selectId === 'trainingSystem'), title: t('Очистки'), docType: 'uokCnt' },
+    ];
+
+    return allCards.filter(card => card.condition);
+  }, [selectId, t]);
+
   return (
     <div className={Styles.team}>
-      {(selectId === 'all' || selectId === 'accountingSystem') && (
-        <List title={t('Сделано')} onClick={() => handleCardClick('MadeInRussia')} />
-      )}
-      {(selectId === 'all' || selectId === 'accountingSystem') && (
-        <List title={t('Декларация')} onClick={() => handleCardClick('Declaration')} />
-      )}
-      {(selectId === 'all' || selectId === 'accountingSystem') && (
-        <List title={t('Заключение')} onClick={() => handleCardClick('Conclusion')} />
-      )}
-      {(selectId === 'all' || selectId === 'accountingSystem') && (
-        <List title={t('Сертификат')} onClick={() => handleCardClick('Certificate')} />
-      )}
-      {(selectId === 'all' || selectId === 'components') && (
-        <List title={t('Гидропривод')} onClick={() => handleCardClick('hydrodrive')} />
-      )}
-      {(selectId === 'all' || selectId === 'measurementSystem') && (
-        <List title={t('Дозирования')} onClick={() => handleCardClick('bdr')} />
-      )}
-      {(selectId === 'all' || selectId === 'trainingSystem') && (
-        <List title={t('Очистки')} onClick={() => handleCardClick('uokCnt')} />
-      )}
-      
-      {/* {(selectId === 'all' || selectId === 'pumpingStations') && (
-        <List imgSrc="" title="Документ Насосные станции" onClick={() => handleCardClick('pumpingStations')} />
-      )} */}
+      {cards.map((card, index) => (
+        <List 
+          key={`${card.id}-${card.docType}`}
+          title={card.title} 
+          onClick={() => handleCardClick(card.docType)}
+          index={index} // Передаем индекс для анимации
+        />
+      ))}
     </div>
   );
 };
