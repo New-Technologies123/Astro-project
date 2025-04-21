@@ -18,28 +18,29 @@ export const News = () => {
       <Title text={t('Новости')}></Title>      
       
       <section className={Styles.newsContent}>
-        <div className={Styles.newsItem}>
-          <Gallery
-            photos={[
-              { id: 1, src: news_1.src, alt: '' },
-              { id: 2, src: news_2.src, alt: '' },
-            ]}
-          />
-          <p>
-            {t('Выставка')}
-          </p>
+        <div className={Styles.teamContact}>
+          <div className={Styles.newsItem}>
+            <Gallery
+              photos={[
+                { id: 1, src: news_1.src, alt: '' },
+                { id: 2, src: news_2.src, alt: '' },
+              ]}
+            />
+            <p>
+              {t('Выставка')}
+            </p>
+          </div>
+
+          <div className={Styles.newsItem}>
+            <img src={news_3.src} className={Styles.thumbnail} onClick={() => { setPhotoIsOpen(true); }}/>
+            <p>
+              {t('Конкурс')}
+            </p>
+
+            {photoIsOpen && <BigPhoto src={news_3.src} onClose={() => setPhotoIsOpen(false)} />}          
+          </div>
         </div>
-
-        <div className={Styles.newsItem}>
-          <img src={news_3.src} className={Styles.thumbnail} onClick={() => { setPhotoIsOpen(true); }}/>
-          <p>
-            {t('Конкурс')}
-          </p>
-
-          {photoIsOpen && <BigPhoto src={news_3.src} onClose={() => setPhotoIsOpen(false)} />}
-
-          
-        </div>
+        
       </section>
     </>
   );
