@@ -12,8 +12,8 @@ export const Careers = () => {
     const { t, i18n } = useTranslation('careers');
 
     const vacancyLinks: Record<TCareers, string> = {
-        vacancy1: "https://ufa.hh.ru/vacancy/119464390?hhtmFrom=vacancy_search_list",
-        vacancy2: "https://ufa.hh.ru/vacancy/119256964?hhtmFrom=vacancy_search_list",
+        vacancy1: "https://ufa.hh.ru/vacancy/119582800?hhtmFrom=vacancy_search_list",
+        vacancy2: "https://ufa.hh.ru/vacancy/118708540?hhtmFrom=vacancy_search_list",
     };
 
     const [typeLayoutBackOpen, setTypeLayoutBackOpen] = useState<TCareers | null>(null);
@@ -48,15 +48,17 @@ export const Careers = () => {
                     
                     <div className={Styles.team}>
                         <Vacancy
-                            header={t('Карточка')}
-                            title={t('Опыт1')}
-                            experience={t('Занятость')}
+                            header={t('Куратор')}
+                            title={t('Опыт')}
+                            experience={t('Полная')}
+                            employmentType={t('График')}
                             onClick={() => window.open(vacancyLinks.vacancy1, "_blank")}
                         />
                         <Vacancy
-                            header={t('Карточка')}
-                            title={t('Опыт2')}
-                            experience={t('Занятость')}
+                            header={t('Электрогазосварщик')}
+                            title={t('Опыт')}
+                            experience={t('Полная')}
+                            employmentType={t('График')}
                             onClick={() => window.open(vacancyLinks.vacancy2, "_blank")}
                         />
                     </div>                    
