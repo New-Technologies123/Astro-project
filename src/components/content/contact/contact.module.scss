@@ -7,16 +7,32 @@
     gap: 15px;
 }
 
-.contactText{
+.contactBloc{
     display: grid;
     height: 65%;
     width: 100%;
+    gap: 30px;  
+}
+
+.contactText{
     h4{
         font-size: 22px;
     }
     p{
         font-size: 20px;
         text-indent: 10px;
+    }
+}
+
+.contactInfo{
+    display: flex;
+    align-items: center;
+    p{
+        font-size: 20px;
+    }
+    h6{
+        font-size: 20px;
+        margin-left: 10px;
     }
 }
 
@@ -32,7 +48,15 @@
         p{
             font-size: 18px;
         }
-    }   
+    }
+    .contactInfo{
+        p{
+            font-size: 18px;
+        }
+        h6{
+            font-size: 18px;
+        }
+    }
     .leftContent iframe{
         width: 650px;
     }
@@ -43,6 +67,9 @@
         display: grid;
         padding: 15px 20px;
         gap: 20px;
+    }
+    .contactBloc{
+        gap: 15px;
     }
     .contactText{
         height: auto;
@@ -58,10 +85,18 @@
 @media (max-width: 1000px){
     .contactText{
         h4{
-            font-size: 18px;
+            font-size: 19px;
         }
         p{
-            font-size: 16px;
+            font-size: 17px;
+        }
+    }
+    .contactInfo{
+        p{
+            font-size: 17px;
+        }
+        h6{
+            font-size: 17px;
         }
     }
 }
@@ -75,10 +110,18 @@
     }
     .contactText{
         h4{
-            font-size: 17px;
+            font-size: 18px;
         }
         p{
-            font-size: 15px;
+            font-size: 16px;
+        }
+    }
+    .contactInfo{
+        p{
+            font-size: 16px;
+        }
+        h6{
+            font-size: 16px;
         }
     }
 }
@@ -93,6 +136,14 @@
             font-size: 16px;
         }
         p{
+            font-size: 14px;
+        }
+    }
+    .contactInfo{
+        p{
+            font-size: 14px;
+        }
+        h6{
             font-size: 14px;
         }
     }

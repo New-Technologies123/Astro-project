@@ -12,13 +12,27 @@ export const Contact = () => {
 
   return (
     <>
-      <Title text={t('Контакты')}></Title>     
-      
-      <section className={Styles.contactContent}>        
-        <div className={Styles.contactText}>
-          <h4>{t('Офис')}</h4>
-          <p>{t('Валиди')}</p>
+      <Title text={t('Контакты')}></Title>
+
+      <section className={Styles.contactContent}>
+        <div className={Styles.contactBloc}>
+          <div className={Styles.contactText}>
+            <h4>{t('Офис')}</h4>
+            <p>{t('Валиди')}</p>
+          </div>
+          <div className={Styles.contactText}>
+            <h4>{t('Юридический')}</h4>
+            <p>{t('Менделеева')}</p>
+          </div>
+          <div className={Styles.contactInfo}>
+            <p>{t('ИннОгрн')}</p>
+          </div>
+          <div className={Styles.contactInfo}>
+            <p>{t('Вопросы')}</p>
+            <h6>+7 999 999 999</h6>
+          </div>
         </div>
+        
         <figure className={Styles.leftContent}>          
           <iframe 
             src={mapUrl}
