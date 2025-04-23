@@ -69,7 +69,6 @@ export const Header = ({ pageType }) => {
     <>
       <header>
         <div className={Styles.headerContainer}>
-          {/* <img src={logo.src} alt="Новые Технологии"/> */}
           <img src={currentLogo.src} alt="Новые Технологии" />
           <div className={Styles.contactBloc}>
             <div className={Styles.contactInfo}>

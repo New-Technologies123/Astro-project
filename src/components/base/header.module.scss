@@ -118,7 +118,7 @@ nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 19px;
   overflow-y: hidden;
   transition: 1s cubic-bezier(0.68, -0.55, 0.27, 10.55);
   box-shadow: var(--nav-shadow);
@@ -135,7 +135,7 @@ nav ul li a {
   padding: 10px 20px;
   display: block;
   position: relative;
-  font-size: 17px;
+  font-size: 18px;
   transition: all 0.4s ease;
   border-radius: 4px;
   
@@ -152,7 +152,7 @@ nav ul li a {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: -5px;
+    bottom: 0px;
     width: 0;
     height: 2px;
     background: #00f3ff;
@@ -275,6 +275,7 @@ nav ul li a.active {
     --padding: 5px;
     --font-size: 14px;
     --max-height: 0px;
+    padding-bottom: 5px;
 
     flex-direction: column;
     position: absolute;
