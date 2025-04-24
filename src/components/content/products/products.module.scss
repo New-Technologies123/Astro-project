@@ -47,11 +47,14 @@
     }
   }
   .mainImg{
-    width: 55%;
-    padding: 7px 0;
+    width: 45%;
+    // padding: 7px 0;
     cursor: zoom-in; // Курсор в виде лупы
     overflow: hidden; /* Предотвращает выход изображений за пределы контейнера */
     transition: transform 0.9s ease;
+    margin: 5px 0px;
+    border: 4px solid rgba(97, 147, 255, 0.336);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   
     &:hover {
       transform: scale(1.02);
