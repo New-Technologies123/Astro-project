@@ -1,63 +1,136 @@
-/* Форма для заголовка страницы */
-.boxButtonText {
+.hero {
+  background: linear-gradient(135deg, #4361ee, #3a0ca3);
+  color: white;
+  border-radius: 0 0 20px 20px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 25px;
+  padding: 20px 10px;  
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Q50,80 0,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+    background-size: cover;
+    background-position: left;
+  }
+}
+
+.backButton {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
   display: flex;
   align-items: center;
-  margin: 5px 0;
-  margin-left: 10px;
-  img{
-    text-decoration: none;
-    cursor: pointer;
-    margin-left: 10px;
-    width: 60px;
-    height: 60px;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(#768bec, 0.8), rgba(#3a0ca3, 0.6));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
   }
-}
 
-.content {
-  margin: 0 20px;
-  padding: 15px;
-  background-color: #f1f1f1;
-  border-radius: 8px;
-  display: flex;
-  align-items: flex-start;
-}
-
-@media (max-width: 1030px){
-  .boxButtonText{
-    img{
-      width: 55px;
-      height: 55px;
+  &:hover {
+    transform: translateX(-5px);
+    padding-left: 1.25rem;
+    background: rgba(255, 255, 255, 0.25);
+    
+    &::before {
+      opacity: 1;
+    }
+    
+    .backText {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .backIcon {
+      transform: translateX(-3px);
     }
   }
-  .content{
-    display: grid;
-    margin-bottom: 15px;
-    padding: 10px;
+}
+
+.backIcon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: brightness(0) invert(1);
+}
+
+.heroContent {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  h1{
+    font-size: 40px;
+    font-weight: 550;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  p{
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin: 0 auto;
   }
 }
 
-@media (max-width: 770px){
-  .boxButtonText{
-    margin-left: 5px;
-    img{
-      width: 50px;
-      height: 50px;
-    }
-  }
-  .content{
-    margin: 0 10px 15px 10px;
-    padding: 13px 8px;
-  }
-}
+// @media (max-width: 1030px){
+//   .boxButtonText{
+//     img{
+//       width: 55px;
+//       height: 55px;
+//     }
+//   }
+//   .content{
+//     display: grid;
+//     margin-bottom: 15px;
+//     padding: 10px;
+//   }
+// }
 
-@media (max-width: 430px) {
-  .boxButtonText{
-    img{
-      width: 45px;
-      height: 45px;
-    }
-  }
-  .content {
-    padding: 13px 7px;
-  }
-}
+// @media (max-width: 770px){
+//   .boxButtonText{
+//     margin-left: 5px;
+//     img{
+//       width: 50px;
+//       height: 50px;
+//     }
+//   }
+//   .content{
+//     margin: 0 10px 15px 10px;
+//     padding: 13px 8px;
+//   }
+// }
+
+// @media (max-width: 430px) {
+//   .boxButtonText{
+//     img{
+//       width: 45px;
+//       height: 45px;
+//     }
+//   }
+//   .content {
+//     padding: 13px 7px;
+//   }
+// }

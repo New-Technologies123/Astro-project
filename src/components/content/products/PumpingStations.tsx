@@ -1,5 +1,5 @@
 import Styles from './products.module.scss';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import product_5 from '../../../images/products/product_5.webp';
 import product_5_1 from '../../../images/products/product_5_1.webp';
 import up from '../../../images/arrow.svg';
@@ -15,160 +15,132 @@ export const PumpingStations = () => {
   const [oneIsOpen, setOneIsOpen] = useState(false);
   const [twoIsOpen, setTwoIsOpen] = useState(false);
 
+  const sectionsRef = useRef([]);
   const handleClick = useClickToScroll();
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth', // Плавная прокрутка
-    });
-  };
+ // Кнопка "Наверх"
+ const [isVisible, setIsVisible] = useState(false);
+ useEffect(() => {
+   const toggleVisibility = () => {
+     if (window.pageYOffset > 100) setIsVisible(true);
+     else setIsVisible(false);
+   };
+   window.addEventListener('scroll', toggleVisibility);
+   return () => window.removeEventListener('scroll', toggleVisibility);
+ }, []);
 
-  const [isVisible, setIsVisible] = useState(false); // Состояние видимости кнопки
-
-  // Функция для отслеживания прокрутки
-  const toggleVisibility = () => {
-    if (window.pageYOffset > 100) { // Показывать кнопку после прокрутки на 300px
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
-
-  // Добавляем слушатель прокрутки при монтировании компонента
-  useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
-    return () => {
-      window.removeEventListener('scroll', toggleVisibility);
-    };
-  }, []);
+ const scrollToTop = () => {
+   window.scrollTo({ top: 0, behavior: 'smooth' });
+ };
 
   return (
-    <div className={Styles.wrapper}>
-      <div className={Styles.verticalMenu}>
-        <a onClick={() => {handleClick('products-1');}}>{t('Насосная')}</a>
-        <a onClick={() => {handleClick('products-2');}}>{t('Мультифазная')}</a>
+    <div className={Styles.container}>
+      <div className={Styles.mainContent}>
+        <aside className={Styles.sidebar}>
+          <nav className={Styles.navMenu}>
+            <button onClick={() => handleClick('products-1')} className={`${Styles.navItem}`}>
+              <span>{t('Насосная')}</span>
+            </button>
+            <button onClick={() => handleClick('products-2')} className={`${Styles.navItem}`}>
+              <span>{t('Мультифазная')}</span>
+            </button>
+          </nav>
+        </aside>
+
+        <div className={Styles.content}>
+          <section id="products-1"  ref={el => sectionsRef.current[0] = el} className={Styles.section}>
+            <div className={Styles.sectionHeader}>
+              <h2><span>Блочная насосная станция внутренней</span> и внешней перекачки нефти</h2>
+            </div>
+            <div className={Styles.mainImageContainer}>
+              <div className={Styles.imageCard} onClick={() => setOneIsOpen(true)}>
+                <img src={product_5.src} alt="#" className={Styles.mainImage} />
+                <div className={Styles.imageOverlay}>
+                  <span className={Styles.zoomText}>Нажмите для увеличения</span>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.features}>
+              <ul className={Styles.featuresList}>
+                <li className={Styles.feature}>
+                  <div>
+                    <h4 className={Styles.featureTitle}>{t('Назначение')}</h4>
+                    <p className={Styles.featureText}>{t('Трубопроводы')}</p>
+                    <p className={Styles.featureText}>{t('Производства')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div>
+                    <h4 className={Styles.featureTitle}>{t('Типовой')}</h4>
+                    <p className={Styles.featureText}>{t('Насосные')}</p>
+                    <p className={Styles.featureText}>{t('Приемный')}</p>
+                    <p className={Styles.featureText}>{t('Дренажа')}</p>
+                    <p className={Styles.featureText}>{t('Пожароохранной')}</p>
+                    <p className={Styles.featureText}>{t('Пенного')}</p>
+                    <p className={Styles.featureText}>{t('Автоматизации')}</p>
+
+                    <p className={Styles.featureText}>{t('Грузоподъемные')}</p>
+                    <p className={Styles.featureText}>{t('Управления')}</p>
+                    <p className={Styles.featureText}>{t('Передачи')}</p>
+                    <p className={Styles.featureText}>{t('Электроснабжения')}</p>
+                    <p className={Styles.featureText}>{t('Жизнеобеспечения')}</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="products-2"  ref={el => sectionsRef.current[1] = el} className={Styles.section}>
+            <div className={Styles.sectionHeader}>
+              <h2><span>Блочная мультифазная</span> насосная станция</h2>
+            </div>
+            <div className={Styles.mainImageContainer}>
+              <div className={Styles.imageCard} onClick={() => setTwoIsOpen(true)}>
+                <img src={product_5_1.src} alt="#" className={Styles.mainImage} />
+                <div className={Styles.imageOverlay}>
+                  <span className={Styles.zoomText}>Нажмите для увеличения</span>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.features}>
+              <ul className={Styles.featuresList}>
+                <li className={Styles.feature}>
+                  <div>
+                    <h4 className={Styles.featureTitle}>{t('Назначение')}</h4>
+                    <p className={Styles.featureText}>{t('Перекачивания')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div>
+                    <h4 className={Styles.featureTitle}>{t('Типовой')}</h4>
+                    <p className={Styles.featureText}>{t('Мультифазные')}</p>
+                    <p className={Styles.featureText}>{t('Трубо')}</p>
+                    <p className={Styles.featureText}>{t('Дренажные')}</p>
+                    <p className={Styles.featureText}>{t('Комплект')}</p>
+                    <p className={Styles.featureText}>{t('Отопление')}</p>
+
+                    <p className={Styles.featureText}>{t('Агрегатами')}</p>
+                    <p className={Styles.featureText}>{t('Противоаварийной')}</p>
+                    <p className={Styles.featureText}>{t('Частотных')}</p>
+                    <p className={Styles.featureText}>{t('Информации')}</p>
+                    <p className={Styles.featureText}>{t('Электро')}</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
       </div>
 
-      <div className={Styles.productsInfo}>
-        <section className={Styles.productsText}>
-          <h3 id="products-1">{t('Насосная')}</h3>
-          <img src={product_5.src} alt="БН" className={Styles.mainImg} onClick={() => {setOneIsOpen(true);}}/>
-          <h1>{t('Назначение')}</h1>
-          <p>{t('Трубопроводы')}</p>
-          <p>{t('Производства')}</p>
-
-          <h1>{t('Типовой')}</h1>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Насосные')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Приемный')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Дренажа')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Пожароохранной')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Пенного')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Автоматизации')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Грузоподъемные')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Управления')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Передачи')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Электроснабжения')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Жизнеобеспечения')}
-          </p>
-        </section>
-
-        <section className={Styles.productsText}>
-          <h3 id="products-2">{t('Мультифазная')}</h3>
-          <img src={product_5_1.src} alt="БЛ" className={Styles.mainImg} onClick={() => {setTwoIsOpen(true);}}/>
-          <h1>{t('Назначение')}</h1>
-          <p>{t('Перекачивания')}</p>
-
-          <h1>{t('Типовой')}</h1>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Мультифазные')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Насосной')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Трубо')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Дренажные')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Комплект')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Отопление')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Агрегатами')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Противоаварийной')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Частотных')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Информации')}
-          </p>
-          <p>
-            <img src={dot.src} className={Styles.dotIcon}/>
-            {t('Электро')}
-          </p>
-        </section>
-      </div>
-
-      {/* Кнопка "Наверх" с условием видимости */}
-      <div className={`${Styles.backUp} ${isVisible ? Styles.visible : ''}`}>
-        <a onClick={scrollToTop}>
-          <img src={up.src} alt="Наверх" />
-        </a>
-      </div>
+      <button 
+        onClick={scrollToTop} 
+        className={`${Styles.backToTop} ${isVisible ? Styles.visible : ''}`}
+        aria-label="Наверх">
+        <img src={up.src} alt="" className={Styles.upIcon} />
+      </button>
 
       {oneIsOpen && <BigPhoto src={product_5.src} onClose={() => setOneIsOpen(false)} />}
       {twoIsOpen && <BigPhoto src={product_5_1.src} onClose={() => setTwoIsOpen(false)} />}
-    </div>
-      
+    </div>      
   );
 };
