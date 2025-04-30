@@ -12,65 +12,33 @@ export const Service = () => {
 
   return (
     <>
-      <div className={Styles.servesFrame}>
-        <img src={serves_5.src} alt="сервис" className={Styles.servesImg} onClick={() => { setPhotoIsOpen(true); }} />
+      <div className={Styles.card}>
+        <div className={Styles.imageWrapper} onClick={() => setPhotoIsOpen(true)}>
+          <img 
+            src={serves_5.src} 
+            alt="сервис" 
+            className={Styles.serviceImage}
+          />
+          <div className={Styles.imageOverlay}>
+            <span className={Styles.zoomText}>{t('Увеличить')}</span>
+          </div>        
+        </div>
+
+        <div className={Styles.content}>
+          <h3 className={Styles.title}>{t('Техническое')}</h3>
+          <ul className={Styles.featureList}>
+            {['Внешний', 'Проверка', 'Доливка', 'Визуальный', 'Сальников', 
+            'Датчика', 'Калибровки', 'Редуктора', 'Заземления', 'Знаков', 'Шкафа', 
+            'Обогрева', 'Сбои'].map((item) => (
+              <li key={item} className={Styles.featureItem}>
+                <img src={dot.src} className={Styles.dotIcon} />
+                {t(item)}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
-      <div className={Styles.servesText}>
-        <h3>{t('Техническое')}</h3>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon}/>
-          {t('Внешний')}
-        </p>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon}/>
-          {t('Проверка')}
-        </p>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon}/>
-          {t('Доливка')}
-        </p>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon}/>
-          {t('Визуальный')}
-        </p>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon}/>
-          {t('Сальников')}
-        </p>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon}/>
-          {t('Датчика')}
-        </p>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon}/>
-          {t('Калибровки')}
-        </p>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon}/>
-          {t('Редуктора')}
-        </p>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon}/>
-          {t('Заземления')}
-        </p>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon}/>
-          {t('Знаков')}
-        </p>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon}/>
-          {t('Шкафа')}
-        </p>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon}/>
-          {t('Обогрева')}
-        </p>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon}/>
-          {t('Сбои')}
-        </p>
-      </div>
 
       {photoIsOpen && <BigPhoto src={serves_5.src} onClose={() => setPhotoIsOpen(false)} />}
     </>

@@ -7,37 +7,33 @@ import dot from '../../../images/dot.svg';
 
 export const Metering = () => {
   const { t } = useTranslation('services');
-
   const [photoIsOpen, setPhotoIsOpen] = useState(false);
 
   return (
     <>
-      <div className={Styles.servesFrame}>
-        <img src={serves_3.src} alt="сервис" className={Styles.servesImg} onClick={() => { setPhotoIsOpen(true); }}/>
-      </div>
+      <div className={Styles.card}>
+        <div className={Styles.imageWrapper} onClick={() => setPhotoIsOpen(true)}>
+          <img 
+            src={serves_3.src} 
+            alt="сервис" 
+            className={Styles.serviceImage}
+          />
+          <div className={Styles.imageOverlay}>
+            <span className={Styles.zoomText}>{t('Увеличить')}</span>
+          </div>
+        </div>
 
-      <div className={Styles.servesText}>
-        <h3>{t('Установки')}</h3>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon} />
-          {t('Доставку')}
-        </p>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon} />
-          {t('Монтаж')}
-        </p>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon} />
-          {t('Сброс')}
-        </p>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon} />
-          {t('Форматироваие')}
-        </p>
-        <p>
-          <img src={dot.src} className={Styles.dotIcon} />
-          {t('Опрессовку')}
-        </p>
+        <div className={Styles.content}>
+          <h3 className={Styles.title}>{t('Установки')}</h3>
+          <ul className={Styles.featureList}>
+            {['Доставку', 'Монтаж', 'Сброс', 'Форматироваие', 'Опрессовку'].map((item) => (
+              <li key={item} className={Styles.featureItem}>
+                <img src={dot.src} className={Styles.dotIcon} />
+                {t(item)}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
       {photoIsOpen && <BigPhoto src={serves_3.src} onClose={() => setPhotoIsOpen(false)} />}
