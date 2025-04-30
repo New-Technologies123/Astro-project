@@ -6,7 +6,7 @@ import { useEffect, useRef } from 'react';
 type TProps = {
   title: string;
   onClick?: () => void;
-  index: number; // Добавляем индекс для определения задержки
+  index: number;
 };
 
 export const List = ({ title, onClick, index }: TProps) => {
@@ -15,8 +15,7 @@ export const List = ({ title, onClick, index }: TProps) => {
   
   useEffect(() => {
     if (listRef.current) {
-      // Задержка зависит от индекса карточки (например, 0.1s для каждой следующей)
-      const delay = index * 100; // 100ms задержка между карточками
+      const delay = index * 100;
       
       setTimeout(() => {
         if (listRef.current) {
@@ -28,19 +27,11 @@ export const List = ({ title, onClick, index }: TProps) => {
   }, [index]);
 
   return (
-    <div 
-      className={Styles.certificatesList} 
-      onClick={onClick}
-      ref={listRef}
-      style={{
-        transitionDelay: `${index * 0.1}s` // Добавляем задержку для плавности
-      }}
-    >
+    <div className={Styles.certificatesList} onClick={onClick} ref={listRef}>
       <div className={Styles.actionTitle}>
         <img src={sign.src} alt="document icon" />
         <p>{t(title)}</p>
       </div>
-      
     </div>
   );
 };

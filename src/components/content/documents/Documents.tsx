@@ -57,7 +57,7 @@ export const Documents = () => {
           </div>
         </div>
       </div>
-      <Cards selectId={showId} />
+      <Cards selectId={showId} key={showId}/>
     </>
   );
 };

@@ -11,7 +11,6 @@ export const Cards = ({ selectId }) => {
     window.open(openUrl, '_blank');
   };
 
-  // Создаем массив карточек с учетом фильтрации
   const cards = useMemo(() => {
     const allCards = [
       { id: 'accountingSystem', condition: (selectId === 'all' || selectId === 'accountingSystem'), title: t('Сделано'), docType: 'MadeInRussia' },
@@ -30,10 +29,10 @@ export const Cards = ({ selectId }) => {
     <div className={Styles.team}>
       {cards.map((card, index) => (
         <List 
-          key={`${card.id}-${card.docType}`}
+          key={`${selectId}-${card.id}-${card.docType}`}
           title={card.title} 
           onClick={() => handleCardClick(card.docType)}
-          index={index} // Передаем индекс для анимации
+          index={index}
         />
       ))}
     </div>
