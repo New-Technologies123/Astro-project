@@ -22,29 +22,31 @@ export const About = () => {
 
       <div className={Styles.numberAbout}>
         <CountCard 
-          header={t('Более')}
-          number='300'
+          header={t('Более300')}
           title={t('Штатных')}
+          index={0}
         />
         <CountCard
-          number='31404'
-          text={t('М')}
-          offer='2'
+          header={t('31404м')}
+          number='2'
           title={t('Площадь')}
+          index={1}
         />
         <CountCard
-          header={t('Более')}
-          number='100'
+          header={t('Более100')}
           title={t('Успешно')}
+          index={2}
         />
         <CountCard
-          number='100 %'
+          header='100 %'
           title={t('Следование')}
+          index={3}
         />
         <CountCard
-          number='79'
+          header='79'
           offer={t('Единиц')}
           title={t('Краны')}
+          index={4}
         />
       </div>
     </>

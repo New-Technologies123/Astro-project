@@ -1,25 +1,33 @@
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 import Styles from './count-card.module.scss';
 
-// Тип для пропсов компонента
 type TVacancyProps = {
-    number: string;
-    header?: string;
-    title?: string;
-    text?: string;
-    offer?: string;
+  header: string;
+  title?: string;
+  offer?: string;
+  number?: string;
+  index?: number;
 };
 
-export const CountCard = ({ number, header, title, text, offer}: TVacancyProps) => {
+export const CountCard = ({ header, number, title, offer, index = 0}: TVacancyProps) => {
+  const { ref, isVisible } = useScrollAnimation(index * 100);
 
-    return (
-        <div className={Styles.bloc}>
-            <h1>{header}</h1>
-            <div className={Styles.numberText}>
-                <h3>{number}</h3>
-                <h4>{text}</h4>
+  return (
+    <div 
+      ref={ref} 
+      className={`${Styles.bloc} ${isVisible ? Styles.visible : Styles.hidden}`}
+      style={{
+        transitionDelay: isVisible ? `${index * 150}ms` : '0ms' // Задержка только для появления
+      }}
+    >
+        <div className={Styles.headerText}>
+            <h3>{header}</h3>
+            <div className={Styles.explanationText}>
+                <h4>{number}</h4>
                 <h5>{offer}</h5>
-            </div>        
-            <p>{title}</p>
+            </div>                
         </div>
-    );
+        <p>{title}</p>
+    </div>
+  );
 };

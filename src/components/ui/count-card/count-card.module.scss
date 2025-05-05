@@ -1,131 +1,126 @@
 .bloc {
-    display: block;
     background-color: #e6f7ff93;
-    // background-color: #6acdff;
     padding: 14px; 
-    width: 250px; 
+    width: 260px; 
     text-align: left;
     color: #000000;
-    // border-radius: 8px;
-    h1{
-        font-size: 19px;
-    }    
-    p{
-        font-size: 18px;
+    will-change: opacity, transform;
+    // Общие параметры анимации
+    transition: 
+      opacity 0.5s ease-out,
+      transform 0.5s ease-out;    
+    p {
+      font-size: 16px;
+    }     
+    // Состояние скрытия
+    &.hidden {
+      opacity: 0;
+      transform: translateY(20px);
+    }  
+    // Состояние показа
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 }
 
-.numberText{
+.headerText{
     display: flex;
     align-items: center;
     h3{
-        margin-right: 10px;
-        margin-left: 5px;
-        font-size: 40px;
-        font-weight: bold;
-    }
+        font-size: 26px;
+    }   
+}
+
+.explanationText{
+    display: flex;
+    align-items: center;
     h4{
-        margin-left: 5px;
-        margin-top: 15px;
-        font-size: 22px;
+        font-size: 18px;
+        margin-bottom: 12px;
     }
     h5{
-        font-size: 16px;
+        margin-left: 10px;
+        font-size: 18px;
     }
 }
 
 @media (max-width: 1400px){
     .bloc{
-        width: 230px;
-        h1{
-            font-size: 18px;
-        }
+        width: 240px;
         p{
-            font-size: 17px;
+            font-size: 15px;
         }
     }
-    .numberText{
+    .headerText{
         h3{
-            margin-right: 6px;
-            font-size: 32px;
+            font-size: 24px;
         }
+    }
+    .explanationText{
         h4{
-            margin-top: 10px;
-            font-size: 20px;
+            font-size: 16px;
         }
         h5{
-            font-size: 15px;
+            font-size: 16px;
         }
     }
 }
 
 @media (max-width: 1030px){
     .bloc{
-        width: 215px;
-        h1{
-            font-size: 17px;
-        }
-        p{
-            font-size: 15px;
-        }
-    }
-    .numberText{
-        h3{
-            font-size: 26px;
-            margin-right: 3px;
-        }
-        h4{
-            font-size: 16px;
-        }
-        h5{
-            font-size: 14px;
-        }
-    }
-}
-
-@media (max-width: 430px){
-    .bloc{
-        h1{
-            font-size: 15px;
-        }
+        width: 225px;
         p{
             font-size: 14px;
         }
     }
-    .numberText{
-        h3{
-            font-size: 24px;
-            margin-right: 1px;
-        }
-        h4{
-            font-size: 15px;
-            margin-top: 7px;
-        }
-        h5{
-            font-size: 13px;
-        }
-    }
-}
-
-@media (max-width: 375px){
-    .bloc{
-        h1{
-            font-size: 14px;
-        }
-        p{
-            font-size: 13px;
-        }
-    }
-    .numberText{
+    .headerText{
         h3{
             font-size: 20px;
-        }
+        }        
+    }
+    .explanationText{
         h4{
-            font-size: 14px;
-            margin-top: 5px;
+            font-size: 12px;
         }
         h5{
-            font-size: 12px;
+            font-size: 15px;
         }
     }
 }
+
+@media (max-width: 520px){
+    .headerText{
+        h3{
+            font-size: 18px;
+        }
+        
+    }
+    .explanationText{
+        h5{
+            font-size: 14px;
+        }
+    }
+}
+
+// @media (max-width: 375px){
+//     .bloc{
+//         p{
+//             font-size: 13px;
+//         }
+//     }
+//     .headerText{
+//         h3{
+//             font-size: 20px;
+//         }        
+//     }
+//     .explanationText{
+//         h4{
+//             font-size: 14px;
+//             margin-top: 5px;
+//         }
+//         h5{
+//             font-size: 12px;
+//         }
+//     }
+// }
