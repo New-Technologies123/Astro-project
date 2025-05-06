@@ -19,7 +19,15 @@ export const Home = () => {
 
   return (
     <>
-      <img src={homeItem_1.src} alt="Главная картинка" className={Styles.homeImg} />
+      <section className={Styles.hero}>
+        <img src={homeItem_1.src} alt="Главная картинка" className={Styles.heroImage}/>
+        <div className={Styles.heroOverlay}>
+          <h1>{t('Добро пожаловать')}</h1>
+          <p>{t('Мы обеспечиваем качественные поставки')}</p>
+        </div>
+      </section>
+
+      {/* <img src={homeItem_1.src} alt="Главная картинка" className={Styles.homeImg} /> */}
       <Title text={t('Поставки')}></Title>
       <img src={homeItem_2.src} alt="Карта поставок" className={Styles.homeImg} />
       <Title text={t('Заказчики')}></Title>
