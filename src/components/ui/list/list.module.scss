@@ -1,5 +1,5 @@
 .certificatesList {
-    background: linear-gradient(135deg, #93d1f0, #7bc4eb);
+    background: linear-gradient(135deg, #6ec9f7, #0c8ed4);
     padding: 10px 15px;
     width: 100%;
     text-align: center;
@@ -19,17 +19,10 @@
     /* Анимация при наведении */
     &:hover {
         transform: translateX(0) translateY(-5px) scale(1.03);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        background: linear-gradient(135deg, #9bd8f5, #84c9ed);
-        
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
         &::before {
             transform: translateX(0);
-            }
         }
-    
-    /* Эффект нажатия */
-    &:active {
-        transform: translateX(0) scale(0.98);
     }
     
     /* Эффект "подсветки" при наведении */
@@ -42,9 +35,9 @@
         height: 100%;
         background: linear-gradient(
             90deg,
-            rgba(255, 255, 255, 0.1),
-            rgba(255, 255, 255, 0.3),
-            rgba(255, 255, 255, 0.1)
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0.4),
+            rgba(255, 255, 255, 0.2)
         );
         transform: translateX(-100%);
         transition: transform 1.5s ease;
@@ -62,7 +55,7 @@
         margin: 5px 0;
         transition: transform 0.3s ease;        
         .certificatesList:hover & {
-            transform: translateX(4px);
+            transform: translateX(5px);
         }
     }
     img {
@@ -73,19 +66,31 @@
     }
 }
   
-@media (max-width: 1360px) {
+@media (max-width: 1400px) {
     .actionTitle {
-        font-size: 18px;        
+        p{
+            font-size: 18px; 
+        }               
         img {
             width: 20px;
             height: 20px;
         }
     }
 }
+
+@media (max-width: 1200px) {
+    .actionTitle {
+        p{
+            font-size: 17px; 
+        }
+    }
+}
   
 @media (max-width: 1030px) {
     .actionTitle {
-        font-size: 16px;        
+        p{
+            font-size: 16px; 
+        }               
         img {
             width: 18px;
             height: 18px;
@@ -95,7 +100,9 @@
   
 @media (max-width: 770px) {
     .actionTitle {
-        font-size: 14px;        
+        p{
+            font-size: 14px;
+        }
         img {
             width: 16px;
             height: 16px;
@@ -105,7 +112,9 @@
   
 @media (max-width: 515px) {
     .actionTitle {
-        font-size: 15px;
+        p{
+            font-size: 15px;
+        }
     }    
     .certificatesList {
         &:hover {
