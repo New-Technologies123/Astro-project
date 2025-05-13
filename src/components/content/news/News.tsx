@@ -4,21 +4,29 @@ import news_3 from '../../../images/news/news_3.webp';
 import Styles from './news.module.scss';
 import { useTranslation } from 'react-i18next';
 import { Gallery } from '../../ui/gallery/Gallery';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BigPhoto } from '../../ui/big-photo/BigPhoto';
 import { Title } from '../../ui/title/Title';
 
 export const News = () => {
   const { t } = useTranslation('news');
-
   const [photoIsOpen, setPhotoIsOpen] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Имитация загрузки контента
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 300);
+    
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
-      <Title text={t('Новости')}></Title>      
-      
-      <section className={Styles.newsContent}>
-        <div className={Styles.teamContact}>
+      <Title text={t('Новости')}></Title>
+      <div className={`${isLoaded ? Styles.loaded : ''}`}>
+        <div className={Styles.newsContent}>
           <div className={Styles.newsItem}>
             <Gallery
               photos={[
@@ -36,12 +44,11 @@ export const News = () => {
             <p>
               {t('Конкурс')}
             </p>
-
-            {photoIsOpen && <BigPhoto src={news_3.src} onClose={() => setPhotoIsOpen(false)} />}          
           </div>
-        </div>
-        
-      </section>
+        </div>        
+      </div>
+      {photoIsOpen && <BigPhoto src={news_3.src} onClose={() => setPhotoIsOpen(false)} />}
     </>
+    
   );
 };

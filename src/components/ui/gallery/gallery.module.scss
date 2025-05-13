@@ -3,14 +3,12 @@
   max-width: 100%;
   position: relative;
   margin: auto;
-  height: 367.3px;
   display: flex;
   align-items: center;
   /* Анимация слайдов */
   .item {
     animation-name: fade;
-    animation-duration: 1.5s;
-    /* Картинка масштабируется по отношению к родительскому элементу */
+    animation-duration: 1.5s;    
     img{
       object-fit: cover;
     }
@@ -22,10 +20,10 @@
   float: right;
   padding: 10px;
   width: 270px;
-  cursor: zoom-in; // Курсор в виде лупы  
-  transition: transform 0.9s; /* Плавный переход */
+  cursor: pointer;
+  transition: transform 0.9s;
   &:hover{
-    transform: scale(1.03); /* Увеличение при наведении */
+    transform: scale(1.03);
   }
 }
 
@@ -69,21 +67,15 @@
 }
 
 @media (max-width: 1030px){
-  .slider{
-    height: 339.52px;
-  }
   .thumbnail {
     width: 250px;
   }
   .previous, .next{
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
-@media (max-width: 770px){
-  .slider{
-    height: 270.05px;
-  } 
+@media (max-width: 835px){
   .thumbnail {
     width: 200px;
     padding: 5px;
