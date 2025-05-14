@@ -14,31 +14,26 @@ export const Service = () => {
     <>
       <div className={Styles.card}>
         <div className={Styles.imageWrapper} onClick={() => setPhotoIsOpen(true)}>
-          <img 
-            src={serves_5.src} 
-            alt="сервис" 
-            className={Styles.serviceImage}
-          />
+          <img src={serves_5.src} alt="сервис" className={Styles.serviceImage}/>
           <div className={Styles.imageOverlay}>
-            <span className={Styles.zoomText}>{t('Увеличить')}</span>
+            <p>{t('Увеличить')}</p>
           </div>        
         </div>
 
         <div className={Styles.content}>
-          <h3 className={Styles.title}>{t('Техническое')}</h3>
-          <ul className={Styles.featureList}>
+          <h3>{t('Техническое')}</h3>
+          <ul>
             {['Внешний', 'Проверка', 'Доливка', 'Визуальный', 'Сальников', 
             'Датчика', 'Калибровки', 'Редуктора', 'Заземления', 'Знаков', 'Шкафа', 
             'Обогрева', 'Сбои'].map((item) => (
-              <li key={item} className={Styles.featureItem}>
-                <img src={dot.src} className={Styles.dotIcon} />
+              <li key={item}>
+                <img src={dot.src}/>
                 {t(item)}
               </li>
             ))}
           </ul>
         </div>
       </div>
-
 
       {photoIsOpen && <BigPhoto src={serves_5.src} onClose={() => setPhotoIsOpen(false)} />}
     </>

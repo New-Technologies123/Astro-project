@@ -16,32 +16,32 @@ export const Repair = () => {
         <div className={Styles.imageWrapper} onClick={() => setPhotoIsOpen(true)}>
           <img src={serves_1.src} alt="сервис" className={Styles.serviceImage}/>
           <div className={Styles.imageOverlay}>
-            <span className={Styles.zoomText}>{t('Увеличить')}</span>
+            <p>{t('Увеличить')}</p>
           </div>
         </div>
 
         <div className={Styles.content}>
-          <h3 className={Styles.title}>{t('Капитальный')}</h3>
-          <ul className={Styles.featureList}>
+          <h3>{t('Капитальный')}</h3>
+          <ul>
             {['Сепарационной', 'Переключателя', 'Счетчика', 'Задвижек', 'Технологического', 'Линии', 
             'Гидравлического', 'Электромонтажная'].map((item) => (
-              <li key={item} className={Styles.featureItem}>
+              <li key={item}>
                 {t(item)}
               </li>
             ))}
           </ul>
           <h3 className={Styles.title}>{t('Обслуживать')}</h3>
-          <ul className={Styles.featureList}>
+          <ul>
             {['Инструкций', 'Замеров'].map((item) => (
-              <li key={item} className={Styles.featureItem}>
+              <li key={item}>
                 {t(item)}
               </li>
             ))}
           </ul>
-          <h3 className={Styles.title}>{t('Модерн')}</h3>
-          <ul className={Styles.featureList}>
+          <h3>{t('Модерн')}</h3>
+          <ul>
             {['Шкафов'].map((item) => (
-              <li key={item} className={Styles.featureItem}>
+              <li key={item}>
                 {t(item)}
               </li>
             ))}

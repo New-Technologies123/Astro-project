@@ -19,16 +19,16 @@ export const Metering = () => {
             className={Styles.serviceImage}
           />
           <div className={Styles.imageOverlay}>
-            <span className={Styles.zoomText}>{t('Увеличить')}</span>
+            <p>{t('Увеличить')}</p>
           </div>
         </div>
 
         <div className={Styles.content}>
-          <h3 className={Styles.title}>{t('Установки')}</h3>
-          <ul className={Styles.featureList}>
+          <h3>{t('Установки')}</h3>
+          <ul>
             {['Доставку', 'Монтаж', 'Сброс', 'Форматироваие', 'Опрессовку'].map((item) => (
-              <li key={item} className={Styles.featureItem}>
-                <img src={dot.src} className={Styles.dotIcon} />
+              <li key={item}>
+                <img src={dot.src}/>
                 {t(item)}
               </li>
             ))}

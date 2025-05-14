@@ -13,20 +13,16 @@ export const Dewaxing = () => {
     <>
       <div className={Styles.card}>
         <div className={Styles.imageWrapper} onClick={() => setPhotoIsOpen(true)}>
-          <img 
-            src={serves_5.src} 
-            alt="сервис" 
-            className={Styles.serviceImage}
-          />
+          <img src={serves_5.src} alt="сервис" className={Styles.serviceImage}/>
           <div className={Styles.imageOverlay}>
-            <span className={Styles.zoomText}>{t('Увеличить')}</span>
+            <p>{t('Увеличить')}</p>
           </div>
         </div>
 
         <div className={Styles.content}>
-          <ul className={Styles.featureList}>
+          <ul>
             {['Услуги', 'АСПО', 'УЭЦН', 'Глубина', 'Отложения', 'Персонал'].map((item) => (
-              <li key={item} className={Styles.featureItem}>
+              <li key={item}>
                 {t(item)}
               </li>
             ))}
