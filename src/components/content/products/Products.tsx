@@ -28,6 +28,14 @@ export const Products = () => {
     pumpingStations: t('Насосные станции'),
   };
 
+   const cardDescription: Record<TProducts, string> = {
+    accountingSystem: t('Текст'),
+    accessories: t('Текст'),
+    measuringSystem: t('Текст'),
+    preparationSystems: t('Текст'),
+    pumpingStations: t('Текст'),
+  };
+
   const [typeLayoutBackOpen, setTypeLayoutBackOpen] = useState<TProducts | null>(null);
 
   useEffect(() => {
@@ -96,27 +104,27 @@ export const Products = () => {
         </Layout>
       )}
       {typeLayoutBackOpen === 'accountingSystem' && (
-        <LayoutBack onBack={onBack} title={cardTitle.accountingSystem}>
+        <LayoutBack onBack={onBack} title={cardTitle.accountingSystem} description={cardDescription.accountingSystem}>
           <AccountingSystem />
         </LayoutBack>
       )}
       {typeLayoutBackOpen === 'accessories' && (
-        <LayoutBack onBack={onBack} title={cardTitle.accessories}>
+        <LayoutBack onBack={onBack} title={cardTitle.accessories} description={cardDescription.accessories}>
           <Accessories />
         </LayoutBack>
       )}
       {typeLayoutBackOpen === 'measuringSystem' && (
-        <LayoutBack onBack={onBack} title={cardTitle.measuringSystem}>
+        <LayoutBack onBack={onBack} title={cardTitle.measuringSystem} description={cardDescription.measuringSystem}>
           <MeasuringSystem />
         </LayoutBack>
       )}
       {typeLayoutBackOpen === 'preparationSystems' && (
-        <LayoutBack onBack={onBack} title={cardTitle.preparationSystems}>
+        <LayoutBack onBack={onBack} title={cardTitle.preparationSystems} description={cardDescription.preparationSystems}>
           <PreparationSystems />
         </LayoutBack>
       )}
       {typeLayoutBackOpen === 'pumpingStations' && (
-        <LayoutBack onBack={onBack} title={cardTitle.pumpingStations}>
+        <LayoutBack onBack={onBack} title={cardTitle.pumpingStations} description={cardDescription.pumpingStations}>
           <PumpingStations />
         </LayoutBack>
       )}

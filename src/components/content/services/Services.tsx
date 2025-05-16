@@ -24,6 +24,13 @@ export const Services = () => {
     dewaxing: t('Депарафинизация'),
   };
 
+  const cardDescription: Record<TServices, string> = {
+    repair: t('Текст'),
+    metering: t('Текст'),
+    service: t('Текст'),
+    dewaxing: t('Текст'),
+  };
+
   const [typeLayoutBackOpen, setTypeLayoutBackOpen] = useState<TServices | null>(null);
 
   useEffect(() => {
@@ -85,22 +92,22 @@ export const Services = () => {
         </Layout>
       )}
       {typeLayoutBackOpen === 'repair' && (
-        <LayoutBack onBack={onBack} title={cardTitle.repair}>
+        <LayoutBack onBack={onBack} title={cardTitle.repair} description={cardDescription.repair}>
           <Repair />
         </LayoutBack>
       )}
       {typeLayoutBackOpen === 'metering' && (
-        <LayoutBack onBack={onBack} title={cardTitle.metering}>
+        <LayoutBack onBack={onBack} title={cardTitle.metering} description={cardDescription.metering}>
           <Metering />
         </LayoutBack>
       )}
       {typeLayoutBackOpen === 'service' && (
-        <LayoutBack onBack={onBack} title={cardTitle.service}>
+        <LayoutBack onBack={onBack} title={cardTitle.service} description={cardDescription.service}>
           <Service />
         </LayoutBack>
       )}
       {typeLayoutBackOpen === 'dewaxing' && (
-        <LayoutBack onBack={onBack} title={cardTitle.dewaxing}>
+        <LayoutBack onBack={onBack} title={cardTitle.dewaxing} description={cardDescription.dewaxing}>
           <Dewaxing />
         </LayoutBack>
       )}
