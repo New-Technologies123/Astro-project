@@ -37,53 +37,115 @@ export const PumpingStations = () => {
     <div className={Styles.container}>
       <div className={Styles.mainContent}>
         <aside className={Styles.sidebar}>
-          <nav className={Styles.navMenu}>
+          <div className={Styles.navMenu}>
             <button onClick={() => handleClick('products-1')} className={`${Styles.navItem}`}>
-              <span>{t('Насосная')}</span>
+              <span className={Styles.navIcon}>⛽</span>
+              <p>{t('Насосная')}</p>
             </button>
             <button onClick={() => handleClick('products-2')} className={`${Styles.navItem}`}>
-              <span>{t('Мультифазная')}</span>
+              <span className={Styles.navIcon}>🔄</span>
+              <p>{t('Мультифазная')}</p>
             </button>
-          </nav>
+          </div>
         </aside>
 
         <div className={Styles.content}>
           <section id="products-1"  ref={el => sectionsRef.current[0] = el} className={Styles.section}>
             <div className={Styles.sectionHeader}>
-              <h2><span>Блочная насосная станция внутренней</span> и внешней перекачки нефти</h2>
+              <h2>{t('Насосная')}</h2>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.imageCard} onClick={() => setOneIsOpen(true)}>
                 <img src={product_5.src} alt="#" className={Styles.mainImage} />
                 <div className={Styles.imageOverlay}>
-                  <span className={Styles.zoomText}>Нажмите для увеличения</span>
+                  <span className={Styles.zoomText}>{t('Увеличение')}</span>
                 </div>
               </div>
             </div>
             <div className={Styles.features}>
+              <h3>{t('Назначение')}</h3>
               <ul className={Styles.featuresList}>
                 <li className={Styles.feature}>
-                  <div>
-                    <h4 className={Styles.featureTitle}>{t('Назначение')}</h4>
-                    <p className={Styles.featureText}>{t('Трубопроводы')}</p>
-                    <p className={Styles.featureText}>{t('Производства')}</p>
+                  <div className={Styles.featureIcon}>🛢️</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Трубопроводы')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
-                  <div>
-                    <h4 className={Styles.featureTitle}>{t('Типовой')}</h4>
-                    <p className={Styles.featureText}>{t('Насосные')}</p>
-                    <p className={Styles.featureText}>{t('Приемный')}</p>
-                    <p className={Styles.featureText}>{t('Дренажа')}</p>
-                    <p className={Styles.featureText}>{t('Пожароохранной')}</p>
-                    <p className={Styles.featureText}>{t('Пенного')}</p>
-                    <p className={Styles.featureText}>{t('Автоматизации')}</p>
-
-                    <p className={Styles.featureText}>{t('Грузоподъемные')}</p>
-                    <p className={Styles.featureText}>{t('Управления')}</p>
-                    <p className={Styles.featureText}>{t('Передачи')}</p>
-                    <p className={Styles.featureText}>{t('Электроснабжения')}</p>
-                    <p className={Styles.featureText}>{t('Жизнеобеспечения')}</p>
+                  <div className={Styles.featureIcon}>🏭</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Производства')}</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className={Styles.features}>
+              <h3>{t('Типовой')}</h3>
+              <ul className={Styles.featuresList}>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>⚙️</div>
+                  <div className={Styles.featureText}>                    
+                    <p>{t('Насосные')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>🔄</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Приемный')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>💧</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Дренажа')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>🔥</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Пожароохранной')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>🧯</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Пенного')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>🤖</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Автоматизации')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>🏗️</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Грузоподъемные')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>🎮</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Управления')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>📡</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Передачи')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>⚡</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Электроснабжения')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>🏥</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Жизнеобеспечения')}</p>
                   </div>
                 </li>
               </ul>
@@ -92,38 +154,94 @@ export const PumpingStations = () => {
 
           <section id="products-2"  ref={el => sectionsRef.current[1] = el} className={Styles.section}>
             <div className={Styles.sectionHeader}>
-              <h2><span>Блочная мультифазная</span> насосная станция</h2>
+              <h2>{t('Мультифазная')}</h2>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.imageCard} onClick={() => setTwoIsOpen(true)}>
                 <img src={product_5_1.src} alt="#" className={Styles.mainImage} />
                 <div className={Styles.imageOverlay}>
-                  <span className={Styles.zoomText}>Нажмите для увеличения</span>
+                  <span className={Styles.zoomText}>{t('Увеличение')}</span>
                 </div>
               </div>
             </div>
             <div className={Styles.features}>
               <ul className={Styles.featuresList}>
                 <li className={Styles.feature}>
-                  <div>
+                  <div className={Styles.featureIcon}>⚡</div>
+                  <div className={Styles.featureText}>
                     <h4 className={Styles.featureTitle}>{t('Назначение')}</h4>
                     <p className={Styles.featureText}>{t('Перекачивания')}</p>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div className={Styles.features}>
+              <h3>{t('Типовой')}</h3>
+              <ul className={Styles.featuresList}>
                 <li className={Styles.feature}>
-                  <div>
-                    <h4 className={Styles.featureTitle}>{t('Типовой')}</h4>
-                    <p className={Styles.featureText}>{t('Мультифазные')}</p>
-                    <p className={Styles.featureText}>{t('Трубо')}</p>
-                    <p className={Styles.featureText}>{t('Дренажные')}</p>
-                    <p className={Styles.featureText}>{t('Комплект')}</p>
-                    <p className={Styles.featureText}>{t('Отопление')}</p>
-
-                    <p className={Styles.featureText}>{t('Агрегатами')}</p>
-                    <p className={Styles.featureText}>{t('Противоаварийной')}</p>
-                    <p className={Styles.featureText}>{t('Частотных')}</p>
-                    <p className={Styles.featureText}>{t('Информации')}</p>
-                    <p className={Styles.featureText}>{t('Электро')}</p>
+                  <div className={Styles.featureIcon}>🔄</div>
+                  <div className={Styles.featureText}>                    
+                    <p>{t('Мультифазные')}</p> 
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>🏗️</div>
+                  <div className={Styles.featureText}>                    
+                    <p>{t('Насосной')}</p> 
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>🛢️</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Трубо')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>💧</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Дренажные')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>📊</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Комплект')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>🌡️</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Отопление')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>🤖</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Агрегатами')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>⚠️</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Противоаварийной')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>⚡</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Частотных')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>📡</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Информации')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>🔌</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Электро')}</p>
                   </div>
                 </li>
               </ul>

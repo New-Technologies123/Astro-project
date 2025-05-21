@@ -37,56 +37,55 @@ export const AccountingSystem = () => {
     <div className={Styles.container}>
       <div className={Styles.mainContent}>
         <aside className={Styles.sidebar}>
-          <nav className={Styles.navMenu}>
+          <div className={Styles.navMenu}>
             <button onClick={() => handleClick('products-1')} className={`${Styles.navItem}`}>
               <span className={Styles.navIcon}>🏢</span>
-              <span>{t('Стационарная')}</span>
+              <p>{t('Стационарная')}</p>
             </button>
             <button onClick={() => handleClick('products-2')} className={`${Styles.navItem}`}>
               <span className={Styles.navIcon}>🚚</span>
-              <span>{t('Мобильная')}</span>
+              <p>{t('Мобильная')}</p>
             </button>
-          </nav>
+          </div>
         </aside>
 
         <div className={Styles.content}>
-          <section 
-            id="products-1" ref={el => sectionsRef.current[0] = el} className={Styles.section}>
+          <section id="products-1" ref={el => sectionsRef.current[0] = el} className={Styles.section}>
             <div className={Styles.sectionHeader}>
-              <h2><span>Стационарная</span> система</h2>
-              <p>Надежное решение для стационарных газозаправочных станций</p>
+              <h2>{t('стацинарная')}</h2>
+              <p>{t('Надежное')}</p>
             </div>
 
             <div className={Styles.gallery}>
               <div className={Styles.imageCard} onClick={() => setFirstIsOpen(true)}>
                 <img src={product_1.src} alt="Стационарная АГЗУ" className={Styles.image} />
                 <div className={Styles.imageOverlay}>
-                  <span className={Styles.zoomText}>Нажмите для увеличения</span>
+                  <span className={Styles.zoomText}>{t('Увеличение')}</span>
                 </div>
               </div>
               <div className={Styles.imageCard} onClick={() => setSecondIsOpen(true)}>
                 <img src={product_1_1.src} alt="Стационарная АГЗУ" className={Styles.image} />
                 <div className={Styles.imageOverlay}>
-                  <span className={Styles.zoomText}>Нажмите для увеличения</span>
+                  <span className={Styles.zoomText}>{t('Увеличение')}</span>
                 </div>
               </div>
             </div>
 
             <div className={Styles.features}>
-              <h3>Основные преимущества</h3>
+              <h3>{t('Преимущества')}</h3>
               <ul className={Styles.featuresList}>
                 <li className={Styles.feature}>
                   <div className={Styles.featureIcon}>💎</div>
-                  <div>
-                    <h4 className={Styles.featureTitle}>Высокая надежность</h4>
-                    <p className={Styles.featureText}>{t('Высокая')}</p>
+                  <div className={Styles.featureText}>
+                    <h4>{t('Надежность')}</h4>
+                    <p>{t('Высокая')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
                   <div className={Styles.featureIcon}>🔧</div>
-                  <div>
-                    <h4 className={Styles.featureTitle}>Гибкость настройки</h4>
-                    <p className={Styles.featureText}>{t('Гибкая')}</p>
+                  <div className={Styles.featureText}>
+                    <h4>{t('Гибкость')}</h4>
+                    <p>{t('Гибкая')}</p>
                   </div>
                 </li>
               </ul>
@@ -96,15 +95,15 @@ export const AccountingSystem = () => {
           <section 
             id="products-2" ref={el => sectionsRef.current[1] = el} className={Styles.section}>
             <div className={Styles.sectionHeader}>
-              <h2><span>Мобильная</span> система</h2>
-              <p>Современное решение для мобильных газозаправочных пунктов</p>
+              <h2>{t('мобильная')}</h2>
+              <p>{t('Современное')}</p>
             </div>
 
             <div className={Styles.mainImageContainer}>
               <div className={Styles.imageCard} onClick={() => setThirdIsOpen(true)}>
                 <img src={product_1_2.src} alt="Мобильная АГЗУ" className={Styles.mainImage} />
                 <div className={Styles.imageOverlay}>
-                  <span className={Styles.zoomText}>Нажмите для увеличения</span>
+                  <span className={Styles.zoomText}>{t('Увеличение')}</span>
                 </div>
               </div>
             </div>
@@ -113,16 +112,16 @@ export const AccountingSystem = () => {
               <ul className={Styles.featuresList}>
                 <li className={Styles.feature}>
                   <div className={Styles.featureIcon}>🏭</div>
-                  <div>
-                    <h4 className={Styles.featureTitle}>Качественное изготовление</h4>
-                    <p className={Styles.featureText}>{t('Изготовлении')}</p>
+                  <div className={Styles.featureText}>
+                    <h4>{t('Качественное')}</h4>
+                    <p>{t('Изготовлении')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
                   <div className={Styles.featureIcon}>⚡</div>
-                  <div>
-                    <h4 className={Styles.featureTitle}>Быстрое развертывание</h4>
-                    <p className={Styles.featureText}>{t('Действия')}</p>
+                  <div className={Styles.featureText}>
+                    <h4>{t('Быстрое')}</h4>
+                    <p>{t('Действия')}</p>
                   </div>
                 </li>
               </ul>

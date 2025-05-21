@@ -11,6 +11,16 @@
   "Гибкая": "Flexible ability to calibrate the flowmeter (regulation of the measurement range) complete with a KMR type control valve with position signaling to reduce the error in measuring the volume of the medium. Intervalidation interval: 4 years. Service life: 12 years.",
   "Изготовлении": "When manufacturing units in a mobile version, AGZU units are installed in the body or on the chassis of a trailer or car.",
   "Действия": "The principle of operation of the installations is based on measurements of the mass and mass flow of crude oil with and without taking into account water, the volume and volumetric flow of free petroleum gas, reduced to standard conditions, after the separation process.",
+  "стацинарная": "Stationary system",
+  "Надежное": "A reliable solution for stationary gas filling stations",
+  "Преимущества": "Key Benefits",
+  "Надежность": "High reliability",
+  "Гибкость": "Flexibility of customization",
+  "мобильная": "Mobile system",
+  "Современное": "Modern solution for mobile gas filling stations",
+  "Качественное": "Quality manufacturing",
+  "Быстрое": "Fast Deployment",
+
 
   "Расходомер": "Vortex flowmeter Ervip",
   "УРПД": "Differential pressure control device (DPRD)",
@@ -26,10 +36,14 @@
   "Метод": "The flow measurement method involves placing an obstacle (disturbing barrier) in the path of the medium flow. When a liquid (gas) passes through this barrier, disturbances called vortices are created in the flow. The vortices leave traces behind the barrier. These vortex paths are commonly referred to as Pocket vortex paths. The frequency of eddy formation behind the flow body is proportional to the flow velocity. Detection of vortices and determination of the frequency of their formation makes it possible to determine the velocity and volume flow rate of the medium.",
   "Внутри": "A piezo crystal is located inside the disturbing barrier, which creates small but measurable voltage pulses, which are also proportional to the flow rate of the liquid (gas). The values of these pulses are measured by the electronics of the vortex flowmeter.",
   "Регулирование": "For operation in the level and differential pressure control system in the «Sputnik» gas turbine unit for installation instead of conventional gas dampers. The tightness of the gate is ensured by pressing the gate against the sealing rings, both parts are made of stainless material, the absence of rubber products at the point of contact ensures a long service life and a high maintenance period.",
+  "Скважина": "For manual and automatic installation of wells for measurement in the AGZU of the Sputnik type. To increase the corrosion resistance of the PSM, the working area of ​​the housings is overlaid with corrosion-resistant chromium-nickel-molybdenum steel. The shaft and carriage of the PSM are subjected to oxycarbonitriding.",
   "Становка": "For manual and automatic installation of wells for measurement in a satellite-type gas station. To increase the corrosion resistance of PSM, the working area of the housings is surfaced with corrosion-resistant chromium-nickel-molybdenum steel. The PSM shaft and carriage are subjected to oxycarbonitrization.",
   "Расход": "For operation in the level and differential pressure control system in the Sputnik type gas turbine instead of the usual PP type flow regulators.",
   "Давление": "To create hydraulic pressure in the hydraulic power cylinder of a multi-pass well switch (PSM) for alternating well switching.",
   "Нефтезаговых": "To separate downhole oil and gas mixtures into liquid and gas for the purpose of their subsequent measurement.",
+  "Вихревой": "Vortex flow meter systems",
+  "Основное": "Main purpose",
+  "стабильность": "High stability",
 
 
   "СИКН": "System for measuring the quantity and quality indicators of oil and petroleum products (SIKN)",
@@ -102,5 +116,6 @@
   "Противоаварийной": "Emergency automatic protection system PAZ;",
   "Частотных": "Frequency converter block;",
   "Информации": "System for transmitting information to the upper level;",
-  "Электро": "Power supply system for pumping units."
+  "Электро": "Power supply system for pumping units.",
+  "Увеличение": "Click to enlarge"
 }

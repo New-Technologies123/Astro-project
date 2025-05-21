@@ -40,33 +40,37 @@ export const MeasuringSystem = () => {
     <div className={Styles.container}>
       <div className={Styles.mainContent}>
         <aside className={Styles.sidebar}>
-          <nav className={Styles.navMenu}>
+          <div className={Styles.navMenu}>
             <button onClick={() => handleClick('products-1')} className={`${Styles.navItem}`}>
-              <span>{t('СИКН')}</span>
+              <span className={Styles.navIcon}>🛢️</span>
+              <p>{t('СИКН')}</p>
             </button>
             <button onClick={() => handleClick('products-2')} className={`${Styles.navItem}`}>
-              <span>{t('СИКГ')}</span>
+              <span className={Styles.navIcon}>💨</span>
+              <p>{t('СИКГ')}</p>
             </button>
             <button onClick={() => handleClick('products-3')} className={`${Styles.navItem}`}>
-              <span>{t('СИКВ')}</span>
+              <span className={Styles.navIcon}>💧</span>
+              <p>{t('СИКВ')}</p>
             </button>
             <button onClick={() => handleClick('products-4')} className={`${Styles.navItem}`}>
-              <span>{t('БДР')}</span>
+              <span className={Styles.navIcon}>🧪</span>
+              <p>{t('БДР')}</p>
             </button>
-          </nav>
+          </div>
         </aside>
 
         <div className={Styles.content}>
           <section id="products-1" ref={el => sectionsRef.current[0] = el} className={Styles.section}>
               <div className={Styles.sectionHeader}>
-              <h2><span>Система измерения количества и показателей качества</span> нефти и нефтепродуктов (СИКН)</h2>
-              <p>Надежное решение для стационарных газозаправочных станций</p>
+              <h2>{t('СИКН')}</h2>
+              <p>Текст</p>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.imageCard} onClick={() => setOneIsOpen(true)}>
                 <img src={product_3.src} alt="Мобильная АГЗУ" className={Styles.mainImage} />
                 <div className={Styles.imageOverlay}>
-                  <span className={Styles.zoomText}>Нажмите для увеличения</span>
+                  <span className={Styles.zoomText}>{t('Увеличение')}</span>
                 </div>
               </div>
             </div>
@@ -74,28 +78,33 @@ export const MeasuringSystem = () => {
               <h3>{t('Назначение')}</h3>
               <ul className={Styles.featuresList}>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Измерения')}</p>
+                  <div className={Styles.featureIcon}>📊</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Измерения')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Определения')}</p>
+                  <div className={Styles.featureIcon}>🔍</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Определения')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Отбор')}</p>
+                  <div className={Styles.featureIcon}>🧪</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Отбор')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Выдача')}</p>
+                  <div className={Styles.featureIcon}>💻</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Выдача')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Изготавливаться')}</p>
+                  <div className={Styles.featureIcon}>🏭</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Изготавливаться')}</p>
                   </div>
                 </li>
               </ul>
@@ -104,14 +113,14 @@ export const MeasuringSystem = () => {
 
           <section id="products-2" ref={el => sectionsRef.current[1] = el} className={Styles.section}>
               <div className={Styles.sectionHeader}>
-              <h2><span>Система измерения количества</span> газа (СИКГ)</h2>
-              <p>Надежное решение для стационарных газозаправочных станций</p>
+              <h2>{t('СИКГ')}</h2>
+              <p>Текст</p>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.imageCard} onClick={() => setTwoIsOpen(true)}>
                 <img src={product_3_1.src} alt="Мобильная АГЗУ" className={Styles.mainImage} />
                 <div className={Styles.imageOverlay}>
-                  <span className={Styles.zoomText}>Нажмите для увеличения</span>
+                  <span className={Styles.zoomText}>{t('Увеличение')}</span>
                 </div>
               </div>
             </div>
@@ -119,61 +128,74 @@ export const MeasuringSystem = () => {
               <h3>{t('Назначение')}</h3>
               <ul className={Styles.featuresList}>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Автоматизированного')}</p>
+                  <div className={Styles.featureIcon}>🤖</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Автоматизированного')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Входит')}</p>
+                  <div className={Styles.featureIcon}>🏗️</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Входит')}</p>
                   </div>
                 </li>
               </ul>
+            </div>
+            <div className={Styles.features}>
               <h3>{t('Типовой')}</h3>
               <ul className={Styles.featuresList}>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Преобразователь')}</p>
+                  <div className={Styles.featureIcon}>🌪️</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Преобразователь')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Вычислитель')}</p>
+                  <div className={Styles.featureIcon}>🧮</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Вычислитель')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Регуляторы')}</p>
+                  <div className={Styles.featureIcon}>🎛️</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Регуляторы')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Аппаратно')}</p>
+                  <div className={Styles.featureIcon}>💾</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Аппаратно')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Газовая')}</p>
+                  <div className={Styles.featureIcon}>📊</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Газовая')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Анализатор')}</p>
+                  <div className={Styles.featureIcon}>💧</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Анализатор')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Преобразователи')}</p>
+                  <div className={Styles.featureIcon}>🌡️</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Преобразователи')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Система')}</p>
+                  <div className={Styles.featureIcon}>🧪</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Система')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Комплексов')}</p>
+                  <div className={Styles.featureIcon}>🛠️</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Комплексов')}</p>
                   </div>
                 </li>
               </ul>
@@ -182,14 +204,14 @@ export const MeasuringSystem = () => {
 
           <section id="products-3" ref={el => sectionsRef.current[2] = el} className={Styles.section}>
               <div className={Styles.sectionHeader}>
-              <h2><span>Система измерения</span> количества воды (СИКВ)</h2>
-              <p>Надежное решение для стационарных газозаправочных станций</p>
+              <h2>{t('СИКВ')}</h2>
+              <p>Текст</p>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.imageCard} onClick={() => setThreeIsOpen(true)}>
                 <img src={product_3_2.src} alt="Мобильная АГЗУ" className={Styles.mainImage} />
                 <div className={Styles.imageOverlay}>
-                  <span className={Styles.zoomText}>Нажмите для увеличения</span>
+                  <span className={Styles.zoomText}>{t('Увеличение')}</span>
                 </div>
               </div>
             </div>
@@ -197,31 +219,32 @@ export const MeasuringSystem = () => {
               <h3>{t('Назначение')}</h3>
               <ul className={Styles.featuresList}>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Количества')}</p>
+                  <div className={Styles.featureIcon}>💧</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Количества')}</p>
                   </div>
                 </li>                
               </ul>
+            </div>
+            <div className={Styles.features}>
               <h3>{t('Типовой')}</h3>
               <ul className={Styles.featuresList}>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Измерительных')}</p>
+                  <div className={Styles.featureIcon}>📊</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Измерительных')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Измерительных')}</p>
+                  <div className={Styles.featureIcon}>💻</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Обработки')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Обработки')}</p>
-                  </div>
-                </li>
-                <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Технологические')}</p>
+                  <div className={Styles.featureIcon}>🛠️</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Технологические')}</p>
                   </div>
                 </li>
               </ul>
@@ -230,13 +253,13 @@ export const MeasuringSystem = () => {
           <section id="products-4" ref={el => sectionsRef.current[3] = el} className={Styles.section}>
             <div className={Styles.sectionHeader}>
               <h2><span>Установка дозирования химическ</span> ого реагента (БДР)</h2>
-              <p>Надежное решение для стационарных газозаправочных станций</p>
+              <p>Текст</p>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.imageCard} onClick={() => setFourIsOpen(true)}>
                 <img src={product_3_3.src} alt="Мобильная АГЗУ" className={Styles.mainImage} />
                 <div className={Styles.imageOverlay}>
-                  <span className={Styles.zoomText}>Нажмите для увеличения</span>
+                  <span className={Styles.zoomText}>{t('Увеличение')}</span>
                 </div>
               </div>
             </div>
@@ -244,8 +267,9 @@ export const MeasuringSystem = () => {
               <h3>{t('Назначение')}</h3>
               <ul className={Styles.featuresList}>
                 <li className={Styles.feature}>
-                  <div>
-                    <p className={Styles.featureText}>{t('Установка')}</p>
+                  <div className={Styles.featureIcon}>⚖️</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Установка')}</p>
                   </div>
                 </li>                
               </ul>
