@@ -1,9 +1,10 @@
 import Styles from './documents.module.scss';
 import { Select } from '../../ui/select/Select';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Cards } from './Cards';
 import { useTranslation } from 'react-i18next';
 import { Title } from '../../ui/title/Title';
+import up from '../../../images/arrow.svg';
 
 export const Documents = () => {
   const { t, i18n } = useTranslation('documents');
@@ -43,6 +44,21 @@ export const Documents = () => {
     setShowId(selectedId);
   };
 
+  // Кнопка "Наверх"
+    const [isVisible, setIsVisible] = useState(false);
+    useEffect(() => {
+      const toggleVisibility = () => {
+        if (window.pageYOffset > 50) setIsVisible(true);
+        else setIsVisible(false);
+      };
+      window.addEventListener('scroll', toggleVisibility);
+      return () => window.removeEventListener('scroll', toggleVisibility);
+    }, []);
+  
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
   return (
     <>
       <Title text={t('Документы')}></Title>
@@ -58,6 +74,12 @@ export const Documents = () => {
         </div>
       </div>
       <Cards selectId={showId} key={showId}/>
+      <button 
+        onClick={scrollToTop} 
+        className={`${Styles.backToTop} ${isVisible ? Styles.visible : ''}`}
+        aria-label="Наверх">
+        <img src={up.src} alt="" className={Styles.upIcon} />
+      </button>
     </>
   );
 };
