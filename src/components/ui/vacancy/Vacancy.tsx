@@ -1,6 +1,5 @@
 import Styles from './vacancy.module.scss';
 
-// Тип для пропсов компонента
 type TVacancyProps = {
   title: string;
   header?: string;

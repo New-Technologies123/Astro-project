@@ -1,13 +1,47 @@
-/* Страничка карьеры */
-
 .team{
     display: flex;
     justify-content: center;
     gap: 70px; 
-    padding: 50px 10px;
+    padding: 20px;
     background-color: #e6f7ff;
     flex-wrap: wrap;
-    margin: 20px 0;
+    margin: 20px 0;    
+}
+
+.backToTop {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  justify-content: center;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: #467ffa;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(#10141b, 0.3);
+  z-index: 100;
+  
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  &:hover {
+    background: #2112f1;
+    transform: scale(1.1);
+  }
+}
+
+.upIcon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
 }
 
 @media (max-width: 1030px){
@@ -17,26 +51,3 @@
         margin: 15px 0;
     }
 }
-
-// @media (max-width: 500px){
-//     .name{
-//         font-size: 20px;
-//     }
-// }
-
-// @media (max-width: 320px){
-//     .careersTeam{
-//         padding: 8px;
-//     }
-//     .careersCard{
-//         padding: 5px;
-//         width: 160px;
-//     }
-//     .careersCard h3{
-//         font-size: 16px;
-//     }
-//     .careersCard p{
-//         font-size: 14px;
-//         margin-left: 13px;
-//     }
-// }

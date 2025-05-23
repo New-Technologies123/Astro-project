@@ -11,7 +11,7 @@
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform: translateY(0);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  animation: fadeInUp 0.8s ease-out forwards;// Анимация при загрузке
+  animation: fadeInUp 0.8s ease-out forwards;
   h3{
     font-size: 20px;
     font-weight: bold;
@@ -19,7 +19,6 @@
     transition: all 0.3s ease;
     position: relative;
     z-index: 1;
-    // text-align: center;
   }
   p {
     font-size: 18px;
@@ -43,12 +42,10 @@
   
   &:hover {
     transform: scale(1.06) translateY(-5px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-    
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);    
     &::before {
       transform: scale(1);
-    }
-    
+    }    
     h3 {
       color: #ffffffde;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
@@ -72,6 +69,18 @@
   }
 }
 
+@media (max-width: 1300px){
+  .employeeVacancy{
+    width: 280px;
+    h3{
+      font-size: 19px;
+    }
+    p{
+      font-size: 17px;
+    }
+  }
+}
+
 @media (max-width: 1020px) {
   .employeeVacancy {
     width: 250px;
@@ -84,6 +93,18 @@
     }
     &:hover {
       transform: scale(1.05) translateY(-3px);
+    }
+  }
+}
+
+@media (max-width: 800px){
+  .employeeVacancy{
+    width: 230px;
+    h3{
+      font-size: 17px;
+    }
+    p{
+      font-size: 15px;
     }
   }
 }
