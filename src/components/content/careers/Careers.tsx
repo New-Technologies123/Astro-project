@@ -6,8 +6,8 @@ import { Title } from '../../ui/title/Title';
 import { useEffect } from 'react';
 import up from '../../../images/arrow.svg';
 
-type TCareers = 'vacancy1' | 'vacancy2' | 'vacancy3' | 'vacancy4' | 'vacancy5' | 'vacancy6' 
- | 'vacancy7' | 'vacancy8' | 'vacancy9' | 'vacancy10';
+type TCareers = 'vacancy1' | 'vacancy2' | 'vacancy3' | 'vacancy4' | 'vacancy6' 
+ | 'vacancy7' | 'vacancy8' | 'vacancy9';
 
 export const Careers = () => {
     const { t, i18n } = useTranslation('careers');
@@ -16,13 +16,11 @@ export const Careers = () => {
         vacancy1: "https://ufa.hh.ru/vacancy/119819836?hhtmFrom=vacancy_search_list",
         vacancy2: "https://ufa.hh.ru/vacancy/120814039?hhtmFrom=vacancy_search_list",
         vacancy3: "https://ufa.hh.ru/vacancy/120697632?hhtmFrom=vacancy_search_list",
-        vacancy4: "https://ufa.hh.ru/vacancy/120526587?hhtmFrom=vacancy_search_list",
-        vacancy5: "https://ufa.hh.ru/vacancy/120609485?hhtmFrom=vacancy_search_list",
-        vacancy6: "https://ufa.hh.ru/vacancy/120561475?hhtmFrom=vacancy_search_list",
-        vacancy7: "https://ufa.hh.ru/vacancy/120012608?hhtmFrom=vacancy_search_list",
-        vacancy8: "https://ufa.hh.ru/vacancy/120113191?hhtmFrom=vacancy_search_list",
-        vacancy9: "https://ufa.hh.ru/vacancy/120113226?hhtmFrom=vacancy_search_list",
-        vacancy10: "https://ufa.hh.ru/vacancy/120383801?hhtmFrom=vacancy_search_list",
+        vacancy4: "https://ufa.hh.ru/vacancy/120526587?hhtmFrom=vacancy_search_list",        
+        vacancy9: "https://ufa.hh.ru/vacancy/120561475?hhtmFrom=vacancy_search_list",
+        vacancy6: "https://ufa.hh.ru/vacancy/120012608?hhtmFrom=vacancy_search_list",
+        vacancy7: "https://ufa.hh.ru/vacancy/120113191?hhtmFrom=vacancy_search_list",
+        vacancy8: "https://ufa.hh.ru/vacancy/120113226?hhtmFrom=vacancy_search_list",
     };
 
     const [typeLayoutBackOpen, setTypeLayoutBackOpen] = useState<TCareers | null>(null);
@@ -99,48 +97,34 @@ export const Careers = () => {
                             experience={t('Полная')}
                             employmentType={t('График')}
                             onClick={() => window.open(vacancyLinks.vacancy4, "_blank")}
-                        />
+                        />                       
                         <Vacancy
-                            header={t('Главный')}
-                            title={t('Опыт3')}
-                            experience={t('Полная')}
-                            employmentType={t('График')}
-                            onClick={() => window.open(vacancyLinks.vacancy5, "_blank")}
-                        />
-                        <Vacancy
-                            header={t('Специалист')}
+                            header={t('Оператор')}
                             title={t('Опыт')}
                             experience={t('Полная')}
                             employmentType={t('График')}
                             onClick={() => window.open(vacancyLinks.vacancy6, "_blank")}
                         />
                         <Vacancy
-                            header={t('Оператор')}
-                            title={t('Опыт')}
-                            experience={t('Полная')}
-                            employmentType={t('График')}
-                            onClick={() => window.open(vacancyLinks.vacancy7, "_blank")}
-                        />
-                        <Vacancy
                             header={t('Инженер')}
                             title={t('ОпытНе')}
                             experience={t('Полная')}
                             employmentType={t('График')}
-                            onClick={() => window.open(vacancyLinks.vacancy8, "_blank")}
+                            onClick={() => window.open(vacancyLinks.vacancy7, "_blank")}
                         />
                         <Vacancy
                             header={t('Электронщик')}
                             title={t('Опыт')}
                             experience={t('Полная')}
                             employmentType={t('График')}
-                            onClick={() => window.open(vacancyLinks.vacancy9, "_blank")}
+                            onClick={() => window.open(vacancyLinks.vacancy8, "_blank")}
                         />
                         <Vacancy
-                            header={t('КИПиА')}
+                            header={t('Специалист')}
                             title={t('Опыт')}
                             experience={t('Полная')}
                             employmentType={t('График')}
-                            onClick={() => window.open(vacancyLinks.vacancy10, "_blank")}
+                            onClick={() => window.open(vacancyLinks.vacancy9, "_blank")}
                         />
                     </div>
                 </>

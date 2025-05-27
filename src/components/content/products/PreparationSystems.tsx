@@ -112,7 +112,7 @@ export const PreparationSystems = () => {
 
           <section id="products-3"  ref={el => sectionsRef.current[2] = el} className={Styles.section}>
             <div className={Styles.sectionHeader}>
-              <h2><span>Устройство очистки колон</span>ны УОК-НКТ</h2>
+              <h2>{t('Очистка')}</h2>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.imageCard} onClick={() => setThreeIsOpen(true)}>

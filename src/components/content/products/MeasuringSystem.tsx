@@ -64,7 +64,6 @@ export const MeasuringSystem = () => {
           <section id="products-1" ref={el => sectionsRef.current[0] = el} className={Styles.section}>
               <div className={Styles.sectionHeader}>
               <h2>{t('СИКН')}</h2>
-              <p>Текст</p>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.imageCard} onClick={() => setOneIsOpen(true)}>
@@ -114,7 +113,6 @@ export const MeasuringSystem = () => {
           <section id="products-2" ref={el => sectionsRef.current[1] = el} className={Styles.section}>
               <div className={Styles.sectionHeader}>
               <h2>{t('СИКГ')}</h2>
-              <p>Текст</p>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.imageCard} onClick={() => setTwoIsOpen(true)}>
@@ -205,7 +203,6 @@ export const MeasuringSystem = () => {
           <section id="products-3" ref={el => sectionsRef.current[2] = el} className={Styles.section}>
               <div className={Styles.sectionHeader}>
               <h2>{t('СИКВ')}</h2>
-              <p>Текст</p>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.imageCard} onClick={() => setThreeIsOpen(true)}>
@@ -252,8 +249,7 @@ export const MeasuringSystem = () => {
           </section>
           <section id="products-4" ref={el => sectionsRef.current[3] = el} className={Styles.section}>
             <div className={Styles.sectionHeader}>
-              <h2><span>Установка дозирования химическ</span> ого реагента (БДР)</h2>
-              <p>Текст</p>
+              <h2>{t('БДР')}</h2>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.imageCard} onClick={() => setFourIsOpen(true)}>

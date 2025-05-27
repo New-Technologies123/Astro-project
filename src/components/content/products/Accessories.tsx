@@ -73,7 +73,6 @@ export const Accessories = () => {
           <section id="products-1"  ref={el => sectionsRef.current[0] = el} className={Styles.section}>
             <div className={Styles.sectionHeader}>
               <h2>{t('Вихревой')}</h2>
-              <p>Текст</p>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.minFoto}>
@@ -126,7 +125,6 @@ export const Accessories = () => {
           <section id="products-2"  ref={el => sectionsRef.current[1] = el} className={Styles.section}>
             <div className={Styles.sectionHeader}>
               <h2>{t('УРПД')}</h2>
-              <p>Текст</p>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.minFoto}>
@@ -155,8 +153,7 @@ export const Accessories = () => {
 
           <section id="products-3"  ref={el => sectionsRef.current[2] = el} className={Styles.section}>
             <div className={Styles.sectionHeader}>
-              <h2><span>Переключатель скважин</span> многоходовой (ПСМ)</h2>
-              <p>Текст</p>
+              <h2>{t('ПСМ')}</h2>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.minFoto}>
@@ -183,8 +180,7 @@ export const Accessories = () => {
 
           <section id="products-4"  ref={el => sectionsRef.current[3] = el} className={Styles.section}>
             <div className={Styles.sectionHeader}>
-              <h2><span>Магниторегулируемый</span> клапан (КМР)</h2>
-              <p>Текст</p>
+              <h2>{t('КМР')}</h2>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.minFoto}>
@@ -211,8 +207,7 @@ export const Accessories = () => {
 
           <section id="products-5"  ref={el => sectionsRef.current[4] = el} className={Styles.section}>
             <div className={Styles.sectionHeader}>
-              <h2><span>Гидропривод </span>(ГП)</h2>
-              <p>Текст</p>
+              <h2>{t('Гидропривод')}</h2>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.minFoto}>
@@ -239,8 +234,7 @@ export const Accessories = () => {
 
           <section id="products-6"  ref={el => sectionsRef.current[5] = el} className={Styles.section}>
             <div className={Styles.sectionHeader}>
-              <h2><span>Гидропривод </span>(ГП)</h2>
-              <p>Текст</p>
+              <h2>{t('Емкость')}</h2>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.minFoto}>
