@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import up from '../../../images/arrow.svg';
 
 type TCareers = 'vacancy1' | 'vacancy2' | 'vacancy3' | 'vacancy4' | 'vacancy6' 
- | 'vacancy7' | 'vacancy8' | 'vacancy9';
+ | 'vacancy7' | 'vacancy9';
 
 export const Careers = () => {
     const { t, i18n } = useTranslation('careers');
@@ -19,8 +19,7 @@ export const Careers = () => {
         vacancy4: "https://ufa.hh.ru/vacancy/120526587?hhtmFrom=vacancy_search_list",        
         vacancy9: "https://ufa.hh.ru/vacancy/120561475?hhtmFrom=vacancy_search_list",
         vacancy6: "https://ufa.hh.ru/vacancy/120012608?hhtmFrom=vacancy_search_list",
-        vacancy7: "https://ufa.hh.ru/vacancy/120113191?hhtmFrom=vacancy_search_list",
-        vacancy8: "https://ufa.hh.ru/vacancy/120113226?hhtmFrom=vacancy_search_list",
+        vacancy7: "https://ufa.hh.ru/vacancy/120113191?hhtmFrom=vacancy_search_list",        
     };
 
     const [typeLayoutBackOpen, setTypeLayoutBackOpen] = useState<TCareers | null>(null);
@@ -111,13 +110,6 @@ export const Careers = () => {
                             experience={t('Полная')}
                             employmentType={t('График')}
                             onClick={() => window.open(vacancyLinks.vacancy7, "_blank")}
-                        />
-                        <Vacancy
-                            header={t('Электронщик')}
-                            title={t('Опыт')}
-                            experience={t('Полная')}
-                            employmentType={t('График')}
-                            onClick={() => window.open(vacancyLinks.vacancy8, "_blank")}
                         />
                         <Vacancy
                             header={t('Специалист')}
