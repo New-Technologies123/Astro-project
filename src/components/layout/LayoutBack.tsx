@@ -2,7 +2,7 @@ import Styles from './layoutBack.module.scss';
 import { ScrollTopOnRender } from '../base/ScrollTopOnRender';
 import back from '../../images/back.svg'
 
-export const LayoutBack = ({ title, description, onBack, children }) => {
+export const LayoutBack = ({ title, onBack, children }) => {
   return (
     <ScrollTopOnRender>
       <div className={Styles.hero}>
@@ -11,7 +11,7 @@ export const LayoutBack = ({ title, description, onBack, children }) => {
         </div>
         <div className={Styles.heroContent}>
           <h1>{title}</h1>
-          <p>{description}</p>
+          {/* <p>{description}</p> */}
         </div>      
       </div>
 

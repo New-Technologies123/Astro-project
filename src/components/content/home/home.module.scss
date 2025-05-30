@@ -1,11 +1,8 @@
 .hero {
   position: relative;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  
+  overflow: hidden;  
   &Image {
     width: 100%;
-    height: 400px;
     object-fit: cover;
     display: block;
   } 
@@ -20,12 +17,12 @@
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
   color: white;
   h1{
-    font-size: 3rem;
+    font-size: 36px;
     margin-bottom: 5px;
     font-weight: 700;
   }    
   p{
-    font-size: 1.5rem;
+    font-size: 24px;
     opacity: 0.9;
   }
 }
@@ -118,12 +115,31 @@
   }
 }
 
-@media (max-width: 1360px){
+@media (max-width: 1400px){
   .brandsCarousel{
     height: 200px;
   }
   .brandsCarousel .slideContent{
     width: 250px;
+  }
+  .heroOverlay{
+    h1{
+      font-size: 34px;
+    }
+    p{
+      font-size: 22px;
+    }
+  }
+}
+
+@media (max-width: 1200px){
+  .heroOverlay{
+    h1{
+      font-size: 32px;
+    }
+    p{
+      font-size: 20px;
+    }
   }
 }
 
@@ -137,6 +153,23 @@
   .brandsCarousel .slideContent a{
     padding: 10px;
   }
+  .heroOverlay{
+    h1{
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 770px){
+  .heroOverlay{
+    padding: 20px 30px;
+    h1{
+      font-size: 25px;
+    }
+    p{
+      font-size: 18px;
+    }
+  }
 }
 
 @media (max-width: 430px) {  
@@ -145,5 +178,14 @@
   }
   .brandsCarousel .slideContent{
     width: 170px;
+  }
+  .heroOverlay{
+    padding: 15px 20px;
+    h1{
+      font-size: 20px;
+    }
+    p{
+      font-size: 16px;
+    }
   }
 }

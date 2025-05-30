@@ -149,6 +149,14 @@
       float: none;
       padding: 8px 25px;
       margin-bottom: 5px;
+      &:hover{
+        background-color: #0051ff;
+      }
+    }
+  }
+  .backToTop{
+    &:hover{
+      background: #467ffa;
     }
   }
 }
@@ -164,9 +172,6 @@
   .documentButton{
     button {
       font-size: 14px;
-      &:hover {
-        background-color: #0051ff;
-      }
     }
   }
 }

@@ -28,13 +28,13 @@ export const Products = () => {
     pumpingStations: t('Насосные станции'),
   };
 
-   const cardDescription: Record<TProducts, string> = {
-    accountingSystem: t('Текст'),
-    accessories: t('Текст'),
-    measuringSystem: t('Текст'),
-    preparationSystems: t('Текст'),
-    pumpingStations: t('Текст'),
-  };
+  //  const cardDescription: Record<TProducts, string> = {
+  //   accountingSystem: t('Текст'),
+  //   accessories: t('Текст'),
+  //   measuringSystem: t('Текст'),
+  //   preparationSystems: t('Текст'),
+  //   pumpingStations: t('Текст'),
+  // };
 
   const [typeLayoutBackOpen, setTypeLayoutBackOpen] = useState<TProducts | null>(null);
 
@@ -104,27 +104,27 @@ export const Products = () => {
         </Layout>
       )}
       {typeLayoutBackOpen === 'accountingSystem' && (
-        <LayoutBack onBack={onBack} title={cardTitle.accountingSystem} description={cardDescription.accountingSystem}>
+        <LayoutBack onBack={onBack} title={cardTitle.accountingSystem}>
           <AccountingSystem />
         </LayoutBack>
       )}
       {typeLayoutBackOpen === 'accessories' && (
-        <LayoutBack onBack={onBack} title={cardTitle.accessories} description={cardDescription.accessories}>
+        <LayoutBack onBack={onBack} title={cardTitle.accessories}>
           <Accessories />
         </LayoutBack>
       )}
       {typeLayoutBackOpen === 'measuringSystem' && (
-        <LayoutBack onBack={onBack} title={cardTitle.measuringSystem} description={cardDescription.measuringSystem}>
+        <LayoutBack onBack={onBack} title={cardTitle.measuringSystem}>
           <MeasuringSystem />
         </LayoutBack>
       )}
       {typeLayoutBackOpen === 'preparationSystems' && (
-        <LayoutBack onBack={onBack} title={cardTitle.preparationSystems} description={cardDescription.preparationSystems}>
+        <LayoutBack onBack={onBack} title={cardTitle.preparationSystems}>
           <PreparationSystems />
         </LayoutBack>
       )}
       {typeLayoutBackOpen === 'pumpingStations' && (
-        <LayoutBack onBack={onBack} title={cardTitle.pumpingStations} description={cardDescription.pumpingStations}>
+        <LayoutBack onBack={onBack} title={cardTitle.pumpingStations}>
           <PumpingStations />
         </LayoutBack>
       )}

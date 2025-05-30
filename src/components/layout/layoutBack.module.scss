@@ -26,7 +26,7 @@
   z-index: 2;
   overflow: hidden;
   flex-shrink: 0;
-  padding: 15px 25px 15px 20px;
+  padding: 10px 25px 10px 20px;
   img{
     width: 45px;
     height: 45px;
@@ -66,14 +66,14 @@
   h1{
     font-size: 35px;
     font-weight: 550;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     text-shadow: 0 6px 8px rgba(125, 203, 255, 0.76);
   }
-  p{
-    font-size: 20px;
-    opacity: 0.9;
-    margin: 0 auto;
-  }
+  // p{
+  //   font-size: 20px;
+  //   opacity: 0.9;
+  //   margin: 0 auto;
+  // }
 }
 
 @media (max-width: 1400px){
@@ -81,9 +81,9 @@
     h1{
       font-size: 30px;
     }
-    p{
-      font-size: 18px;
-    }
+    // p{
+    //   font-size: 18px;
+    // }
   }
 }
 
@@ -94,11 +94,11 @@
   .heroContent{
     h1{
       font-size: 26px;
-      margin-bottom: 15px;
+      // margin-bottom: 15px;
     }
-    p{
-      font-size: 17px;
-    }
+    // p{
+    //   font-size: 17px;
+    // }
   }
   .backButton{
     padding: 12px 22px 12px 17px;
@@ -113,11 +113,11 @@
   .heroContent{    
     h1{
       font-size: 24px;
-      margin-bottom: 10px;
+      // margin-bottom: 10px;
     }
-    p{
-      font-size: 16px;
-    }
+    // p{
+    //   font-size: 16px;
+    // }
   }
   .backButton{
     padding: 10px 20px 10px 15px;
@@ -136,9 +136,9 @@
     h1{
       font-size: 20px;
     }
-    p{
-      font-size: 14px;
-    }
+    // p{
+    //   font-size: 14px;
+    // }
   }
   .backButton{
     img{
@@ -153,9 +153,9 @@
     h1{
       font-size: 18px;
     }
-    p{
-      font-size: 13px;
-    }
+    // p{
+    //   font-size: 13px;
+    // }
   }
   .backButton{
     padding: 7px 17px 7px 12px;

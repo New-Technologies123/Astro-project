@@ -74,8 +74,7 @@ export const Documents = () => {
         </div>
       </div>
       <Cards selectId={showId} key={showId}/>
-      <button 
-        onClick={scrollToTop} 
+      <button onClick={scrollToTop} 
         className={`${Styles.backToTop} ${isVisible ? Styles.visible : ''}`}
         aria-label="Наверх">
         <img src={up.src} alt="" className={Styles.upIcon} />

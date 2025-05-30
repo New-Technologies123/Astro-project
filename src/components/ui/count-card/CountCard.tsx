@@ -20,14 +20,14 @@ export const CountCard = ({ header, number, title, offer, index = 0}: TVacancyPr
         transitionDelay: isVisible ? `${index * 150}ms` : '0ms' // Задержка только для появления
       }}
     >
-        <div className={Styles.headerText}>
-            <h3>{header}</h3>
-            <div className={Styles.explanationText}>
-                <h4>{number}</h4>
-                <h5>{offer}</h5>
-            </div>                
-        </div>
-        <p>{title}</p>
+      <div className={Styles.headerText}>
+        <h3>{header}</h3>
+        <div className={Styles.explanationText}>
+          <h4>{number}</h4>
+          <h5>{offer}</h5>
+        </div>                
+      </div>
+      <p>{title}</p>
     </div>
   );
 };

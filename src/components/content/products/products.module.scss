@@ -184,6 +184,7 @@
 
 .feature {
   display: flex;
+  align-items: center;
   gap: 24px;
   padding: 24px;
   background: #f8f9fa;
@@ -286,6 +287,9 @@
   .zoomText{
     font-size: 16px;
   }
+  .minFoto{
+    width: 39%;
+  }
 }
 
 @media (max-width: 1200px){
@@ -318,6 +322,9 @@
   }
   .featureIcon{
     font-size: 24px;
+  }
+  .minFoto{
+    width: 45%;
   }
 }
 
@@ -354,6 +361,9 @@
     p{
       font-size: 15px;
     }
+  }
+  .minFoto{
+    width: 50%;
   }
 }
 
@@ -412,5 +422,8 @@
     p{
       font-size: 14px;
     }
+  }
+  .minFoto{
+    width: 60%;
   }
 }
