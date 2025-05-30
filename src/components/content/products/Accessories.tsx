@@ -72,7 +72,7 @@ export const Accessories = () => {
 
           <section id="products-1"  ref={el => sectionsRef.current[0] = el} className={Styles.section}>
             <div className={Styles.sectionHeader}>
-              <h2>{t('Вихревой')}</h2>
+              <h2>{t('Расходомер')}</h2>
             </div>
             <div className={Styles.mainImageContainer}>
               <div className={Styles.minFoto}>

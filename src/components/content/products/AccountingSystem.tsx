@@ -53,7 +53,6 @@ export const AccountingSystem = () => {
           <section id="products-1" ref={el => sectionsRef.current[0] = el} className={Styles.section}>
             <div className={Styles.sectionHeader}>
               <h2>{t('стацинарная')}</h2>
-              <p>{t('Надежное')}</p>
             </div>
 
             <div className={Styles.gallery}>
@@ -77,14 +76,12 @@ export const AccountingSystem = () => {
                 <li className={Styles.feature}>
                   <div className={Styles.featureIcon}>💎</div>
                   <div className={Styles.featureText}>
-                    <h4>{t('Надежность')}</h4>
                     <p>{t('Высокая')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
                   <div className={Styles.featureIcon}>🔧</div>
                   <div className={Styles.featureText}>
-                    <h4>{t('Гибкость')}</h4>
                     <p>{t('Гибкая')}</p>
                   </div>
                 </li>
@@ -96,7 +93,6 @@ export const AccountingSystem = () => {
             id="products-2" ref={el => sectionsRef.current[1] = el} className={Styles.section}>
             <div className={Styles.sectionHeader}>
               <h2>{t('мобильная')}</h2>
-              <p>{t('Современное')}</p>
             </div>
 
             <div className={Styles.mainImageContainer}>
@@ -113,14 +109,12 @@ export const AccountingSystem = () => {
                 <li className={Styles.feature}>
                   <div className={Styles.featureIcon}>🏭</div>
                   <div className={Styles.featureText}>
-                    <h4>{t('Качественное')}</h4>
                     <p>{t('Изготовлении')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
                   <div className={Styles.featureIcon}>⚡</div>
                   <div className={Styles.featureText}>
-                    <h4>{t('Быстрое')}</h4>
                     <p>{t('Действия')}</p>
                   </div>
                 </li>
