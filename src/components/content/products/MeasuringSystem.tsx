@@ -3,9 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import product_3 from '../../../images/products/product_3.webp';
 import product_3_1 from '../../../images/products/product_3_1.webp';
 import product_3_2 from '../../../images/products/product_3_2.webp';
-import product_3_3 from '../../../images/products/product_3_3.webp';
 import up from '../../../images/arrow.svg';
-import dot from '../../../images/dot.svg';
 import { BigPhoto } from '../../ui/big-photo/BigPhoto';
 import { useClickToScroll } from '../../../hooks/useClickToScroll';
 import { useTranslation } from 'react-i18next';
@@ -16,7 +14,7 @@ export const MeasuringSystem = () => {
   const [oneIsOpen, setOneIsOpen] = useState(false);
   const [twoIsOpen, setTwoIsOpen] = useState(false);
   const [threeIsOpen, setThreeIsOpen] = useState(false);
-  const [fourIsOpen, setFourIsOpen] = useState(false);
+  
 
   const sectionsRef = useRef([]);
   const handleClick = useClickToScroll();
@@ -53,10 +51,7 @@ export const MeasuringSystem = () => {
               <span className={Styles.navIcon}>💧</span>
               <p>{t('СИКВ')}</p>
             </button>
-            <button onClick={() => handleClick('products-4')} className={`${Styles.navItem}`}>
-              <span className={Styles.navIcon}>🧪</span>
-              <p>{t('БДР')}</p>
-            </button>
+            
           </div>
         </aside>
 
@@ -247,30 +242,6 @@ export const MeasuringSystem = () => {
               </ul>
             </div>
           </section>
-          <section id="products-4" ref={el => sectionsRef.current[3] = el} className={Styles.section}>
-            <div className={Styles.sectionHeader}>
-              <h2>{t('БДР')}</h2>
-            </div>
-            <div className={Styles.mainImageContainer}>
-              <div className={Styles.imageCard} onClick={() => setFourIsOpen(true)}>
-                <img src={product_3_3.src} alt="Мобильная АГЗУ" className={Styles.mainImage} />
-                <div className={Styles.imageOverlay}>
-                  <span className={Styles.zoomText}>{t('Увеличение')}</span>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.features}>
-              <h3>{t('Назначение')}</h3>
-              <ul className={Styles.featuresList}>
-                <li className={Styles.feature}>
-                  <div className={Styles.featureIcon}>⚖️</div>
-                  <div className={Styles.featureText}>
-                    <p>{t('Установка')}</p>
-                  </div>
-                </li>                
-              </ul>
-            </div>
-          </section>          
         </div>
       </div>
 
@@ -284,7 +255,6 @@ export const MeasuringSystem = () => {
       {oneIsOpen && <BigPhoto src={product_3.src} onClose={() => setOneIsOpen(false)} />}
       {twoIsOpen && <BigPhoto src={product_3_1.src} onClose={() => setTwoIsOpen(false)} />}
       {threeIsOpen && <BigPhoto src={product_3_2.src} onClose={() => setThreeIsOpen(false)} />}
-      {fourIsOpen && <BigPhoto src={product_3_3.src} onClose={() => setFourIsOpen(false)} />}
     </div>
       
   );

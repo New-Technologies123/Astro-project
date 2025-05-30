@@ -1,7 +1,8 @@
 import Styles from './services.module.scss';
 import { BigPhoto } from '../../ui/big-photo/BigPhoto';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import serves_1 from '../../../images/services/serves_12.png'
+import up from '../../../images/arrow.svg';
 
 import { useTranslation } from 'react-i18next';
 
@@ -9,6 +10,21 @@ export const Repair = () => {
   const { t } = useTranslation('services');
 
   const [photoIsOpen, setPhotoIsOpen] = useState(false);
+
+  // Кнопка "Наверх"
+    const [isVisible, setIsVisible] = useState(false);
+    useEffect(() => {
+      const toggleVisibility = () => {
+        if (window.pageYOffset > 100) setIsVisible(true);
+        else setIsVisible(false);
+      };
+      window.addEventListener('scroll', toggleVisibility);
+      return () => window.removeEventListener('scroll', toggleVisibility);
+    }, []);
+  
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
   return (
     <>
@@ -47,8 +63,14 @@ export const Repair = () => {
             ))}
           </ul>
         </div>
+        
       </div>
-
+      <button 
+          onClick={scrollToTop} 
+          className={`${Styles.backToTop} ${isVisible ? Styles.visible : ''}`}
+          aria-label="Наверх">
+          <img src={up.src} alt="" className={Styles.upIcon} />
+        </button>
       {photoIsOpen && <BigPhoto src={serves_1.src} onClose={() => setPhotoIsOpen(false)} />}
     </>
   );

@@ -2,7 +2,8 @@ import Styles from './products.module.scss';
 import { useState, useEffect, useRef } from 'react';
 import product_4 from '../../../images/products/product_4.webp';
 import product_4_1 from '../../../images/products/product_4_2.webp';
-import product_4_3 from '../../../images/products/product_4_4.webp';
+import product_4_3 from '../../../images/products/product_4_3.webp';
+import product_4_4 from '../../../images/products/product_4_4.webp';
 import up from '../../../images/arrow.svg';
 import { BigPhoto } from '../../ui/big-photo/BigPhoto';
 import { useClickToScroll } from '../../../hooks/useClickToScroll';
@@ -14,6 +15,7 @@ export const PreparationSystems = () => {
   const [oneIsOpen, setOneIsOpen] = useState(false);
   const [twoIsOpen, setTwoIsOpen] = useState(false);
   const [threeIsOpen, setThreeIsOpen] = useState(false);
+  const [fourIsOpen, setFourIsOpen] = useState(false);
 
   const sectionsRef = useRef([]);
   const handleClick = useClickToScroll();
@@ -49,6 +51,10 @@ export const PreparationSystems = () => {
             <button onClick={() => handleClick('products-3')} className={`${Styles.navItem}`}>
               <span className={Styles.navIcon}>🧹</span>
               <p>{t('Очистка')}</p>
+            </button>
+            <button onClick={() => handleClick('products-4')} className={`${Styles.navItem}`}>
+              <span className={Styles.navIcon}>🧪</span>
+              <p>{t('БДР')}</p>
             </button>
           </div>
         </aside>
@@ -169,6 +175,30 @@ export const PreparationSystems = () => {
               </ul>
             </div>
           </section>
+          <section id="products-4" ref={el => sectionsRef.current[3] = el} className={Styles.section}>
+            <div className={Styles.sectionHeader}>
+              <h2>{t('БДР')}</h2>
+            </div>
+            <div className={Styles.mainImageContainer}>
+              <div className={Styles.imageCard} onClick={() => setFourIsOpen(true)}>
+                <img src={product_4_4.src} alt="Мобильная АГЗУ" className={Styles.mainImage} />
+                <div className={Styles.imageOverlay}>
+                  <span className={Styles.zoomText}>{t('Увеличение')}</span>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.features}>
+              <h3>{t('Назначение')}</h3>
+              <ul className={Styles.featuresList}>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>⚖️</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Установка')}</p>
+                  </div>
+                </li>                
+              </ul>
+            </div>
+          </section> 
         </div>
       </div>
 
@@ -182,6 +212,7 @@ export const PreparationSystems = () => {
       {oneIsOpen && <BigPhoto src={product_4.src} onClose={() => setOneIsOpen(false)} />}
       {twoIsOpen && <BigPhoto src={product_4_1.src} onClose={() => setTwoIsOpen(false)} />}
       {threeIsOpen && <BigPhoto src={product_4_3.src} onClose={() => setThreeIsOpen(false)} />}
+      {fourIsOpen && <BigPhoto src={product_4_4.src} onClose={() => setFourIsOpen(false)} />}
     </div>
       
   );

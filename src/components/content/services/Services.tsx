@@ -8,6 +8,7 @@ import { Service } from './Service';
 import { Dewaxing } from './Dewaxing';
 import serves_12 from '../../../images/services/serves_12.png';
 import serves_3 from '../../../images/services/serves_3.png';
+import serves_4 from '../../../images/services/serves_4.webp';
 import serves_5 from '../../../images/services/serves_5.webp';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
@@ -75,7 +76,7 @@ export const Services = () => {
               }}
             />
             <Card
-              imgSrc={serves_5.src}
+              imgSrc={serves_4.src}
               title={cardTitle.service}
               onClick={() => {
                 onClickCard('service');

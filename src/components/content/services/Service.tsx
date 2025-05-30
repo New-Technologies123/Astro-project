@@ -1,7 +1,7 @@
 import Styles from './services.module.scss';
 import { BigPhoto } from '../../ui/big-photo/BigPhoto';
 import { useState } from 'react';
-import serves_5 from '../../../images/services/serves_5.webp';
+import serves_4 from '../../../images/services/serves_4.webp';
 import { useTranslation } from 'react-i18next';
 import dot from '../../../images/dot.svg';
 
@@ -14,7 +14,7 @@ export const Service = () => {
     <>
       <div className={Styles.card}>
         <div className={Styles.imageWrapper} onClick={() => setPhotoIsOpen(true)}>
-          <img src={serves_5.src} alt="сервис" className={Styles.serviceImage}/>
+          <img src={serves_4.src} alt="сервис" className={Styles.serviceImage}/>
           <div className={Styles.imageOverlay}>
             <p>{t('Увеличить')}</p>
           </div>        
@@ -35,7 +35,7 @@ export const Service = () => {
         </div>
       </div>
 
-      {photoIsOpen && <BigPhoto src={serves_5.src} onClose={() => setPhotoIsOpen(false)} />}
+      {photoIsOpen && <BigPhoto src={serves_4.src} onClose={() => setPhotoIsOpen(false)} />}
     </>
   );
 };
