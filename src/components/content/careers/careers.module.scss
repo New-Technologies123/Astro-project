@@ -5,6 +5,8 @@
 
 .vacans{
   margin: 25px 10px;
+  padding: 20px;
+  background-color: #e6f7ff;
   p{
     margin-bottom: 10px;
     font-size: 20px;
@@ -15,8 +17,7 @@
 .team{
     display: flex;
     justify-content: center;
-    gap: 55px; 
-    background-color: #e6f7ff;
+    gap: 55px;    
     flex-wrap: wrap;    
 }
 
