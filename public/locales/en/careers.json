@@ -22,5 +22,25 @@
     "Оператор": "Well testing operator",
     "Инженер": "Instrumentation and automation engineer - metrologist",
     "Электронщик": "Electronics engineer",
-    "КИПиА": "Instrumentation and automation engineer"
+    "КИПиА": "Instrumentation and automation engineer",
+
+    "Работник": "Production worker",
+    "Монтажник": "TT installer",
+    "Слесарь": "Instrumentation and automation fitter",
+    "Водитель": "Driver (category C) Gubkinsky",
+    "Вахта": "Watch",
+    "График6": "Schedule: 6/1",
+    "Маляр": "Metal painter",
+    "Ведущий": "Leading engineer for commissioning works of instrumentation and automation",
+    "ГрафикДр": "Schedule: 5/2 and other options",
+    "Электрик": "Electrical Engineer",
+    "Токарь": "Turner",
+    "Замера": "Well metering operator Samara",
+    "Вахта3": "30 shift shifts",
+    "График6и5": "График: 6/1 или 5/2",
+    "Пильщик": "Metal sawyer",
+    "Мастер": "Welding foreman",
+    "ВодительС": "Category C driver (Samara)",
+    "Исследованию": "Well Survey Operator (Gubkinsky)",
+    "Бухгалтера": "Deputy Chief Accountant"    
 }

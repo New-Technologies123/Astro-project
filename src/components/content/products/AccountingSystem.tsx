@@ -71,18 +71,24 @@ export const AccountingSystem = () => {
             </div>
 
             <div className={Styles.features}>
-              <h3>{t('Преимущества')}</h3>
+              <h3>{t('Назначение')}</h3>
               <ul className={Styles.featuresList}>
                 <li className={Styles.feature}>
-                  <div className={Styles.featureIcon}>💎</div>
+                  <div className={Styles.featureIcon}>📊</div>
                   <div className={Styles.featureText}>
-                    <p>{t('Высокая')}</p>
+                    <p>{t('Массы')}</p>
                   </div>
                 </li>
                 <li className={Styles.feature}>
-                  <div className={Styles.featureIcon}>🔧</div>
+                  <div className={Styles.featureIcon}>🚱</div>
                   <div className={Styles.featureText}>
-                    <p>{t('Гибкая')}</p>
+                    <p>{t('Расхода')}</p>
+                  </div>
+                </li>
+                <li className={Styles.feature}>
+                  <div className={Styles.featureIcon}>📏</div>
+                  <div className={Styles.featureText}>
+                    <p>{t('Приведённого')}</p>
                   </div>
                 </li>
               </ul>

@@ -1,11 +1,23 @@
+.ramca{
+  display: grid;
+  gap: 15px;
+}
+
+.vacans{
+  margin: 25px 10px;
+  p{
+    margin-bottom: 10px;
+    font-size: 20px;
+    margin-left: 70px;
+  }
+}
+
 .team{
     display: flex;
     justify-content: center;
-    gap: 70px; 
-    padding: 20px;
+    gap: 55px; 
     background-color: #e6f7ff;
-    flex-wrap: wrap;
-    margin: 20px 0;    
+    flex-wrap: wrap;    
 }
 
 .backToTop {
@@ -45,9 +57,14 @@
 }
 
 @media (max-width: 1030px){
-    .team{
-        gap: 40px;
-        padding: 25px 10px;
-        margin: 15px 0;
+  .vacans{
+    p{
+      font-size: 17px;
     }
+  }
+  .team{
+      gap: 40px;
+      padding: 25px 10px;
+      margin: 15px 0;
+  }
 }
