@@ -1,0 +1,22 @@
+---
+// 1. Импорты (как в вашем примере Careers)
+import Layout from "../../layouts/Layout.astro";
+import { Header } from "../../components/base/Header";
+import { Footer } from "../../components/base/Footer";
+import { Content } from "../../components/base/Content";
+import { Forbidden } from "../../components/content/forbidden/Forbidden"; // Ваш компонент 403
+import { changeLanguage } from "i18next";
+
+changeLanguage("en");
+
+// 3. Возвращаем статус 403 (для SEO и HTTP-ответа)
+Astro.response.status = 403;
+---
+
+<Layout>
+  <Header pageType="default" client:load /> <!-- или другой pageType -->
+  <Content>
+    <Forbidden client:load /> <!-- React/Vue-компонент -->
+  </Content>
+  <Footer client:load />
+</Layout>
