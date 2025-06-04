@@ -8,7 +8,7 @@ import up from '../../../images/arrow.svg';
 
 type TCareers = 'vacancy1' | 'vacancy2' | 'vacancy3' | 'vacancy4' | 'vacancy5' | 'vacancy6' 
  | 'vacancy7' | 'vacancy8' | 'vacancy9' | 'vacancy10' | 'vacancy11' | 'vacancy12' | 'vacancy13'
- | 'vacancy14' | 'vacancy15' | 'vacancy16' | 'vacancy17' | 'vacancy18' | 'vacancy19' | 'vacancy20'
+ | 'vacancy14' | 'vacancy15' | 'vacancy16' | 'vacancy17' | 'vacancy18' | 'vacancy20'
  | 'vacancy21' | 'vacancy22';
 
 export const Careers = () => {
@@ -32,8 +32,7 @@ export const Careers = () => {
         vacancy15: "https://ufa.hh.ru/vacancy/119049339?hhtmFromLabel=employer_vacancy_tab&hhtmFrom=employer",
         vacancy16: "https://ufa.hh.ru/vacancy/120455324?hhtmFromLabel=employer_vacancy_tab&hhtmFrom=employer",
         vacancy17: "https://ufa.hh.ru/vacancy/119000621?hhtmFromLabel=employer_vacancy_tab&hhtmFrom=employer",
-        vacancy18: "https://ufa.hh.ru/vacancy/121164312?hhtmFromLabel=employer_vacancy_tab&hhtmFrom=employer",
-        vacancy19: "https://ufa.hh.ru/vacancy/119073802?hhtmFromLabel=employer_vacancy_tab&hhtmFrom=employer",
+        vacancy18: "https://ufa.hh.ru/vacancy/121164312?hhtmFromLabel=employer_vacancy_tab&hhtmFrom=employer",        
         vacancy20: "https://ufa.hh.ru/vacancy/120468792?hhtmFromLabel=employer_vacancy_tab&hhtmFrom=employer",
         vacancy21: "https://ufa.hh.ru/vacancy/119019977?hhtmFromLabel=employer_vacancy_tab&hhtmFrom=employer",
         vacancy22: "https://ufa.hh.ru/vacancy/121165460?hhtmFromLabel=employer_vacancy_tab&hhtmFrom=employer",
@@ -205,12 +204,6 @@ export const Careers = () => {
                                 onClick={() => window.open(vacancyLinks.vacancy18, "_blank")}
                             />
                             <Vacancy
-                                header={t('Мастер')}
-                                title={t('ОпытНе')}
-                                experience={t('Полная')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy19, "_blank")}
-                            /><Vacancy
                                 header={t('Бухгалтера')}
                                 title={t('Опыт3')}
                                 experience={t('Полная')}
