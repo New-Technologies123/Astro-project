@@ -9,7 +9,7 @@ import up from '../../../images/arrow.svg';
 type TCareers = 'vacancy1' | 'vacancy2' | 'vacancy3' | 'vacancy4' | 'vacancy5' | 'vacancy6' 
  | 'vacancy7' | 'vacancy8' | 'vacancy9' | 'vacancy10' | 'vacancy11' | 'vacancy12' | 'vacancy13'
  | 'vacancy14' | 'vacancy15' | 'vacancy16' | 'vacancy17' | 'vacancy18' | 'vacancy20'
- | 'vacancy21' | 'vacancy22';
+ | 'vacancy21' | 'vacancy22' | 'vacancy23';
 
 export const Careers = () => {
     const { t, i18n } = useTranslation('careers');
@@ -36,6 +36,7 @@ export const Careers = () => {
         vacancy20: "https://ufa.hh.ru/vacancy/120468792?hhtmFromLabel=employer_vacancy_tab&hhtmFrom=employer",
         vacancy21: "https://ufa.hh.ru/vacancy/119019977?hhtmFromLabel=employer_vacancy_tab&hhtmFrom=employer",
         vacancy22: "https://ufa.hh.ru/vacancy/121165460?hhtmFromLabel=employer_vacancy_tab&hhtmFrom=employer",
+        vacancy23: "https://ufa.hh.ru/vacancy/121359859?hhtmFromLabel=employer_vacancy_tab&hhtmFrom=employer",
     };
 
     const [typeLayoutBackOpen, setTypeLayoutBackOpen] = useState<TCareers | null>(null);
@@ -80,172 +81,182 @@ export const Careers = () => {
     return (
         <>
             {typeLayoutBackOpen === null && (
-                <div className={Styles.ramca}>
-                    <Title text={t('Вакансии')}></Title>                   
-                    <div className={Styles.vacans}>
-                        <p>Заки Валиди 32/2</p>
-                        <div className={Styles.team}>
-                            <Vacancy
-                                header={t('Тендерный')}
-                                title={t('Опыт')}
-                                experience={t('Полная')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy3, "_blank")}
-                            />
-                            <Vacancy
-                                header={t('Менеджер')}
-                                title={t('ОпытНе')}
-                                experience={t('Полная')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy4, "_blank")}
-                            />                       
-                            <Vacancy
-                                header={t('Оператор')}
-                                title={t('Опыт')}
-                                experience={t('Полная')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy6, "_blank")}
-                            />
-                            <Vacancy
-                                header={t('Инженер')}
-                                title={t('ОпытНе')}
-                                experience={t('Полная')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy7, "_blank")}
-                            />
-                            <Vacancy
-                                header={t('Специалист')}
-                                title={t('Опыт')}
-                                experience={t('Полная')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy9, "_blank")}
-                            />
-                        </div>
+                <>
+                    <Title text={t('Вакансии')}></Title>
+                    <div className={Styles.ramca}>                                           
+                        <div className={Styles.vacancies}>
+                            <p>Заки Валиди 32/2</p>
+                            <div className={Styles.team}>
+                                <Vacancy
+                                    header={t('Тендерный')}
+                                    title={t('Опыт')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy3, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Менеджер')}
+                                    title={t('ОпытНе')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy4, "_blank")}
+                                />                       
+                                <Vacancy
+                                    header={t('Оператор')}
+                                    title={t('Опыт')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy6, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Инженер')}
+                                    title={t('ОпытНе')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy7, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Специалист')}
+                                    title={t('Опыт')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy9, "_blank")}
+                                />
+                            </div>
 
-                    </div>
-                    <div className={Styles.vacans}>
-                        <p>Благоварская 16/2</p>
-                        <div className={Styles.team}>
-                            <Vacancy
-                                header={t('Контролер')}
-                                title={t('Опыт')}
-                                experience={t('Полная')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy1, "_blank")}
-                            />
-                            <Vacancy
-                                header={t('Работник')}
-                                title={t('ОпытНе')}
-                                experience={t('Полная')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy2, "_blank")}
-                            />
-                            <Vacancy
-                                header={t('Монтажник')}
-                                title={t('Опыт')}
-                                experience={t('Полная')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy5, "_blank")}
-                            />
-                            <Vacancy
-                                header={t('Слесарь')}
-                                title={t('Опыт')}
-                                experience={t('Полная')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy8, "_blank")}
-                            />
-                            <Vacancy
-                                header={t('Маляр')}
-                                title={t('ОпытНе')}
-                                experience={t('Полная')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy10, "_blank")}
-                            />
-                            <Vacancy
-                                header={t('Ведущий')}
-                                title={t('Опыт')}
-                                experience={t('Полная')}
-                                employmentType={t('ГрафикДр')}
-                                onClick={() => window.open(vacancyLinks.vacancy12, "_blank")}
-                            />
-                            <Vacancy
-                                header={t('Электрогазосварщик')}
-                                title={t('Опыт')}
-                                experience={t('Полная')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy13, "_blank")}
-                            />
-                            <Vacancy
-                                header={t('Электрик')}
-                                title={t('Опыт')}
-                                experience={t('Полная')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy14, "_blank")}
-                            />
-                            <Vacancy
-                                header={t('Токарь')}
-                                title={t('Опыт')}
-                                experience={t('Полная')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy15, "_blank")}
-                            />
-                            <Vacancy
-                                header={t('Пильщик')}
-                                title={t('Опыт')}
-                                experience={t('Полная')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy17, "_blank")}
-                            />
-                            <Vacancy
-                                header={t('КИПиА')}
-                                title={t('Опыт')}
-                                experience={t('Полная')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy18, "_blank")}
-                            />
-                            <Vacancy
-                                header={t('Бухгалтера')}
-                                title={t('Опыт3')}
-                                experience={t('Полная')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy22, "_blank")}
-                            />
+                        </div>
+                        <div className={Styles.vacancies}>
+                            <p>Благоварская 16/2</p>
+                            <div className={Styles.team}>
+                                <Vacancy
+                                    header={t('Контролер')}
+                                    title={t('Опыт')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy1, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Работник')}
+                                    title={t('ОпытНе')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy2, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Монтажник')}
+                                    title={t('Опыт')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy5, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Слесарь')}
+                                    title={t('Опыт')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy8, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Маляр')}
+                                    title={t('ОпытНе')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy10, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Ведущий')}
+                                    title={t('Опыт')}
+                                    experience={t('Полная')}
+                                    employmentType={t('ГрафикДр')}
+                                    onClick={() => window.open(vacancyLinks.vacancy12, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Электрогазосварщик')}
+                                    title={t('Опыт')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy13, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Электрик')}
+                                    title={t('Опыт')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy14, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Токарь')}
+                                    title={t('Опыт')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy15, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Пильщик')}
+                                    title={t('Опыт')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy17, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('КИПиА')}
+                                    title={t('Опыт')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy18, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Бухгалтера')}
+                                    title={t('Опыт3')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy22, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Кладовщик')}
+                                    title={t('Опыт')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy23, "_blank")}
+                                />
+                            </div> 
+                        </div>
+                        <div className={Styles.vacancies}>
+                            <p>Вахта</p>
+                            <div className={Styles.team}>
+                                <Vacancy
+                                    header={t('Водитель')}
+                                    title={t('ОпытНе')}
+                                    experience={t('Вахта')}
+                                    employmentType={t('График6')}
+                                    onClick={() => window.open(vacancyLinks.vacancy11, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Замера')}
+                                    title={t('Опыт')}
+                                    experience={t('Вахта3')}
+                                    employmentType={t('График6и5')}
+                                    onClick={() => window.open(vacancyLinks.vacancy16, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('ВодительС')}
+                                    title={t('ОпытНе')}
+                                    experience={t('Вахта3')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy20, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Исследованию')}
+                                    title={t('Опыт')}
+                                    experience={t('Вахта')}
+                                    employmentType={t('График6')}
+                                    onClick={() => window.open(vacancyLinks.vacancy21, "_blank")}
+                                />
+                            </div>
                         </div>
                     </div>
-                    <div className={Styles.vacans}>
-                        <p>Вахта</p>
-                        <div className={Styles.team}>
-                            <Vacancy
-                                header={t('Водитель')}
-                                title={t('ОпытНе')}
-                                experience={t('Вахта')}
-                                employmentType={t('График6')}
-                                onClick={() => window.open(vacancyLinks.vacancy11, "_blank")}
-                            />
-                            <Vacancy
-                                header={t('Замера')}
-                                title={t('Опыт')}
-                                experience={t('Вахта3')}
-                                employmentType={t('График6и5')}
-                                onClick={() => window.open(vacancyLinks.vacancy16, "_blank")}
-                            />
-                            <Vacancy
-                                header={t('ВодительС')}
-                                title={t('ОпытНе')}
-                                experience={t('Вахта3')}
-                                employmentType={t('График')}
-                                onClick={() => window.open(vacancyLinks.vacancy20, "_blank")}
-                            />
-                            <Vacancy
-                                header={t('Исследованию')}
-                                title={t('Опыт')}
-                                experience={t('Вахта')}
-                                employmentType={t('График6')}
-                                onClick={() => window.open(vacancyLinks.vacancy21, "_blank")}
-                            />
-                        </div>
-                    </div>
-                </div>
+                </>
+                
             )}
             <button 
                 onClick={scrollToTop} 
