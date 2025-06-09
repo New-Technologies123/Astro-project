@@ -2,7 +2,7 @@
 Astro.redirect('//src/pages/403.astro');
 ---
 
-<html lang="ru">
+<html>
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -14,19 +14,22 @@ Astro.redirect('//src/pages/403.astro');
         text-align: center; 
         padding: 2rem; 
       }
-      h1 { color: #dc2626; }
+      h1 { color: #dc2626; font-size: 34px;}
+      p,button{ font-size: 18px;}
+      @media (max-width: 1030px){
+        h1 { font-size: 28px;}
+        p,button{ font-size: 16px;}
+      }
+      @media (max-width: 500px){
+        h1 { font-size: 22px;}
+        p,button{ font-size: 14px;}
+      }
     </style>
   </head>
   <body>
     <h1>⛔ 403 — Доступ запрещен</h1>
     <p>У вас нет прав для просмотра этой страницы.</p>
     
-    <!-- Можно добавить кнопку "Назад" -->
     <button onclick="history.back()">← Вернуться назад</button>
-    
-    <!-- Или ссылку на главную -->
-    <p>
-      <a href="/">Перейти на главную</a>
-    </p>
   </body>
 </html>
