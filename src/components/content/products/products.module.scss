@@ -6,7 +6,6 @@
 
 .container {
   margin: 40px 30px;
-  color: #3665cc;
 }
 
 .mainContent {
@@ -160,16 +159,16 @@
     font-size: 24px;
     margin-bottom: 24px;
     position: relative;
-    display: inline-block;
+    display: inline-block; 
     
     &::after {
       content: '';
       position: absolute;
-      bottom: -7px;
+      bottom: -4px;
       left: 0;
       width: 100%;
       height: 3px;
-      background: #4361ee;
+      background: #000000;
       border-radius: 3px;
     }
   }
