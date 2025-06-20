@@ -159,7 +159,7 @@
     font-size: 24px;
     margin-bottom: 24px;
     position: relative;
-    display: inline-block; 
+    display: inline-block;
     
     &::after {
       content: '';
@@ -168,7 +168,7 @@
       left: 0;
       width: 100%;
       height: 3px;
-      background: #000000;
+      background: #0d37f7;
       border-radius: 3px;
     }
   }
