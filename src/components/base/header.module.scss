@@ -378,7 +378,6 @@ nav ul li a.active {
   }
   .contactInfo{
     p {
-      // font-size: 14px;
       margin: 2px 0;
       img{
         height: 13px;
@@ -431,9 +430,9 @@ nav ul li a.active {
   }
   nav ul li a {
     padding: 5px 15px;
-    font-size: 14px;
+    font-size: 16px;
     &.active {
-      font-size: 15px;
+      font-size: 17px;
     }
   }
   .menuIcon {
