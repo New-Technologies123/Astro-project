@@ -1,17 +1,12 @@
 .customSelect {
   position: relative;
-  border: 1px solid #4de1fc;
+  border: 1px solid #00a8cc;
   border-radius: 6px;
   cursor: pointer;
   width: 800px;
   margin: 10px;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(77, 225, 252, 0.2);
-  
-  &:hover {
-    border-color: #00a8cc;
-    box-shadow: 0 4px 12px rgba(77, 225, 252, 0.3);
-  }
 }
 
 .selectHeader {
@@ -59,7 +54,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  border: 1px solid #4de1fc;
+  border: 1px solid #00a8cc;
   background-color: white;
   z-index: 10;
   border-radius: 6px;
