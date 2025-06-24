@@ -25,13 +25,6 @@ export const Services = () => {
     dewaxing: t('Депарафинизация'),
   };
 
-  // const cardDescription: Record<TServices, string> = {
-  //   repair: t('Текст'),
-  //   metering: t('Текст'),
-  //   service: t('Текст'),
-  //   dewaxing: t('Текст'),
-  // };
-
   const [typeLayoutBackOpen, setTypeLayoutBackOpen] = useState<TServices | null>(null);
 
   useEffect(() => {

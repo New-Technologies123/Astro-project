@@ -34,7 +34,6 @@ export const Service = () => {
           </ul>
         </div>
       </div>
-
       {photoIsOpen && <BigPhoto src={serves_4.src} onClose={() => setPhotoIsOpen(false)} />}
     </>
   );

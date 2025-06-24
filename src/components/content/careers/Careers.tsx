@@ -4,7 +4,7 @@ import { Vacancy } from '../../ui/vacancy/Vacancy';
 import { useState } from 'react';
 import { Title } from '../../ui/title/Title';
 import { useEffect } from 'react';
-import up from '../../../images/arrow.svg';
+import { BackToTop } from '../../ui/back-to-top/BackToTop';
 
 type TCareers = 'vacancy1' | 'vacancy2' | 'vacancy3' | 'vacancy4' | 'vacancy5' | 'vacancy6' 
  | 'vacancy7' | 'vacancy8' | 'vacancy9' | 'vacancy10' | 'vacancy11' | 'vacancy12' | 'vacancy13'
@@ -64,21 +64,6 @@ export const Careers = () => {
     
         const newUrl = `${window.location.origin}${window.location.pathname}?type=${typeProduct}`;
         window.history.pushState({}, '', newUrl);
-    };
-
-    // Кнопка "Наверх"
-    const [isVisible, setIsVisible] = useState(false);
-    useEffect(() => {
-      const toggleVisibility = () => {
-        if (window.pageYOffset > 100) setIsVisible(true);
-        else setIsVisible(false);
-      };
-      window.addEventListener('scroll', toggleVisibility);
-      return () => window.removeEventListener('scroll', toggleVisibility);
-    }, []);
-  
-    const scrollToTop = () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     return (
@@ -282,12 +267,7 @@ export const Careers = () => {
                 </>
                 
             )}
-            <button 
-                onClick={scrollToTop} 
-                className={`${Styles.backToTop} ${isVisible ? Styles.visible : ''}`}
-                aria-label="Наверх">
-                <img src={up.src} alt="" className={Styles.upIcon} />
-            </button>
+            <BackToTop/>
         </>
     );
 };

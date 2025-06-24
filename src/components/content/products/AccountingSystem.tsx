@@ -1,12 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import product_1 from '../../../images/products/product_1.webp';
 import product_1_1 from '../../../images/products/product_1_1.webp';
 import product_1_2 from '../../../images/products/product_1_2.webp';
-import up from '../../../images/arrow.svg';
 import { BigPhoto } from '../../ui/big-photo/BigPhoto';
 import Styles from './products.module.scss';
 import { useTranslation } from 'react-i18next';
 import { useClickToScroll } from '../../../hooks/useClickToScroll';
+import { BackToTop } from '../../ui/back-to-top/BackToTop';
 
 export const AccountingSystem = () => {
   const { t } = useTranslation('products');
@@ -17,21 +17,6 @@ export const AccountingSystem = () => {
 
   const sectionsRef = useRef([]);
   const handleClick = useClickToScroll();
-
-  // Кнопка "Наверх"
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 100) setIsVisible(true);
-      else setIsVisible(false);
-    };
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
     <div className={Styles.container}>
@@ -130,13 +115,7 @@ export const AccountingSystem = () => {
         </div>
       </div>
 
-      <button 
-        onClick={scrollToTop} 
-        className={`${Styles.backToTop} ${isVisible ? Styles.visible : ''}`}
-        aria-label="Наверх">
-        <img src={up.src} alt="" className={Styles.upIcon} />
-      </button>
-
+      <BackToTop/>
       {firstIsOpen && <BigPhoto src={product_1.src} onClose={() => setFirstIsOpen(false)} />}
       {secondIsOpen && <BigPhoto src={product_1_1.src} onClose={() => setSecondIsOpen(false)} />}
       {thirdIsOpen && <BigPhoto src={product_1_2.src} onClose={() => setThirdIsOpen(false)} />}

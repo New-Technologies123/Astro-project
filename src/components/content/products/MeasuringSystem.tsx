@@ -1,12 +1,12 @@
 import Styles from './products.module.scss';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import product_3 from '../../../images/products/product_3.webp';
 import product_3_1 from '../../../images/products/product_3_1.webp';
 import product_3_2 from '../../../images/products/product_3_2.webp';
-import up from '../../../images/arrow.svg';
 import { BigPhoto } from '../../ui/big-photo/BigPhoto';
 import { useClickToScroll } from '../../../hooks/useClickToScroll';
 import { useTranslation } from 'react-i18next';
+import { BackToTop } from '../../ui/back-to-top/BackToTop';
 
 export const MeasuringSystem = () => {
   const { t } = useTranslation('products');
@@ -18,21 +18,6 @@ export const MeasuringSystem = () => {
 
   const sectionsRef = useRef([]);
   const handleClick = useClickToScroll();
-
-  // Кнопка "Наверх"
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 100) setIsVisible(true);
-      else setIsVisible(false);
-    };
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
     <div className={Styles.container}>
@@ -245,17 +230,10 @@ export const MeasuringSystem = () => {
         </div>
       </div>
 
-      <button 
-        onClick={scrollToTop} 
-        className={`${Styles.backToTop} ${isVisible ? Styles.visible : ''}`}
-        aria-label="Наверх">
-        <img src={up.src} alt="" className={Styles.upIcon} />
-      </button>
-
+      <BackToTop/>
       {oneIsOpen && <BigPhoto src={product_3.src} onClose={() => setOneIsOpen(false)} />}
       {twoIsOpen && <BigPhoto src={product_3_1.src} onClose={() => setTwoIsOpen(false)} />}
       {threeIsOpen && <BigPhoto src={product_3_2.src} onClose={() => setThreeIsOpen(false)} />}
-    </div>
-      
+    </div>      
   );
 };

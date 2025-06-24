@@ -28,14 +28,6 @@ export const Products = () => {
     pumpingStations: t('Насосные станции'),
   };
 
-  //  const cardDescription: Record<TProducts, string> = {
-  //   accountingSystem: t('Текст'),
-  //   accessories: t('Текст'),
-  //   measuringSystem: t('Текст'),
-  //   preparationSystems: t('Текст'),
-  //   pumpingStations: t('Текст'),
-  // };
-
   const [typeLayoutBackOpen, setTypeLayoutBackOpen] = useState<TProducts | null>(null);
 
   useEffect(() => {
