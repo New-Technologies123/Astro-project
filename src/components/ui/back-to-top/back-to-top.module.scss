@@ -15,7 +15,7 @@
   visibility: hidden;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(#10141b, 0.3);
-  z-index: 100;
+  z-index: 6;
   
   &.visible {
     opacity: 1;
