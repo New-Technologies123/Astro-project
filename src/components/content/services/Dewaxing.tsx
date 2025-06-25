@@ -3,6 +3,7 @@ import { BigPhoto } from '../../ui/big-photo/BigPhoto';
 import { useState } from 'react';
 import serves_5 from '../../../images/services/serves_5.webp';
 import { useTranslation } from 'react-i18next';
+import { BackToTop } from '../../ui/back-to-top/BackToTop';
 
 
 export const Dewaxing = () => {
@@ -29,7 +30,7 @@ export const Dewaxing = () => {
           </ul>
         </div>
       </div>
-
+      <BackToTop/>
       {photoIsOpen && <BigPhoto src={serves_5.src} onClose={() => setPhotoIsOpen(false)} />}
     </>
   );

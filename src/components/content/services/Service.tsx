@@ -4,6 +4,7 @@ import { useState } from 'react';
 import serves_4 from '../../../images/services/serves_4.webp';
 import { useTranslation } from 'react-i18next';
 import dot from '../../../images/dot.svg';
+import { BackToTop } from '../../ui/back-to-top/BackToTop';
 
 export const Service = () => {
   const { t } = useTranslation('services');
@@ -34,6 +35,7 @@ export const Service = () => {
           </ul>
         </div>
       </div>
+      <BackToTop/>
       {photoIsOpen && <BigPhoto src={serves_4.src} onClose={() => setPhotoIsOpen(false)} />}
     </>
   );

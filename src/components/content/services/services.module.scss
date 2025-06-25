@@ -213,6 +213,19 @@
   }
 }
 
+@media (max-width: 500px){
+  .imageWrapper{
+    &:hover .imageOverlay {
+      opacity: 0;
+    }
+  }
+  .serviceImage {  
+    .imageWrapper:hover & {
+      transform: none;
+    }
+  }
+}
+
 @media (max-width: 430px){
   .card{
     gap: 5px;
