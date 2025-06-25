@@ -50,7 +50,7 @@
       color: #ffffffde;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     }
-  } 
+  }
 
   &:active {
     transform: scale(0.98);
@@ -118,8 +118,21 @@
     p {
       font-size: 14px;
     }
+    &::before {
+      background: none;
+      transform: none;
+      transition: none;
+    }
     &:hover {
-      transform: scale(1.03) translateY(-2px);
+      transform: none;
+      box-shadow: none;    
+      &::before {
+        transform: none;
+      }    
+      h3 {
+        color: #000000;
+        text-shadow: none;
+      }
     }
   }
 }
