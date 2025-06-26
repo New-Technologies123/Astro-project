@@ -11,7 +11,6 @@ export const LayoutBack = ({ title, onBack, children }) => {
         </div>
         <div className={Styles.heroContent}>
           <h1>{title}</h1>
-          {/* <p>{description}</p> */}
         </div>      
       </div>
 

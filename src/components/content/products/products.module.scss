@@ -257,7 +257,9 @@
 
 @media (max-width: 1200px){
   .navItem{
-    font-size: 15px;
+    P{
+      font-size: 15px;
+    }    
   }
   .zoomText{
     font-size: 15px;
@@ -342,8 +344,10 @@
     top: auto;
   }
   .navItem{
-    font-size: 14px;
     padding: 10px 15px;
+    p{
+      font-size: 14px;
+    }    
   }
   .navIcon{
     font-size: 18px;
@@ -388,5 +392,42 @@
   }
   .minFoto{
     width: 60%;
+  }
+}
+
+@media (max-width: 500px){
+  .navMenu{
+    padding: 3px;
+    gap: 3px;
+  }
+  .navItem{
+    padding: 8px 13px;
+    p{
+      font-size: 13px;
+    }
+  }
+  .imageCard{
+    &:hover {
+      transform: none;
+      box-shadow: none;
+      
+      .imageOverlay {
+        opacity: 0;
+      }
+    }
+  }
+  .mainImageContainer{
+    width: 78%;
+  }
+  .gallery{
+    display: grid;
+  }
+  .image{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .minFoto{
+    width: 50%;
   }
 }
