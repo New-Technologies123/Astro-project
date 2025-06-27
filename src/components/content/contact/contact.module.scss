@@ -184,6 +184,15 @@
     }
 }
 
+@media (max-width: 500px){
+    .phone{
+        &:hover {
+            color: #0f3bff;
+            text-decoration: none;
+        }
+    }
+}
+
 @media (max-width: 475px){
     .textContainer{
         h3{

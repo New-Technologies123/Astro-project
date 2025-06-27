@@ -53,5 +53,9 @@
     "Лебедки": "Mobile winch driver",
     "Водитель": "Driver (category C) Gubkinsky",
     "Вахта3и4": "Shift work for 30 or 45 shifts",
-    "Категории": "Category C driver (Gubkinsky)"
+    "Категории": "Category C driver (Gubkinsky)",
+
+    "Юрист": "Lawyer",
+    "ИнженерСнабжению": "Supply Engineer",
+    "ТАТРИТЭК": "Category C driver (TATRITEK)"
 }
