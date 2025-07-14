@@ -57,5 +57,14 @@
 
     "Юрист": "Lawyer",
     "ИнженерСнабжению": "Supply Engineer",
-    "ТАТРИТЭК": "Category C driver (TATRITEK)"
+    "ТАТРИТЭК": "Category C driver (TATRITEK)",
+
+    "Делопроизводитель": "Clerk in the logistics department",
+    "Коммерческий": "Commercial Director (CCO)",
+    "Уборщик": "Laboratory cleaner",
+    "Частичная": "Part-time employment",
+    "Фрезеровщик": "Miller",
+    "ВодительСургут": "Driver of category C (Surgut)",
+    "СлесарьСургут": "Locksmith of KIPiA (Surgut)",
+    "СлесарьНижневартовск": "NGO locksmith (Nizhnevartovsk)"  
 }
