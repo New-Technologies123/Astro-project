@@ -392,6 +392,16 @@ nav ul li a.active {
   }
 }
 
+@media (max-width: 500px){
+  nav{
+    ul{
+      li{
+        margin: 5px 8px;
+      }
+    }
+  }
+}
+
 @media (max-width: 440px) {  
   .headerContainer {
     padding: 5px;
