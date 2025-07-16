@@ -1,4 +1,6 @@
 {
+    "Офис": "Zaki Validi 32/2",
+    "Завод": "Blagovarskaya 16/2",
     "Вакансии": "Open vacancies",
     "Карточка": "Vacancy",
 
@@ -66,5 +68,8 @@
     "Фрезеровщик": "Miller",
     "ВодительСургут": "Driver of category C (Surgut)",
     "СлесарьСургут": "Locksmith of KIPiA (Surgut)",
-    "СлесарьНижневартовск": "NGO locksmith (Nizhnevartovsk)"  
+    "СлесарьНижневартовск": "NGO locksmith (Nizhnevartovsk)",
+
+    "Секретарь": "Secretary/Assistant Manager",
+    "Вахта6": "60 shift shifts"
 }
