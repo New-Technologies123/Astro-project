@@ -22,7 +22,7 @@ export const Careers = () => {
         vacancy4: "https://ufa.hh.ru/vacancy/122555950?hhtmFrom=vacancy_search_list",        
         vacancy5: "https://ufa.hh.ru/vacancy/122445536?hhtmFrom=vacancy_search_list",        
         vacancy6: "https://ufa.hh.ru/vacancy/122610706?hhtmFrom=vacancy_search_list",
-        vacancy7: "",
+        vacancy7: "https://ufa.hh.ru/vacancy/122847081?hhtmFrom=vacancy_search_list",
         vacancy8: "",
         vacancy9: "https://ufa.hh.ru/vacancy/120561475?hhtmFrom=vacancy_search_list",
         vacancy10: "https://ufa.hh.ru/vacancy/122774277?hhtmFrom=vacancy_search_list",
@@ -44,8 +44,8 @@ export const Careers = () => {
         vacancy26: "https://ufa.hh.ru/vacancy/121933089?hhtmFrom=vacancy_search_list",
         vacancy27: "",
         vacancy28: "https://ufa.hh.ru/vacancy/122203130?hhtmFrom=vacancy_search_list",
-        vacancy29: "https://ufa.hh.ru/vacancy/122625941?hhtmFrom=vacancy_search_list",
-        vacancy30: "",
+        vacancy29: "",
+        vacancy30: "https://ufa.hh.ru/vacancy/122705794?hhtmFrom=vacancy_search_list",
     };
 
     const [typeLayoutBackOpen, setTypeLayoutBackOpen] = useState<TCareers | null>(null);
@@ -134,6 +134,13 @@ export const Careers = () => {
                                     experience={t('Полная')}
                                     employmentType={t('График')}
                                     onClick={() => window.open(vacancyLinks.vacancy9, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Работник')}
+                                    title={t('ОпытНе')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy7, "_blank")}
                                 />
                                 
                                 <Vacancy
