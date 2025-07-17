@@ -75,37 +75,19 @@
         height: 210px;
     } 
 }
-  
-  @media (max-width: 430px) {
-    .employeeCard {
-        width: 240px;
-        padding: 10px 3px;
+
+@media (max-width: 500px){
+    .employeeCard{
+        width: 250px;
         h3{
             font-size: 15px;
-            margin-top: 5px;
         }
         p{
             font-size: 17px;
         }
     }
-    .system {
+    .system{
         width: 210px;
         height: 200px;
-    }
-}
-  
-@media (max-width: 375px){
-    .employeeCard{
-        width: 230px;
-        h3{
-            font-size: 14px;            
-        }
-        p{
-            font-size: 16px;
-        }
-    }
-    .system{
-        width: 200px;
-        height: 190px;
     }
 }
