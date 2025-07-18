@@ -72,7 +72,7 @@ export const Footer = () => {
                 <a href={`/${i18n.language}/news`}>{t('Новости')}</a>
               </li>
               <li>
-                <a href={`/${i18n.language}/contact`}>{t(' Контакты')}</a>
+                <a href={`/${i18n.language}/contact`}>{t('Контакты')}</a>
               </li>
             </ul>
           </div>
