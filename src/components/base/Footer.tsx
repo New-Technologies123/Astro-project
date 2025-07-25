@@ -1,5 +1,5 @@
-import logoRu from '../../images/logo_ru.webp';
-import logoEn from '../../images/logo_en.webp';
+import logoRu from '../../images/logo_fut_ru.webp';
+import logoEn from '../../images/logo_fut_en.webp';
 import Styles from './footer.module.scss';
 import { useTranslation } from 'react-i18next';
 
