@@ -39,7 +39,7 @@ export const Careers = () => {
         vacancy21: "https://ufa.hh.ru/vacancy/122228698?hhtmFrom=vacancy_search_list",
         vacancy22: "https://ufa.hh.ru/vacancy/122804392?hhtmFrom=vacancy_search_list",
         vacancy23: "",
-        vacancy24: "https://ufa.hh.ru/vacancy/121679607?hhtmFrom=vacancy_search_list",
+        vacancy24: "",
         vacancy25: "https://ufa.hh.ru/vacancy/123108886?hhtmFrom=vacancy_search_list",
         vacancy26: "https://ufa.hh.ru/vacancy/121933089?hhtmFrom=vacancy_search_list",
         vacancy27: "",
@@ -170,7 +170,7 @@ export const Careers = () => {
                                     header={t('Пильщик')}
                                     title={t('Опыт')}
                                     experience={t('Полная')}
-                                    employmentType={t('График')}
+                                    employmentType={t('График2')}
                                     onClick={() => window.open(vacancyLinks.vacancy16, "_blank")}
                                 />
                                 <Vacancy
@@ -193,14 +193,6 @@ export const Careers = () => {
                                     experience={t('Полная')}
                                     employmentType={t('График')}
                                     onClick={() => window.open(vacancyLinks.vacancy22, "_blank")}
-                                />
-                                                              
-                                <Vacancy
-                                    header={t('Начальник')}
-                                    title={t('Опыт3')}
-                                    experience={t('Полная')}
-                                    employmentType={t('График')}
-                                    onClick={() => window.open(vacancyLinks.vacancy24, "_blank")}
                                 />
                                 <Vacancy
                                     header={t('Уборщик')}

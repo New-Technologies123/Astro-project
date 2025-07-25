@@ -13,6 +13,7 @@ import { BackToTop } from '../../ui/back-to-top/BackToTop';
 export const News = () => {
   const { t } = useTranslation('news');
   const [photoIsOpen, setPhotoIsOpen] = useState(false);
+  const [photoTwoIsOpen, setPhotoTwoIsOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -30,7 +31,7 @@ export const News = () => {
       <div className={`${isLoaded ? Styles.loaded : ''}`}>
         <div className={Styles.newsContent}>
           <div className={Styles.newsItem}>
-            <img src={news_4.src} className={Styles.thumbnail} onClick={() => { setPhotoIsOpen(true); }}/>
+            <img src={news_4.src} className={Styles.thumbnail} onClick={() => { setPhotoTwoIsOpen(true); }}/>
             <p>
               {t('Грамота')}
             </p>
@@ -56,7 +57,7 @@ export const News = () => {
         </div>        
       </div>
       {photoIsOpen && <BigPhoto src={news_3.src} onClose={() => setPhotoIsOpen(false)} />}
-      {photoIsOpen && <BigPhoto src={news_4.src} onClose={() => setPhotoIsOpen(false)} />}
+      {photoTwoIsOpen && <BigPhoto src={news_4.src} onClose={() => setPhotoTwoIsOpen(false)} />}
       <BackToTop/>
     </>
     
