@@ -73,9 +73,11 @@
     "Секретарь": "Secretary/Assistant Manager",
     "Вахта6": "60 shift shifts",
     "НачальникОхраны": "Head of the Occupational Safety Department",
+    "Конструктор": "Constructor-KIPiA",
 
     "ГлавныйМетролог": "Chief metrologist",
     "ОператорЧПУ": "CNC milling machine operator",
     "График2": "Schedule: 2/2",
-    "КонтролерОТК": "Moderator of OTC Metallurgy"
+    "КонтролерОТК": "Moderator of OTC Metallurgy",
+    "Дефектоскопист": "NDT inspector"
 }

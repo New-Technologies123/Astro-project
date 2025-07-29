@@ -86,7 +86,10 @@ export const Header = ({ pageType }) => {
               </p>
             </div>
             <div className={Styles.languageSwitch}>
-              <a className={Styles.buttonMenu} onClick={onToggleLanguage}>
+              <a className={Styles.buttonMenu} onClick={() => {
+                  onToggleLanguage();
+                  window.location.reload(); // Перезагружаем страницу
+                }}>
                 {t('Рус/Eng')}
               </a>
             </div>
