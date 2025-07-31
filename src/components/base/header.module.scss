@@ -276,7 +276,7 @@ nav ul li a.active {
     --padding: 5px;
     --font-size: 14px;
     --max-height: 0px;
-    padding-bottom: 5px;
+    // padding-bottom: 5px;
 
     flex-direction: column;
     position: absolute;
@@ -285,7 +285,7 @@ nav ul li a.active {
     top: 46px;
     max-height: var(--max-height);
     transition: max-height 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    background: linear-gradient(#0019a5, #03000e);
+    background: linear-gradient(#086ab3, #03000e);
     z-index: 100;
     overflow: hidden; /* Скрываем содержимое до начала анимации */
 

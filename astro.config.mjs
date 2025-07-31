@@ -4,7 +4,7 @@ import astroI18next from 'astro-i18next';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://new.tech-new.ru',
+  site: 'https://tech-new.ru',
   integrations: [react(), astroI18next(), sitemap()],
   devToolbar: {
     enabled: false,

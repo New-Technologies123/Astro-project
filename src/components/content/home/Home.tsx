@@ -20,7 +20,7 @@ export const Home = () => {
   return (
     <>
       <section className={Styles.hero}>
-        <img src={homeItem_1.src} alt="Главная картинка" className={Styles.heroImage}/>
+        {/* <img src={homeItem_1.src} alt="Главная картинка" className={Styles.heroImage}/> */}
         <div className={Styles.heroOverlay}>
           <h1>{t('Добро')}</h1>
           <p>{t('Обеспечиваем')}</p>

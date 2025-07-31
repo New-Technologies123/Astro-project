@@ -17,14 +17,14 @@ export const Careers = () => {
 
     const vacancyLinks: Record<TCareers, string> = {
         vacancy1: "https://ufa.hh.ru/vacancy/122914281?hhtmFrom=vacancy_search_list",
-        vacancy2: "https://ufa.hh.ru/vacancy/122744965?hhtmFrom=vacancy_search_list",        
+        vacancy2: "https://ufa.hh.ru/vacancy/123431286?hhtmFrom=vacancy_search_list",        
         vacancy3: "https://ufa.hh.ru/vacancy/120697632?hhtmFrom=vacancy_search_list",
         vacancy4: "https://ufa.hh.ru/vacancy/123145608?hhtmFrom=vacancy_search_list",        
         vacancy5: "https://ufa.hh.ru/vacancy/122445536?hhtmFrom=vacancy_search_list",        
         vacancy6: "https://ufa.hh.ru/vacancy/122610706?hhtmFrom=vacancy_search_list",
         vacancy7: "https://ufa.hh.ru/vacancy/123108785?hhtmFrom=vacancy_search_list",
         vacancy8: "https://ufa.hh.ru/vacancy/122969761?hhtmFrom=vacancy_search_list",
-        vacancy9: "https://ufa.hh.ru/vacancy/120561475?hhtmFrom=vacancy_search_list",
+        vacancy9: "https://ufa.hh.ru/vacancy/123320947?hhtmFrom=vacancy_search_list",
         vacancy10: "https://ufa.hh.ru/vacancy/123109019?hhtmFrom=vacancy_search_listы",
         vacancy11: "https://ufa.hh.ru/vacancy/119888842?hhtmFromLabel=employer_vacancy_tab&hhtmFrom=employer",
         vacancy12: "https://ufa.hh.ru/vacancy/123088334?hhtmFrom=vacancy_search_list",
@@ -109,13 +109,6 @@ export const Careers = () => {
                                     experience={t('Полная')}
                                     employmentType={t('График')}
                                     onClick={() => window.open(vacancyLinks.vacancy8, "_blank")}
-                                />
-                                <Vacancy
-                                    header={t('Секретарь')}
-                                    title={t('Опыт')}
-                                    experience={t('Полная')}
-                                    employmentType={t('График')}
-                                    onClick={() => window.open(vacancyLinks.vacancy2, "_blank")}
                                 />                                
                                 <Vacancy
                                     header={t('НачальникОхраны')}
@@ -241,6 +234,13 @@ export const Careers = () => {
                                     experience={t('Полная')}
                                     employmentType={t('График')}
                                     onClick={() => window.open(vacancyLinks.vacancy21, "_blank")}
+                                />
+                                <Vacancy
+                                    header={t('Грузчик')}
+                                    title={t('ОпытНе')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy2, "_blank")}
                                 />                                
                             </div> 
                         </div>

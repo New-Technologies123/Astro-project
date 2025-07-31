@@ -6,21 +6,20 @@ import { Title } from '../../ui/title/Title';
 import { useTranslation } from 'react-i18next';
 import { CountCard } from '../../ui/count-card/CountCard';
 
-
 export const About = () => {
   const { t } = useTranslation('about');
   return (
     <>
-      <Layout title="О компании" description="Текст о компании">
+      {/* <Layout title="О компании" description="Текст о компании">
         <>
           <ProfileCard imgSrc={der.src} title="Рауфович" header="Генеральный" />
           <ProfileCard imgSrc="" title="Рамиловна" header="Коммерческий" />
         </>
-      </Layout>
-      {/* <Title text={t('О компании')}></Title>
+      </Layout> */}
+      <Title text={t('О компании')}></Title>
       <div className={Styles.layout}>
         <p>{t('Текст о компании')}</p>        
-      </div> */}
+      </div>
 
       <Title text={t('Цифра')}></Title>
 
