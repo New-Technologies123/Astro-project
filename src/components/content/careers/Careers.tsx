@@ -18,7 +18,7 @@ export const Careers = () => {
     const vacancyLinks: Record<TCareers, string> = {
         vacancy1: "https://ufa.hh.ru/vacancy/122914281?hhtmFrom=vacancy_search_list",
         vacancy2: "https://ufa.hh.ru/vacancy/123431286?hhtmFrom=vacancy_search_list",        
-        vacancy3: "https://ufa.hh.ru/vacancy/120697632?hhtmFrom=vacancy_search_list",
+        vacancy3: "",
         vacancy4: "https://ufa.hh.ru/vacancy/123145608?hhtmFrom=vacancy_search_list",        
         vacancy5: "https://ufa.hh.ru/vacancy/122445536?hhtmFrom=vacancy_search_list",        
         vacancy6: "https://ufa.hh.ru/vacancy/122610706?hhtmFrom=vacancy_search_list",
@@ -81,14 +81,7 @@ export const Careers = () => {
                         <div className={Styles.vacancies}>
                             <p>{t('Офис')}</p>
                             <div className={Styles.team}>
-                                <Vacancy
-                                    header={t('Тендерный')}
-                                    title={t('Опыт')}
-                                    experience={t('Полная')}
-                                    employmentType={t('График')}
-                                    onClick={() => window.open(vacancyLinks.vacancy3, "_blank")}
-                                />
-                                                              
+                                                   
                                 <Vacancy
                                     header={t('Коммерческий')}
                                     title={t('Опыт3')}
