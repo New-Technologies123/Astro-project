@@ -16,6 +16,16 @@ Astro.redirect('//src/pages/403.astro');
       }
       h1 { color: #dc2626; font-size: 34px;}
       p,button{ font-size: 18px;}
+      .buttons {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+      button {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+      }
       @media (max-width: 1030px){
         h1 { font-size: 28px;}
         p,button{ font-size: 16px;}
@@ -23,6 +33,10 @@ Astro.redirect('//src/pages/403.astro');
       @media (max-width: 500px){
         h1 { font-size: 22px;}
         p,button{ font-size: 14px;}
+        .buttons {
+          flex-direction: column;
+          align-items: center;
+        }
       }
     </style>
   </head>
@@ -30,6 +44,9 @@ Astro.redirect('//src/pages/403.astro');
     <h1>⛔ 403 — Доступ запрещен</h1>
     <p>У вас нет прав для просмотра этой страницы.</p>
     
-    <button onclick="history.back()">← Вернуться назад</button>
+    <div class="buttons">
+      <button onclick="history.back()">← Вернуться назад</button>
+      <button onclick="window.location.href='http://tech-new.ru/'">На главную</button>
+    </div>
   </body>
 </html>

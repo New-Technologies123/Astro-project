@@ -35,7 +35,7 @@ export const Cards = ({ selectId }) => {
       { id: 'trainingSystem', condition: (selectId === 'all' || selectId === 'trainingSystem'), title: t('00123'), docType: '4-1' },
       { id: 'trainingSystem', condition: (selectId === 'all' || selectId === 'trainingSystem'), title: t('Декларация5д'), docType: '4-2' },
       { id: 'trainingSystem', condition: (selectId === 'all' || selectId === 'trainingSystem'), title: t('Декларация150м'), docType: '4-3' },
-      { id: 'trainingSystem', condition: (selectId === 'all' || selectId === 'trainingSystem'), title: t('Сертфикат010'), docType: '4-4' },
+      { id: 'trainingSystem', condition: (selectId === 'all' || selectId === 'trainingSystem'), title: t('Сертификат010'), docType: '4-4' },
       { id: 'trainingSystem', condition: (selectId === 'all' || selectId === 'trainingSystem'), title: t('ДекларацияТр010'), docType: '4-5' },
       { id: 'trainingSystem', condition: (selectId === 'all' || selectId === 'trainingSystem'), title: t('ДекларацияТруб'), docType: '4-6' },
       { id: 'trainingSystem', condition: (selectId === 'all' || selectId === 'trainingSystem'), title: t('ДекларацияТР'), docType: '4-7' },

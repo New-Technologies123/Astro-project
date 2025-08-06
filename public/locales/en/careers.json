@@ -79,5 +79,7 @@
     "ОператорЧПУ": "CNC milling machine operator",
     "График2": "Schedule: 2/2",
     "КонтролерОТК": "Moderator of OTC Metallurgy",
-    "Дефектоскопист": "NDT inspector"
+    "Дефектоскопист": "NDT inspector",
+    "Грузчик": "Loader",
+    "ГлавныйИнженер": "Chief Design Engineer"
 }
