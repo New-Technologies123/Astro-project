@@ -81,5 +81,8 @@
     "КонтролерОТК": "Moderator of OTC Metallurgy",
     "Дефектоскопист": "NDT inspector",
     "Грузчик": "Loader",
-    "ГлавныйИнженер": "Chief Design Engineer"
+    "ГлавныйИнженер": "Chief Design Engineer",
+
+    "Метролог": "Metrologist (Engineer - instrumentation and automation)",
+    "РуководительПоставки": "Project Manager (Supply)"
 }
