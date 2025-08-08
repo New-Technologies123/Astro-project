@@ -1,4 +1,4 @@
-import der from '../../../images/about/der.webp';
+
 import { Layout } from '../../layout/Layout';
 import { ProfileCard } from '../../ui/profile-card/ProfileCard';
 import Styles from './about.module.scss';
