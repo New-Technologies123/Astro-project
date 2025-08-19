@@ -25,16 +25,16 @@ export const Careers = () => {
         vacancy7: "https://ufa.hh.ru/vacancy/123870208?hhtmFrom=vacancy_search_list",
         vacancy8: "https://ufa.hh.ru/vacancy/122969761?hhtmFrom=vacancy_search_list",
         vacancy9: "https://ufa.hh.ru/vacancy/124109819?hhtmFrom=vacancy_search_list",
-        vacancy10: "https://ufa.hh.ru/vacancy/123109019?hhtmFrom=vacancy_search_listы",
+        vacancy10: "https://ufa.hh.ru/vacancy/124180906?hhtmFrom=vacancy_search_list",
         vacancy11: "https://ufa.hh.ru/vacancy/123870264?hhtmFrom=vacancy_search_list",
         vacancy12: "https://ufa.hh.ru/vacancy/123870344?hhtmFrom=vacancy_search_list",
         vacancy13: "https://ufa.hh.ru/vacancy/123923807?hhtmFrom=vacancy_search_list",        
         vacancy14: "https://ufa.hh.ru/vacancy/124152601?hhtmFrom=vacancy_search_list",
         vacancy15: "https://ufa.hh.ru/vacancy/124034462?hhtmFrom=vacancy_search_list",
         vacancy16: "https://ufa.hh.ru/vacancy/124150987?hhtmFrom=vacancy_search_list",
-        vacancy17: "",        
+        vacancy17: "https://ufa.hh.ru/vacancy/124197677?hhtmFrom=vacancy_search_list",        
         vacancy18: "https://ufa.hh.ru/vacancy/123144740?hhtmFrom=vacancy_search_list",
-        vacancy19: "",
+        vacancy19: "https://ufa.hh.ru/vacancy/124197750?hhtmFrom=vacancy_search_list",
         vacancy20: "",
         vacancy21: "https://ufa.hh.ru/vacancy/123508591?hhtmFrom=vacancy_search_list",
         vacancy22: "https://ufa.hh.ru/vacancy/124016929?hhtmFrom=vacancy_search_list",
@@ -130,6 +130,13 @@ export const Careers = () => {
                                     employmentType={t('График')}
                                     onClick={() => window.open(vacancyLinks.vacancy16, "_blank")}
                                 />
+                                <Vacancy
+                                    header={t('ВедущийПТО')}
+                                    title={t('Опыт')}
+                                    experience={t('Проект')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy10, "_blank")}
+                                />
                             </div>
                         </div>
                         <div className={Styles.vacancies}>
@@ -185,11 +192,11 @@ export const Careers = () => {
                                     onClick={() => window.open(vacancyLinks.vacancy22, "_blank")}
                                 />
                                 <Vacancy
-                                    header={t('Уборщик')}
-                                    title={t('ОпытНе')}
-                                    experience={t('Частичная')}
+                                    header={t('Бригада')}
+                                    title={t('Опыт')}
+                                    experience={t('Полная')}
                                     employmentType={t('График')}
-                                    onClick={() => window.open(vacancyLinks.vacancy10, "_blank")}
+                                    onClick={() => window.open(vacancyLinks.vacancy19, "_blank")}
                                 />
                                 <Vacancy
                                     header={t('Контролер')}
@@ -226,6 +233,14 @@ export const Careers = () => {
                                     employmentType={t('График')}
                                     onClick={() => window.open(vacancyLinks.vacancy1, "_blank")}
                                 />
+                                <Vacancy
+                                    header={t('Монтажник')}
+                                    title={t('Опыт')}
+                                    experience={t('Полная')}
+                                    employmentType={t('График')}
+                                    onClick={() => window.open(vacancyLinks.vacancy17, "_blank")}
+                                />
+                                
                             </div> 
                         </div>
                         {/* <div className={Styles.vacancies}>
