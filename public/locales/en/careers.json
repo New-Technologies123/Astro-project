@@ -89,5 +89,9 @@
     "НачальникКонструктор": "Head of the Design Department",
     "ИнженерКонстр": "Design Engineer",
     "УборщикОфиса": "Office cleaner",
-    "ВодительЭкспедитор": "Driver-forwarder"
+    "ВодительЭкспедитор": "Driver-forwarder",
+
+    "ВедущийПТО": "Leading Engineer of the PTO Department",
+    "Проект": "Project or one-time task",
+    "Бригада": "Team of welders and fitters TT"
 }
