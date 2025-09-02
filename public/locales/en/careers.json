@@ -93,5 +93,7 @@
 
     "ВедущийПТО": "Leading Engineer of the PTO Department",
     "Проект": "Project or one-time task",
-    "Бригада": "Team of welders and fitters TT"
+    "Бригада": "Team of welders and fitters TT",
+    "ИнженерПланирования": "Production Planning Engineer",
+    "СлесарьМехан": "Assembly fitter"
 }
