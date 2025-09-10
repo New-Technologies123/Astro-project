@@ -95,5 +95,7 @@
     "Проект": "Project or one-time task",
     "Бригада": "Team of welders and fitters TT",
     "ИнженерПланирования": "Production Planning Engineer",
-    "СлесарьМехан": "Assembly fitter"
+    "СлесарьМехан": "Assembly fitter",
+    "График1": "Schedule: 1/3",
+    "Охранник": "Security Guard"
 }
