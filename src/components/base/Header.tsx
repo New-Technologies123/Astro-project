@@ -85,6 +85,7 @@ export const Header = ({ pageType }) => {
                 {t('Телефон')}
               </p>
             </div>
+
             <div className={Styles.languageSwitch}>
               <a className={Styles.buttonMenu} onClick={() => {
                   onToggleLanguage();
@@ -93,37 +94,7 @@ export const Header = ({ pageType }) => {
                 {t('Рус/Eng')}
               </a>
             </div>
-            {/* <div className={Styles.languageSwitch}>
-              <a
-                className={Styles.buttonMenu}
-                onClick={() => {
-                  onToggleLanguage(); // Вызываем оригинальную функцию переключения языка
-                  
-                  // Определяем текущий домен и целевой домен для переключения
-                  const currentHost = window.location.host;
-                  let targetHost;
-
-                  if (currentHost === 'tech-new.ru') {
-                    targetHost = 'eng.tech-new.ru';
-                  } else if (currentHost === 'eng.tech-new.ru') {
-                    targetHost = 'tech-new.ru';
-                  } else {
-                    // На случай, если находимся на другом домене (например, локальном)
-                    targetHost = currentHost.includes('eng.') 
-                      ? currentHost.replace('eng.', '') 
-                      : 'eng.' + currentHost;
-                  }
-
-                  // Сохраняем текущий путь (кроме домена)
-                  const currentPath = window.location.pathname + window.location.search + window.location.hash;
-                  
-                  // Перенаправляем на новый домен с сохранением пути
-                  window.location.href = `https://${targetHost}${currentPath}`;
-                }}
-              >
-                {t('Рус/Eng')}
-              </a>
-            </div> */}
+            
           </div>
         </div>
       </header>
@@ -132,7 +103,7 @@ export const Header = ({ pageType }) => {
           {isActiveMobileMenu ? (
             <img src={cross.src} alt="Крестик" className={Styles.menuIcon} />
           ) : (
-            <img src={menu.src} alt="Меню" className={Styles.menuIcon} />
+            <img src={menu.src} alt="" className={Styles.menuIcon} />
           )}
         </div>
 

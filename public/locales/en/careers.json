@@ -84,7 +84,7 @@
     "ГлавныйИнженер": "Chief Design Engineer",
 
     "Метролог": "Metrologist (Engineer - instrumentation and automation)",
-    "РуководительПоставки": "Project Manager (Supply)",
+    "РуководительПоставки": "Project Manager",
     "Наладчик": "CNC Machine Adjuster",
     "НачальникКонструктор": "Head of the Design Department",
     "ИнженерКонстр": "Design Engineer",
@@ -97,5 +97,6 @@
     "ИнженерПланирования": "Production Planning Engineer",
     "СлесарьМехан": "Assembly fitter",
     "График1": "Schedule: 1/3",
-    "Охранник": "Security Guard"
+    "Охранник": "Security Guard",
+    "СпециалистПерсонала": "Recruitment Specialist"
 }
